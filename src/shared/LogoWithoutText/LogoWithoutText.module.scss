@@ -1,0 +1,13 @@
+@import "@/shared/styles/_vars";
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  max-width: rem(150);
+}
+
+.logoImg {
+  width: 100%;
+}

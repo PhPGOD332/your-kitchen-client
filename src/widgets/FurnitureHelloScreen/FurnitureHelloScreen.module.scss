@@ -1,0 +1,117 @@
+@import "@/shared/styles/_vars";
+
+.helloScreen {
+  display: flex;
+  min-height: rem(750);
+  max-height: rem(1400);
+
+  padding-top: rem(120);
+  position: relative;
+
+  @media (max-width: $max-1300) {
+    min-height: rem(700);
+  }
+
+  overflow: hidden;
+}
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  max-width: none;
+
+  -webkit-mask-image: linear-gradient(
+    0deg,
+    rgba(64, 56, 48, 0) 0%,
+    rgba(255, 255, 255, 1) 30.29%
+  );
+
+  mask-image: linear-gradient(
+    0deg,
+    rgba(64, 56, 48, 0) 0%,
+    rgba(255, 255, 255, 1) 30.29%
+  );
+
+  @media (max-width: $max-1000) {
+    -o-object-position: right;
+    object-position: right;
+  }
+}
+.container {
+  @include container();
+  position: relative;
+  z-index: 2;
+}
+.tags {
+  display: flex;
+  align-items: center;
+  gap: rem(15);
+
+  @media screen and (max-width: em(370)) {
+    gap: rem(10);
+  }
+}
+.tag {
+  @include gilroy(500);
+  font-size: rem(20);
+  color: $white;
+
+  @media screen and (max-width: em(370)) {
+    font-size: rem(16);
+  }
+}
+.circle {
+  width: rem(10);
+  height: rem(10);
+  border-radius: rem(100);
+  background-color: #d56745;
+  -webkit-filter: drop-shadow(0px 0px 8.2px rgba(255, 255, 255, 0.25));
+  filter: drop-shadow(0px 0px 8.2px rgba(255, 255, 255, 0.25));
+}
+.title {
+  margin-top: rem(30);
+  @include noto(600);
+  font-size: rem(48);
+  line-height: 1.3;
+  color: #fff;
+  max-width: rem(711);
+  width: 100%;
+
+  &.boldTitle {
+    font-weight: 600;
+    max-width: rem(711);
+  }
+
+  @media (max-width: $max-700) {
+    font-size: rem(24);
+    max-width: rem(380);
+    line-height: 1.3;
+  }
+}
+.subtitle {
+  display: flex;
+  align-items: center;
+  @include gilroy(600);
+  font-size: rem(18);
+  color: $white;
+  max-width: rem(663);
+  margin-top: rem(30);
+
+  @media (max-width: $max-500) {
+    font-size: rem(14);
+    max-width: rem(330);
+  }
+
+  &.boldSubtitle {
+    font-weight: 600;
+  }
+}
+
+.button {
+  margin-top: rem(50);
+}

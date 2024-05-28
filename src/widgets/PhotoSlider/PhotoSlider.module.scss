@@ -1,0 +1,167 @@
+@import "@/shared/styles/_vars";
+
+.photoSlider {
+  padding: rem(20) 0;
+  padding-bottom: rem(10);
+}
+.container {
+  @include container();
+}
+.title {
+  @include noto(400);
+  font-size: rem(40);
+  line-height: 1.3;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  color: $white;
+
+  &.left {
+    text-align: left;
+    margin: 0;
+
+    @media (max-width: $max-768) {
+      text-align: center;
+    }
+  }
+
+  @media (max-width: $max-768) {
+    font-size: rem(24);
+  }
+}
+.subtitle {
+  margin: 0 auto;
+  margin-top: rem(8);
+  @include gilroy(400);
+  color: $white;
+  text-align: center;
+  letter-spacing: rem(0.4);
+  font-size: rem(22);
+
+  @media (max-width: $max-768) {
+    font-size: rem(18);
+  }
+}
+.swiper {
+  width: 100%;
+  margin-top: rem(40);
+  border-radius: rem(12);
+}
+.slide {
+  width: 100%;
+  min-width: rem(300);
+  height: rem(200);
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  border-radius: rem(12);
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+.image {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.lowerText {
+  @include gilroy(400);
+  font-size: rem(24);
+  text-align: center;
+  color: $white;
+  line-height: 1.3;
+  margin-top: rem(60);
+
+  @media screen and (max-width: $max-768) {
+    font-size: rem(18);
+  }
+}
+.textWithVideo {
+  margin-top: rem(30);
+  display: flex;
+  justify-content: space-between;
+  gap: rem(30);
+
+  @media screen and (max-width: $max-950) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.leftText {
+  width: 50%;
+
+  @media screen and (max-width: $max-950) {
+    width: 100%;
+  }
+}
+.rightVideo {
+  border-radius: rem(12);
+  width: 100%;
+  max-width: rem(512);
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+
+  @media screen and (max-width: $max-950) {
+    max-width: rem(700);
+    aspect-ratio: 16/9;
+  }
+}
+.videoPreview {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.openVideoButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: rem(84);
+  height: rem(84);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  fill: $white;
+  color: $white;
+
+  &:hover .openButtonIcon {
+    fill: darken($white, 10%);
+    color: darken($white, 10%);
+  }
+}
+
+.openButtonIcon {
+  transition: 0.2s;
+  fill: $white;
+  color: $white;
+}
+.text {
+  margin-top: rem(14);
+  color: $white;
+  @include gilroy(400);
+  font-size: rem(16);
+
+  & strong {
+    font-weight: 600;
+  }
+}

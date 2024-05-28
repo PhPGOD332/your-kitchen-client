@@ -1,0 +1,42 @@
+@import "@/shared/styles/_vars";
+
+.editorButtons {
+  display: flex;
+  flex-wrap: wrap;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  gap: rem(6);
+  background-color: #fff;
+  margin-bottom: rem(10);
+  padding: rem(6);
+  padding-bottom: rem(6);
+  border-bottom: rem(2) solid rgba(0, 0, 0, 0.2);
+
+  & button {
+    padding: rem(4);
+    border-radius: rem(6);
+    width: rem(32);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+
+    &:hover {
+      background-color: #edf1f6;
+    }
+
+    & svg {
+      width: rem(16);
+      height: 100%;
+      color: #646668;
+    }
+
+    &.isActiveButton {
+      background-color: #edf1f6;
+      color: #fff;
+    }
+  }
+}

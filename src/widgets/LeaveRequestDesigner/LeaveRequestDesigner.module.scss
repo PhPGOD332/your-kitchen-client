@@ -1,0 +1,463 @@
+@import "@/shared/styles/_vars";
+
+.wrapper {
+  padding: rem(50) 0;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+
+  &.noPadding {
+    padding: 0;
+  }
+}
+.leaveRequest {
+  width: 100%;
+  @include container();
+  padding: rem(20) rem(20) rem(10);
+  background: linear-gradient(
+    180deg,
+    #262324 0%,
+    #2a2827 14.88%,
+    #393632 29.68%,
+    #3b3634 39.07%,
+    #323031 50.95%,
+    #323030 74.93%
+  );
+  border-radius: rem(12);
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: rem(30);
+  z-index: 2;
+
+  @media (max-width: $max-1000) {
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  @media (max-width: $max-768) {
+    padding-inline: 0;
+  }
+}
+.bgImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: right;
+  object-position: right;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  @media screen and (max-width: $max-800) {
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      rgba(64, 56, 48, 0.5) 10%,
+      rgba(64, 56, 48, 0.5) 100%
+    );
+    mask-image: linear-gradient(
+      90deg,
+      rgba(64, 56, 48, 0.5) 10%,
+      rgba(64, 56, 48, 0.5) 100%
+    );
+  }
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  max-width: rem(740);
+  z-index: 2;
+
+  @media (max-width: $max-1000) {
+    margin: 0 auto;
+  }
+}
+.title {
+  @include noto(500);
+  font-size: rem(40);
+  line-height: 1.3;
+  color: $white;
+  text-wrap: balance;
+  position: relative;
+  z-index: 2;
+  margin-top: rem(30);
+
+  @media screen and (max-width: $max-768) {
+    font-size: rem(24);
+  }
+}
+.description {
+  @include gilroy(500);
+  font-size: rem(16);
+  color: $white;
+  line-height: 1.5;
+  margin-top: rem(30);
+  position: relative;
+  z-index: 2;
+
+  @media screen and (max-width: $max-768) {
+    font-size: rem(14);
+  }
+}
+.icon {
+  color: $white;
+  -webkit-filter: drop-shadow(0px 0px rem(12) #f28c6b)
+    drop-shadow(0px 0px rem(19) #f28c6b);
+  filter: drop-shadow(0px 0px rem(12) #f28c6b)
+    drop-shadow(0px 0px rem(19) #f28c6b);
+  width: rem(22);
+  height: rem(22);
+}
+.askText {
+  @include gilroy(500);
+  font-size: rem(16);
+  color: #f28c6b;
+  line-height: 1.3;
+}
+.right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+
+  @media screen and (max-width: $max-1000) {
+    position: static;
+    top: auto;
+    right: auto;
+    transform: translate(0);
+    margin: 0 auto;
+    margin-top: rem(30);
+  }
+}
+.rightImage {
+  max-width: rem(440);
+  width: 100%;
+  min-width: rem(250);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.card {
+  margin-left: rem(40);
+  margin-top: rem(20);
+  display: flex;
+  position: relative;
+  z-index: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: rem(20);
+  padding-bottom: rem(10);
+
+  @media screen and (max-width: $max-1000) {
+    margin-left: 0;
+  }
+
+  @media screen and (max-width: $max-600) {
+    align-items: center;
+  }
+  @media screen and (max-width: $max-500) {
+    padding-inline: rem(30);
+  }
+}
+.cardTitle {
+  @include gilroy(400);
+  font-size: rem(16);
+  color: $white;
+  line-height: 1.5;
+
+  @media screen and (max-width: $max-800) {
+    text-align: center;
+    text-wrap: balance;
+  }
+}
+.columnInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(6);
+}
+.columnFileInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(6);
+
+  @media screen and (max-width: $max-800) {
+    justify-content: space-between;
+    border-radius: rem(50);
+    border: rem(1) solid #eeedeb;
+    width: 100%;
+    flex-direction: row-reverse;
+    padding: rem(8);
+    padding-left: rem(20);
+    max-width: rem(350);
+  }
+}
+.inputsWrapper {
+  display: flex;
+  align-items: center;
+  gap: rem(20);
+
+  @media (max-width: $max-1100) {
+    flex-direction: column;
+  }
+}
+.form {
+  display: flex;
+  align-items: flex-start;
+  gap: rem(26);
+
+  @media screen and (max-width: $max-600) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.labelText {
+  @include gilroy(400);
+  font-size: rem(12);
+  color: $white;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+.inputWrapper {
+  max-width: rem(260);
+  min-width: rem(260);
+  width: 100%;
+  position: relative;
+
+  @media (max-width: $max-1100) {
+    width: 100%;
+    max-width: rem(350);
+  }
+  @media (max-width: $max-400) {
+    max-width: rem(300);
+    min-width: auto;
+    min-width: none;
+  }
+}
+.input {
+  background: #eeedea;
+  padding: rem(25) rem(30);
+  padding-right: rem(50);
+  border-radius: rem(50);
+  width: 100%;
+  color: #4f4a46;
+  transition: 0.2s;
+  border: 0;
+  outline: none;
+
+  &::-webkit-input-placeholder {
+    opacity: 1;
+    font-size: rem(14);
+  }
+
+  &::-moz-placeholder {
+    opacity: 1;
+    font-size: rem(14);
+  }
+
+  &:-ms-input-placeholder {
+    opacity: 1;
+    font-size: rem(14);
+  }
+
+  &::-ms-input-placeholder {
+    opacity: 1;
+    font-size: rem(14);
+  }
+
+  &::placeholder {
+    opacity: 1;
+    font-size: rem(14);
+  }
+
+  &:focus {
+    border: 0;
+    outline: none;
+    background-color: darken(#eeedea, 5%);
+  }
+
+  &.error {
+    background-color: rgb(231, 152, 152);
+  }
+}
+.inputIcon {
+  color: #cecdcb;
+  fill: #cecdcb;
+  max-width: rem(17);
+  width: 100%;
+  position: absolute;
+  right: rem(30);
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.inputFile {
+  display: none;
+}
+.labelFile {
+  background: linear-gradient(202deg, #eeedea 0%, #edecea 100%);
+  width: rem(70);
+  height: rem(70);
+  min-width: rem(70);
+  aspect-ratio: 1/1;
+  border-radius: rem(50);
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    background: linear-gradient(
+      202deg,
+      darken(#eeedea, 5%) 0%,
+      darken(#edecea, 5%) 100%
+    );
+  }
+}
+.inputIconCenter {
+  color: #f28c6b;
+  fill: #f28c6b;
+  max-width: rem(17);
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.button {
+  min-width: rem(230);
+  font-size: rem(12);
+
+  @media screen and (max-width: $max-800) {
+    max-width: rem(350);
+  }
+}
+.text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.infoText {
+  @include gilroy(400);
+  font-size: rem(10);
+  color: $white;
+  margin-top: rem(4);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  & button {
+    color: #f28c6b;
+    text-decoration: none;
+    border: 0;
+    outline: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  @media screen and (max-width: $max-800) {
+    max-width: rem(230);
+  }
+}
+
+.moreText {
+  @include gilroy(500);
+  font-style: italic;
+  text-wrap: pretty;
+  position: relative;
+  z-index: 2;
+  font-size: rem(16);
+  color: #a3863d;
+
+  & span {
+    font-weight: 700;
+  }
+
+  @media screen and (max-width: $max-800) {
+    text-align: center;
+  }
+}
+
+.tags {
+  display: flex;
+  align-items: center;
+  gap: rem(15);
+  position: relative;
+  z-index: 2;
+
+  &.upperTags {
+    @media screen and (max-width: $max-950) {
+      margin-top: rem(-30);
+    }
+  }
+
+  &.column {
+    .tagWrapper {
+      display: flex;
+      align-items: center;
+      gap: rem(15);
+    }
+
+    @media screen and (max-width: $max-950) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: rem(50);
+
+      &.upperTags {
+        margin-top: rem(20);
+
+        @media screen and (max-width: $max-700) {
+          margin-top: rem(40);
+        }
+      }
+
+      .tagWrapper {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}
+.tag {
+  @include gilroy(500);
+  font-size: rem(20);
+  color: $white;
+
+  @media screen and (max-width: $max-768) {
+    font-size: rem(16);
+  }
+}
+.circle {
+  width: rem(10);
+  height: rem(10);
+  border-radius: rem(100);
+  background-color: #d56745;
+  -webkit-filter: drop-shadow(0px 0px 8.2px rgba(255, 255, 255, 0.25));
+  filter: drop-shadow(0px 0px 8.2px rgba(255, 255, 255, 0.25));
+
+  &.last {
+    display: none;
+
+    @media screen and (max-width: $max-950) {
+      display: block;
+    }
+  }
+}

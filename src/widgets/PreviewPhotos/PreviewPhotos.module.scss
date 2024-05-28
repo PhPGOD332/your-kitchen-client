@@ -1,0 +1,145 @@
+@import "@/shared/styles/_vars";
+
+.closeButton {
+  @include gilroy(400);
+  color: #fff;
+  font-size: rem(54);
+  position: absolute;
+  top: 0;
+  right: rem(-10);
+  z-index: 10;
+  border: 0;
+  outline: none;
+  padding: rem(20);
+  background: transparent;
+  cursor: pointer;
+  transition: 0.2s;
+  opacity: 0.6;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+.preview {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+  display: flex;
+  padding-top: rem(50);
+  justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+.relative {
+  position: relative;
+  width: 100%;
+}
+.previewSlider {
+  @include container();
+  max-height: 70vh;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  position: relative;
+}
+.previewSlide {
+  min-width: rem(250);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+  object-position: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 0 rem(30);
+}
+.previewImg {
+  width: 80%;
+  height: 100%;
+  object-fit: contain;
+  -o-object-fit: contain;
+  -o-object-position: center;
+  object-position: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: rem(6);
+
+  @media screen and (max-width: $max-768) {
+    width: 95%;
+  }
+}
+.thumbsSlider {
+  position: fixed;
+  bottom: rem(30);
+  max-width: rem(590);
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: rem(100);
+  background-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  overflow: hidden;
+
+  @media (max-width: $max-650) {
+    max-width: rem(360);
+  }
+
+  @media (max-width: $max-400) {
+    max-width: rem(230);
+  }
+}
+.thumbsSlide {
+  max-width: rem(100);
+  min-width: rem(100);
+  aspect-ratio: 1/1;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  margin: 0 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+.thumbsImg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: rem(6);
+}

@@ -1,0 +1,50 @@
+@import "@/shared/styles/_vars";
+
+.clientDocument {
+  background-color: #fff;
+  padding: rem(10);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: rem(10);
+}
+.side {
+  display: flex;
+  align-items: center;
+  gap: rem(10);
+}
+.name {
+  color: #000;
+  cursor: text;
+}
+.checkbox {
+  cursor: pointer;
+}
+.button {
+  @include gilroy(500);
+  font-size: rem(16);
+  color: #000;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  transition: 0.1s;
+  background-color: #f0f0f0;
+  padding: rem(6) rem(14);
+  border-radius: rem(6);
+
+  &:hover {
+    background-color: darken(#f0f0f0, 5%);
+  }
+
+  &.orange {
+    @include orange-gradient();
+    color: #fff;
+  }
+}
+.image {
+  max-width: rem(60);
+  width: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}

@@ -1,0 +1,30 @@
+@import '@/shared/styles/_vars';
+
+.rotateUp {
+	transform: rotate(-90deg);
+	@include gilroy(400);
+	font-size: rem(20);
+	line-height: 1;
+	cursor: pointer;
+}
+.rotateDown {
+	transform: rotate(90deg);
+	@include gilroy(400);
+	font-size: rem(20);
+	line-height: 1;
+	cursor: pointer;
+}
+.rotateLeft {
+	transform: rotate(180deg);
+	@include gilroy(400);
+	font-size: rem(20);
+	line-height: 1;
+	cursor: pointer;
+}
+.rotateRight {
+	transform: rotate(0deg);
+	@include gilroy(400);
+	font-size: rem(20);
+	line-height: 1;
+	cursor: pointer;
+}

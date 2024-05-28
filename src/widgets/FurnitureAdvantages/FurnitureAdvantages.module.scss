@@ -1,0 +1,64 @@
+@import '@/shared/styles/_vars';
+
+.advantages {
+	padding: rem(50) 0;
+	// background: linear-gradient(
+	// 	180deg,
+	// 	#433a31 0%,
+	// 	#332e2a 11.08%,
+	// 	#282320 19.17%,
+	// 	#2c2b29 100%
+	// );
+}
+.container {
+	@include container();
+}
+.title {
+	@include title(300);
+}
+.items {
+	margin-top: rem(75);
+	display: flex;
+	justify-content: center;
+	gap: rem(60);
+	flex-wrap: wrap;
+	align-items: flex-start;
+
+	@media screen and (max-width: $max-768) {
+		gap: rem(30);
+	}
+}
+.item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	max-width: rem(310);
+	width: 100%;
+
+	&.more {
+		max-width: rem(380);
+	}
+}
+.icon {
+	fill: #fff;
+	-webkit-filter: drop-shadow(0px 0px rem(50) #f28c6b)
+		drop-shadow(0px 0px rem(50) #f28c6b);
+	filter: drop-shadow(0px 0px rem(50) #f28c6b)
+		drop-shadow(0px 0px rem(50) #f28c6b);
+	height: rem(64);
+}
+.itemTitle {
+	margin-top: rem(20);
+	@include noto(500);
+	font-size: rem(16);
+	color: $white;
+	text-align: center;
+}
+.itemText {
+	margin-top: rem(15);
+	text-align: center;
+	@include gilroy(400);
+	font-size: rem(16);
+	color: $white;
+}

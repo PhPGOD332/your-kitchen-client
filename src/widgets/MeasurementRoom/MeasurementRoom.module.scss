@@ -1,0 +1,75 @@
+.measuresScreen {
+
+
+  .measuresTitle {
+    text-align: center;
+    line-height: 130%;
+    font-size: 41px;
+    max-width: 1145px;
+    margin: 0 auto;
+    margin-bottom: 46px;
+    padding: 0 30px;
+
+    @media screen and (max-width: 700px) {
+      font-size: 32px;
+      font-weight: lighter;
+    }
+  }
+
+  .measureCard {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 40px;
+
+    @media screen and (max-width: 700px) {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  .measuresDescription {
+    max-width: calc(100% - 30px);
+
+    @media screen and (max-width: 700px) {
+      order: 0;
+    }
+  }
+
+  .descriptionSubtitle {
+    font-family: 'GilroyBold', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 115%;
+    margin-bottom: 20px;
+
+    @media screen and (max-width: 700px) {
+      font-family: 'Gilroy', sans-serif;
+      font-weight: normal;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .descriptionText {
+    font-size: 16px;
+    line-height: 146%;
+    width: 100%;
+    max-width: 100%;
+
+    @media screen and (max-width: 700px) {
+      font-size: 14px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      max-width: 100%;
+
+      @media screen and (max-width: 700px) {
+        &:nth-of-type(1) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

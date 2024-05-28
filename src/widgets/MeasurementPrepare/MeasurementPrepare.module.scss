@@ -1,0 +1,124 @@
+.preparesSection {
+  z-index: 2;
+
+  @media screen and (max-width: 950px) {
+    margin-bottom: 300px !important;
+  }
+
+  .preparesCard {
+    border-radius: 12px;
+    background-color: #332E2A;
+  }
+
+  .cardContainer {
+    position: relative;
+    padding: 45px 40px 40px 45px;
+    overflow: clip;
+    border-radius: 12px;
+    background-color: #2A2623;
+    z-index: 2;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: calc(-563px / 2.5);
+      left: calc(-545px / 5);
+      width: 563px;
+      height: 545px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(#98826D, 0.35) 0, #3f3830 35%, #2A2623 70%);
+      z-index: -1;
+      outline: none;
+
+      @media screen and (max-width: 700px) {
+        top: calc(-463px / 2.5);
+        left: calc(-445px / 2);
+        width: 463px;
+        height: 445px;
+      }
+
+      @media screen and (max-width: 900px) {
+        top: calc(-540px / 2.5);
+        left: calc(-540px / 2);
+        width: 540px;
+        height: 540px;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: calc(-563px / 2.5);
+      right: calc(-545px / 5);
+      width: 563px;
+      height: 545px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(#98826D, 0.35) 0, #3f3830 35%, #2A2623 70%);
+      z-index: -1;
+
+      @media screen and (max-width: 700px) {
+        bottom: calc(-463px / 2.5);
+        right: calc(-445px / 2);
+        width: 463px;
+        height: 445px;
+      }
+
+      @media screen and (max-width: 900px) {
+        bottom: calc(-540px / 2.5);
+        right: calc(-540px / 2);
+        width: 540px;
+        height: 540px;
+      }
+    }
+  }
+
+  .preparesTitle {
+    font-size: 24px;
+    margin-bottom: 40px;
+    line-height: 130%;
+
+    @media screen and (max-width: 700px) {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+  }
+
+  .enumPrepares {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 73px;
+    counter-reset: section;
+
+    @media screen and (max-width: 700px) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+
+  }
+
+  .prepareItem {
+
+
+    &:before {
+      counter-increment: section;
+      content: "0" counter(section) ".";
+      color: #F28C6B;
+      font-family: 'DM Serif Display', sans-serif;
+      font-size: 42px;
+    }
+
+    .prepareText {
+      font-size: 16px;
+      letter-spacing: 0.02rem;
+      margin-top: 10px;
+
+      @media screen and (max-width: 700px) {
+        font-size: 14px;
+      }
+    }
+  }
+}

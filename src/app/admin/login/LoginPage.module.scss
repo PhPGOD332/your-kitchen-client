@@ -1,0 +1,54 @@
+@import "@/shared/styles/_vars";
+
+.loginPage {
+  min-height: 100vh;
+  padding-top: rem(50);
+  background-color: #433a31;
+  padding-bottom: rem(50);
+}
+.container {
+  @include container();
+}
+.form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  gap: rem(50);
+}
+.error {
+  font-size: rem(20);
+  color: red;
+  margin-bottom: rem(20);
+  cursor: text;
+  text-align: center;
+}
+.title {
+  @include gilroy(400);
+  font-size: rem(28);
+  text-align: center;
+  color: #fff;
+  margin-top: rem(100);
+  margin-bottom: rem(50);
+}
+.input {
+  max-width: rem(400);
+  width: 100%;
+  color: #000;
+  background-color: #fff;
+  padding: rem(10) rem(30);
+  border-radius: rem(8);
+  outline: none;
+  border: 0;
+}
+.button {
+  @include orange-gradient();
+  max-width: rem(400);
+  width: 100%;
+  padding: rem(10) rem(30);
+  border-radius: rem(8);
+  outline: none;
+  font-size: rem(20);
+  color: #fff;
+}

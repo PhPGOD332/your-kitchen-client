@@ -1,0 +1,19 @@
+@import "@/shared/styles/_vars";
+
+.unavailable {
+  cursor: not-allowed;
+  opacity: 0.6;
+
+  & * {
+    cursor: not-allowed;
+  }
+  & a {
+    cursor: not-allowed;
+  }
+  & div {
+    cursor: not-allowed;
+  }
+  & button {
+    cursor: not-allowed;
+  }
+}

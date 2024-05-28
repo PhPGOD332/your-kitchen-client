@@ -1,0 +1,19 @@
+@import "@/shared/styles/_vars";
+
+.bg {
+  background: linear-gradient(
+    180deg,
+    #433a31 0%,
+    #433a31 11.08%,
+    #433a31 19.17%,
+    #433a31 29.31%,
+    #363435 50.3%,
+    #2c2b29 100%
+  );
+}
+.wrapper {
+  padding: rem(50) 0;
+}
+.darkBg {
+  background: linear-gradient(180deg, #312d2a 0%, #35302c 57.29%, #312d2a 100%);
+}

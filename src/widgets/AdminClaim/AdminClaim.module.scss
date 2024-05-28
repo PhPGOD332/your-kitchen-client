@@ -1,0 +1,98 @@
+@import "@/shared/styles/_vars";
+
+.claim {
+  background-color: $white;
+  padding: rem(12);
+  border-radius: rem(12);
+  @include gilroy(400);
+  cursor: default;
+  color: #111;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(10);
+}
+.title {
+  font-size: rem(20);
+  cursor: text;
+}
+.info {
+  margin-top: rem(10);
+  display: flex;
+  flex-direction: column;
+  gap: rem(10);
+
+  @media (max-width: $max-1000) {
+    margin-top: rem(6);
+    gap: rem(6);
+  }
+}
+.fieldWrapper {
+  display: flex;
+  align-items: center;
+  gap: rem(10);
+  justify-content: space-between;
+
+  @media (max-width: $max-1000) {
+    justify-content: flex-start;
+  }
+}
+.fieldTitle {
+  cursor: text;
+  font-weight: 600;
+  white-space: nowrap;
+  display: inline;
+}
+.fieldValue {
+  display: inline;
+  cursor: text;
+  margin-left: rem(10);
+}
+.fieldInfo {
+  display: inline-block;
+  align-items: center;
+}
+.fieldInfoLink {
+  display: inline-block;
+  align-items: center;
+  color: $accent1;
+}
+.button {
+  outline: none;
+  border: 0;
+
+  &:hover {
+    .icon path {
+      stroke: $accent1;
+    }
+  }
+
+  &.success {
+    .icon {
+      fill: green;
+    }
+  }
+}
+.icon {
+  transition: 0.2s;
+  color: transparent;
+  max-width: rem(30);
+  width: 100%;
+
+  & path {
+    transition: 0.2s;
+    stroke: #000;
+  }
+}
+.input {
+  border-bottom: 1px solid #000;
+  outline: none;
+}

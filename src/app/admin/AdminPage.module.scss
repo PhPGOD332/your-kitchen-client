@@ -1,0 +1,28 @@
+@import "@/shared/styles/_vars";
+
+.adminPage {
+  min-height: 100vh;
+  padding-top: rem(50);
+  background-color: #433a31;
+  padding-bottom: rem(50);
+}
+.container {
+  @include container();
+  display: flex;
+  height: 100%;
+}
+.signInButton {
+  @include orange-gradient();
+  padding: rem(10) rem(50);
+  border-radius: rem(8);
+  outline: none;
+  font-size: rem(20);
+  color: #fff;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+  margin: 0 auto;
+}
+.preloader {
+  width: rem(100);
+}

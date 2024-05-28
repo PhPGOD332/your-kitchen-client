@@ -1,0 +1,267 @@
+@use "sass:math";
+
+// Colors
+$accent1: #178af5;
+
+$shadow1: #f28c6b;
+
+$white: #ffffff;
+$beige: #c5b49e;
+
+$light-black: #212121;
+
+// Text
+@mixin H1-1920() {
+  font-weight: 500;
+  font-size: 4.6875rem; // 75px
+  line-height: 1.1;
+  cursor: text;
+}
+
+@mixin H2-1920() {
+  font-weight: 500;
+  font-size: 3.75rem; // 60px
+  line-height: 1.2;
+  cursor: text;
+}
+
+@mixin H3-1920() {
+  font-weight: 500;
+  font-size: 1.875rem; // 30px
+  cursor: text;
+  line-height: 1.2;
+}
+
+@mixin link() {
+  font-weight: 500;
+  font-size: 1.25rem; // 20px
+  line-height: 1.2;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: color;
+
+  &:hover {
+    color: darken($accent1, 10%);
+  }
+}
+
+@mixin paragraph-1920() {
+  font-weight: 400;
+  font-size: 1.25rem; // 20px
+  line-height: 1.2;
+  cursor: text;
+}
+
+@mixin p-mini() {
+  font-weight: 400;
+  font-size: 1.125rem; // 18px
+  line-height: 1.2;
+  cursor: text;
+}
+
+@mixin photo-desc() {
+  font-weight: 400;
+  font-style: oblique 10deg;
+  font-size: 1.125rem; // 18px
+  line-height: 1.2;
+  cursor: text;
+}
+
+@mixin p-medium() {
+  font-weight: 500;
+  font-size: 1.25rem; // 20px
+  line-height: 1.2;
+  cursor: text;
+}
+
+@mixin H1-mobile() {
+  font-weight: 500;
+  font-size: 2.375rem; // 30px
+  line-height: 1.2;
+  cursor: text;
+}
+@mixin H2-mobile() {
+  font-weight: 500;
+  font-size: 1.625rem; // 26px
+  line-height: 1.2;
+  cursor: text;
+}
+
+@mixin H3-mobile() {
+  font-weight: 500;
+  font-size: 1.25rem; // 20px
+  line-height: 1.2;
+  cursor: text;
+}
+
+@mixin paragraph-mobile() {
+  font-weight: 400;
+  font-size: 1rem; // 16px
+  line-height: 1.25;
+  cursor: text;
+}
+
+@mixin link-mobile() {
+  font-weight: 400;
+  font-size: 1rem; // 16px
+  line-height: 1.25;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: color;
+
+  &:hover {
+    color: darken($accent1, 10%);
+  }
+}
+@mixin title($weight: 400) {
+  @include noto($weight);
+  font-size: rem(40);
+  color: #fff;
+  line-height: 1.3;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+
+  & span {
+    background-color: #7b402e;
+    padding: rem(5) rem(15);
+    border-radius: rem(50);
+  }
+
+  @media (max-width: $max-768) {
+    font-weight: 300;
+    font-size: rem(24);
+  }
+}
+// Fonts
+@mixin gilroy($weight) {
+  font-family: "Gilroy", sans-serif;
+  font-weight: $weight;
+  cursor: text;
+}
+@mixin noto($weight) {
+  font-family: "Noto Sefis", sans-serif;
+  font-weight: $weight;
+  cursor: text;
+}
+@mixin dm() {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@mixin playfair($weight) {
+  font-family: "Playfair Display SC", serif;
+  font-weight: $weight;
+  font-style: normal;
+}
+@mixin text-gradient() {
+  background: linear-gradient(
+    180deg,
+    #fff 0%,
+    rgba(255, 255, 255, 0) 100%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@mixin text-gradient2() {
+  background: linear-gradient(
+    180deg,
+    #ddd5cb -12.9%,
+    rgba(218, 205, 194, 0) 88.22%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@mixin orange-gradient() {
+  background: radial-gradient(
+    circle,
+    rgba(242, 140, 107, 1) 0%,
+    rgba(211, 97, 61, 1) 100%
+  ) !important;
+  border: 1px solid transparent;
+  transition: 0.3s;
+
+  &:hover {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+  }
+}
+@mixin strings($string-count) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  display: -webkit-box;
+  -webkit-line-clamp: $string-count;
+  -webkit-box-orient: vertical;
+  line-clamp: $string-count;
+  box-orient: vertical;
+}
+// Convert
+
+@function rem($px) {
+  $result: math.div($px, 16) + rem;
+  @return $result;
+}
+@function em($px) {
+  $result: math.div($px, 16) + em;
+  @return $result;
+}
+
+@mixin container() {
+  max-width: rem(1100);
+  padding: 0 20px;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (max-width: $max-768) {
+    padding: 0 15px;
+  }
+}
+
+@mixin container-mini() {
+  max-width: rem(800);
+  padding: 0 20px;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (max-width: $max-768) {
+    padding: 0 15px;
+  }
+}
+
+@mixin position-center() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Responsive
+
+$max-1400: em(1400);
+$max-1300: em(1300);
+$max-1200: em(1200);
+$max-1100: em(1100);
+$max-1000: em(1000);
+$max-950: em(950);
+$max-900: em(900);
+$max-850: em(850);
+$max-800: em(800);
+$max-768: em(768);
+$max-700: em(700);
+$max-650: em(650);
+$max-600: em(600);
+$max-550: em(550);
+$max-500: em(500);
+$max-450: em(450);
+$max-400: em(400);

@@ -1,0 +1,1 @@
+.loading{color:#000;fill:#000;max-width:6.25rem;margin:0 auto;animation:loading .5s infinite linear}.loading circle{stroke:#000}@keyframes loading{0%{transform:rotate(0)}100%{transform:rotate(360)}}

@@ -1,0 +1,76 @@
+@import '@/shared/styles/_vars';
+
+.page {
+	padding-top: rem(50);
+	padding-bottom: rem(50);
+	height: 100%;
+	min-height: 90vh;
+	background: linear-gradient(
+		180deg,
+		#282320 0%,
+		#322d29 25.78%,
+		#35302c 57.29%,
+		#2d2928 100%
+	);
+	width: 100%;
+}
+.container {
+	@include container();
+	width: 100%;
+}
+.wrapper {
+	padding-top: rem(150);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	gap: rem(50);
+
+	@media (max-width: $max-768) {
+		flex-direction: column;
+		gap: rem(20);
+		padding-top: rem(80);
+	}
+}
+.column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.buttonWrapper {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+.button {
+	margin-top: rem(20);
+}
+.title {
+	@include noto(400);
+	font-size: rem(20);
+	text-align: center;
+	color: #fff;
+	margin-left: rem(30);
+
+	@media (max-width: $max-768) {
+		margin-left: 0;
+	}
+}
+.errorImg {
+	margin-top: rem(10);
+	max-width: rem(515);
+	width: 100%;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.kitchenImg {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	max-width: rem(370);
+	width: 100%;
+}

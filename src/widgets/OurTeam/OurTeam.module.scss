@@ -1,0 +1,96 @@
+@import "@/shared/styles/_vars";
+
+.ourTeamPage {
+  background: linear-gradient(
+    180deg,
+    #2d2928 -32.49%,
+    #2a2827 31%,
+    #393632 70.94%,
+    #312d2a 97.56%,
+    #35302c 121.7%,
+    #2d2928 236.64%
+  );
+  padding-top: rem(50);
+  position: relative;
+  padding-bottom: rem(50);
+}
+.container {
+  @include container();
+}
+.titleWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.title {
+  max-width: rem(610);
+  @include noto(400);
+  font-size: rem(40);
+  line-height: 1.3;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+
+  & span {
+    position: relative;
+    z-index: 2;
+    margin: 0 rem(10);
+
+    &::before {
+      content: "";
+      @include position-center();
+      width: rem(50);
+      height: rem(50);
+      border-radius: rem(50);
+      background-color: #7b402e;
+      z-index: -1;
+    }
+  }
+
+  @media (max-width: $max-768) {
+    font-size: rem(24);
+    max-width: rem(390);
+
+    & span {
+      margin: 0 rem(6);
+    }
+
+    & span:before {
+      width: rem(30);
+      height: rem(30);
+    }
+  }
+}
+.bgText {
+  @include playfair(700);
+  font-size: rem(126);
+  max-width: rem(470);
+  opacity: 0.1;
+  color: #a89e94;
+  line-height: 0.8;
+  text-align: center;
+  @include position-center();
+  white-space: nowrap;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  @media (max-width: $max-600) {
+    font-size: rem(70);
+  }
+}
+.slider {
+  width: 100%;
+  margin-top: rem(40);
+}
+.error {
+  @include gilroy(400);
+  font-size: rem(24);
+  text-align: center;
+  color: #fff;
+  margin-top: rem(50);
+  position: relative;
+}

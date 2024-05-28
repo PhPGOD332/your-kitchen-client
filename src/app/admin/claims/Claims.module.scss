@@ -1,0 +1,46 @@
+@import "@/shared/styles/_vars";
+
+.claimsPage {
+  min-height: 100vh;
+  padding-top: rem(50);
+  background-color: #433a31;
+  padding-bottom: rem(50);
+}
+.preloader {
+  width: rem(100);
+}
+.title {
+  font-size: rem(42);
+  color: #fff;
+  @include gilroy(400);
+  margin-bottom: rem(30);
+}
+.container {
+  @include container();
+  padding-left: rem(320);
+
+  @media (max-width: $max-768) {
+    padding-left: rem(320);
+  }
+}
+.claims {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: rem(30);
+
+  @media (max-width: $max-1000) {
+    grid-template-columns: 1fr;
+  }
+}
+.authText {
+  color: #fff;
+  font-size: rem(20);
+  cursor: text;
+}
+.error {
+  font-size: rem(20);
+  color: red;
+  margin-top: rem(20);
+  cursor: text;
+}

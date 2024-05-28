@@ -1,0 +1,21 @@
+:root {
+  --swiper-navigation-size: 16px !important;
+  /* --swiper-scrollbar-sides-offset: 50%; */
+}
+
+.swiper-button-next {
+  background-color: rgba(40, 35, 32, 0.67) !important;
+  border-radius: 20rem !important;
+  color: #fff !important;
+  right: 20px !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+.swiper-button-prev {
+  background-color: rgba(40, 35, 32, 0.67) !important;
+  border-radius: 20rem !important;
+  color: #fff !important;
+  left: 20px !important;
+  width: 40px !important;
+  height: 40px !important;
+}

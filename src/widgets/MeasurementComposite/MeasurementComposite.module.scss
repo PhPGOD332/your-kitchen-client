@@ -1,0 +1,34 @@
+.compositeContainer {
+
+  position: relative;
+
+  .compositeBgBlock {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+
+    .maskImg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(to top, #332E2A 0, rgba(#332E2A, 0.4) 40%, rgba(#332E2A, 0.3) 50%, rgba(#332E2A, 0.4) 60%, #332E2A 100%) top;
+      mask-image: radial-gradient(ellipse 50% 50% at 15% 50%, transparent 0, rgba(#000, 0.8) 30%, #000 100%);
+      z-index: -1;
+    }
+
+    .compositeBgImg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+  }
+}

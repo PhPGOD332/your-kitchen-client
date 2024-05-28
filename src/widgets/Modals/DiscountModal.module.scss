@@ -1,0 +1,346 @@
+@import "@/shared/styles/_vars";
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(40, 35, 32, 0.7);
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transition: 0.2s;
+  cursor: pointer;
+
+  &.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.modalInner {
+  width: 100%;
+  height: 80vh;
+  background-color: #232222;
+  border-radius: rem(12);
+  display: flex;
+  flex-direction: column;
+  cursor: default;
+  overflow: hidden;
+  overflow-y: auto;
+  position: relative;
+  padding-bottom: rem(40);
+}
+.upper {
+  margin-top: rem(-1);
+  padding: rem(30) rem(40);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: rem(-1);
+  z-index: 101;
+  background-color: #232222;
+  gap: rem(20);
+
+  @media (max-width: $max-768) {
+    padding: rem(20);
+    align-items: flex-start;
+  }
+}
+.name {
+  @include gilroy(600);
+  font-size: rem(24);
+  color: $white;
+  text-wrap: pretty;
+
+  @media (max-width: $max-768) {
+    font-size: rem(20);
+  }
+}
+.bgText {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 0;
+  @include playfair(700);
+  font-size: rem(110);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  opacity: 0.1;
+  background: linear-gradient(
+    180deg,
+    #fff 65.38%,
+    rgba(255, 255, 255, 0) 81.82%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: rem(6);
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  @media screen and (max-width: $max-850) {
+    font-size: rem(70);
+    text-align: center;
+  }
+
+  @media (max-width: $max-768) {
+    top: 25%;
+  }
+
+  @media screen and (max-width: $max-450) {
+    font-size: rem(56);
+    bottom: rem(-50);
+  }
+}
+.closeButton {
+  @include gilroy(400);
+  color: $white;
+  font-size: rem(54);
+  border: 0;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.2s;
+  max-width: rem(26);
+  width: 100%;
+  height: rem(26);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    color: darken($white, 10%);
+  }
+
+  @media screen and (max-width: $max-768) {
+    padding-top: rem(20);
+  }
+}
+.label {
+  margin-top: rem(30);
+  @include gilroy(400);
+  font-size: rem(16);
+  color: $white;
+  padding: 0 rem(40);
+  margin-bottom: rem(10);
+
+  @media (max-width: $max-768) {
+    padding: 0 rem(20);
+  }
+}
+.description {
+  position: relative;
+  z-index: 10;
+  @include gilroy(400);
+  font-size: rem(18);
+  color: $white;
+  padding: 0 rem(40);
+
+  @media (max-width: $max-768) {
+    padding: 0 rem(20);
+  }
+}
+.content {
+  position: relative;
+  z-index: 100;
+  color: $white;
+  font-family: "Gilroy", sans-serif;
+  padding: 0 rem(40);
+
+  & p {
+    cursor: text;
+    font-size: rem(18);
+    min-height: rem(22);
+  }
+
+  & a {
+    font-weight: 500;
+    font-style: italic;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #fff;
+    font-family: "Gilroy", sans-serif;
+  }
+
+  & br {
+    height: rem(20);
+  }
+
+  & ul,
+  ol {
+    padding: rem(10) 1rem;
+    margin-left: rem(10);
+  }
+
+  & ul {
+    list-style: disc;
+
+    & li::marker {
+      font-size: rem(30);
+    }
+  }
+  & ol {
+    list-style: decimal;
+
+    & li::marker {
+      font-size: rem(22);
+    }
+  }
+
+  & h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.1;
+    cursor: text;
+  }
+
+  & h1 {
+    font-size: rem(40);
+  }
+
+  & h2 {
+    font-size: rem(36);
+  }
+
+  & h3 {
+    font-size: rem(32);
+  }
+
+  & h4 {
+    font-size: rem(28);
+  }
+
+  & h5 {
+    font-size: rem(24);
+  }
+
+  & h6 {
+    font-size: rem(22);
+  }
+
+  & code {
+    background-color: rgba(#616161, 0.1);
+    color: #616161;
+  }
+
+  & pre {
+    background: #0d0d0d;
+    color: #fff;
+    font-family: "JetBrainsMono", monospace;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+
+    & code {
+      color: inherit;
+      padding: 0;
+      background: none;
+      font-size: 0.8rem;
+    }
+  }
+
+  & img {
+    margin: rem(50) auto;
+    max-width: rem(720);
+    width: 100%;
+    max-height: rem(400);
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    border-radius: rem(6);
+
+    -webkit-mask: linear-gradient(
+      0deg,
+      rgba(40, 35, 32, 0.4) 0%,
+      rgba(40, 35, 32, 1) 56.4%,
+      rgba(40, 35, 32, 0.4) 100%
+    );
+
+    mask: linear-gradient(
+      0deg,
+      rgba(40, 35, 32, 0.4) 0%,
+      rgba(40, 35, 32, 1) 56.4%,
+      rgba(40, 35, 32, 0.4) 100%
+    );
+  }
+
+  & blockquote {
+    padding-left: 1rem;
+    border-left: 2px solid rgba(#fff, 0.5);
+  }
+
+  & hr {
+    border: none;
+    border-top: 2px solid rgba(#fff, 0.5);
+    margin: 2rem 0;
+  }
+
+  @media (max-width: $max-768) {
+    margin-top: rem(30);
+    padding: 0 rem(20);
+
+    & p {
+      font-size: rem(16);
+      min-height: rem(18);
+    }
+
+    & ul li::marker {
+      font-size: rem(20);
+    }
+    & ol li::marker {
+      font-size: rem(18);
+    }
+
+    & h1 {
+      font-size: rem(36);
+    }
+
+    & h2 {
+      font-size: rem(32);
+    }
+
+    & h3 {
+      font-size: rem(28);
+    }
+
+    & h4 {
+      font-size: rem(24);
+    }
+
+    & h5 {
+      font-size: rem(20);
+    }
+
+    & h6 {
+      font-size: rem(18);
+    }
+
+    & img {
+      margin: rem(30) auto;
+      max-height: rem(180);
+    }
+  }
+}
+.lower {
+}
+.container {
+  @include container();
+  position: relative;
+}

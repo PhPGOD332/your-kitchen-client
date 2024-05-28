@@ -1,0 +1,30 @@
+.loading {
+  color: #000;
+  fill: #000;
+  max-width: 6.25rem;
+  margin: 0 auto;
+  -webkit-animation: loading 0.5s infinite linear;
+  animation: loading 0.5s infinite linear;
+
+  & circle {
+    stroke: #000;
+  }
+}
+
+@-webkit-keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360);
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360);
+  }
+}

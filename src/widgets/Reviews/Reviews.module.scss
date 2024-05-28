@@ -1,0 +1,358 @@
+@import "@/shared/styles/_vars";
+
+.reviewsPage {
+  padding-top: rem(150);
+  padding-bottom: rem(50);
+  background: linear-gradient(
+    180deg,
+    #282320 -194.94%,
+    #322d29 -125.8%,
+    #35302c -41.3%,
+    #2d2928 73.23%
+  );
+  position: relative;
+}
+.reviewsPageWithoutBg {
+  padding-top: rem(150);
+  padding-bottom: rem(50);
+  position: relative;
+}
+
+.container {
+  @include container();
+}
+.bgText {
+  background: linear-gradient(
+    180deg,
+    #a89e94 -31.66%,
+    rgba(161, 153, 141, 0) 79.44%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: rem(260);
+  position: absolute;
+  top: rem(-50);
+  white-space: nowrap;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0.2;
+  @include playfair(700);
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  @media (max-width: $max-1300) {
+    font-size: rem(190);
+  }
+  @media (max-width: $max-1000) {
+    font-size: rem(170);
+  }
+  @media (max-width: $max-900) {
+    font-size: rem(150);
+  }
+  @media (max-width: $max-800) {
+    font-size: rem(86);
+    top: 0;
+  }
+  @media (max-width: $max-500) {
+    font-size: rem(60);
+    top: 0;
+  }
+}
+.title {
+  color: #fff;
+  @include noto(500);
+  font-size: rem(40);
+  line-height: 1.3;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+
+  & span {
+    font-weight: 700;
+  }
+
+  @media (max-width: $max-800) {
+    font-size: rem(24);
+  }
+}
+.secondContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  max-width: rem(1700);
+  margin: 0 auto;
+}
+.slider {
+  margin: 0 auto;
+  padding-bottom: rem(80) !important;
+  padding-top: rem(40);
+  margin-top: rem(20);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  @media (max-width: $max-900) {
+    padding: 0 rem(20);
+    padding-bottom: rem(80);
+    padding-top: rem(40);
+  }
+  @media (max-width: $max-800) {
+    padding-bottom: rem(50);
+  }
+}
+.review {
+  width: rem(860);
+  height: rem(400);
+  position: relative;
+  margin: 0 auto;
+
+  @media (max-width: $max-1300) {
+    max-width: rem(760);
+    width: 100%;
+  }
+  @media (max-width: $max-800) {
+    height: rem(550);
+  }
+}
+.cardWrapper {
+  width: 100%;
+  height: 100%;
+
+  @media (max-width: $max-800) {
+    margin: 0 auto;
+    padding: 0 rem(20);
+    padding-bottom: rem(50);
+  }
+}
+.personCard {
+  background-color: #fff;
+  padding: rem(25) rem(35);
+  max-width: rem(392);
+  width: 100%;
+  overflow: visible;
+  border-radius: rem(6);
+  position: relative;
+  z-index: 2;
+  transition: all 0.2s linear;
+  height: 105%;
+  max-height: rem(304);
+
+  &.open {
+    max-height: rem(420);
+
+    & .reviewText {
+      @include strings(1000);
+      max-height: rem(260);
+      overflow-y: scroll;
+
+      @media (max-width: $max-800) {
+        max-height: rem(150);
+      }
+    }
+  }
+
+  @media (max-width: $max-800) {
+    margin: 0 auto;
+    padding: rem(20);
+    padding-bottom: rem(50);
+  }
+}
+.quotes {
+  position: absolute;
+  max-width: rem(40);
+  width: 100%;
+  right: rem(65);
+  top: rem(-20);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.personInfo {
+  color: $beige;
+  display: flex;
+  align-items: center;
+  @include noto(500);
+  cursor: default;
+  font-size: rem(22);
+}
+.personPhoto {
+  max-width: rem(68);
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: rem(50);
+  overflow: hidden;
+  margin-right: rem(15);
+  background-color: rgb(166, 166, 166);
+}
+.personName {
+  & div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: rem(5);
+    cursor: text;
+  }
+}
+.personFirstName {
+  white-space: nowrap;
+}
+.personLastName {
+  white-space: nowrap;
+}
+.reviewText {
+  @include gilroy(400);
+  color: #2f2f2f;
+  line-height: 1.5;
+  font-size: rem(15);
+  padding-right: rem(80);
+  margin-top: rem(20);
+  @include strings(6);
+  transition: 0.3s ease-in;
+
+  @media (max-width: $max-800) {
+    padding-right: 0;
+    @include strings(7);
+  }
+}
+.reviewLink {
+  font-size: rem(12);
+  text-decoration: underline;
+  color: $beige;
+  @include gilroy(700);
+  line-height: 1.5;
+  margin-top: rem(10);
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  background: transparent;
+  padding: 0;
+  transition: color 0.2s linear;
+
+  &:hover {
+    color: darken($beige, 10%);
+  }
+
+  @media (max-width: $max-800) {
+    margin-top: 0;
+  }
+}
+.reviewSlider {
+  position: absolute !important;
+  bottom: 0;
+  right: 0;
+  z-index: 2 !important;
+  max-width: rem(550);
+  width: 100%;
+  max-height: rem(350);
+  border-radius: rem(6);
+  overflow: hidden;
+
+  @media (max-width: $max-1300) {
+    max-width: rem(450);
+    height: rem(300);
+    bottom: 0;
+  }
+  @media (max-width: $max-800) {
+    right: 50%;
+    transform: translate(50%, 0);
+    max-height: rem(250);
+    max-width: rem(450);
+    width: 100%;
+  }
+}
+.reviewSlide {
+  width: 100%;
+  height: rem(367);
+  border-radius: rem(6);
+
+  @media (max-width: $max-1300) {
+    height: rem(300);
+  }
+
+  & img {
+    width: 100%;
+    height: 100%;
+    border-radius: rem(6);
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+  }
+}
+.previewSlider {
+  position: absolute !important;
+  left: 0;
+  bottom: 0 !important;
+  z-index: 0;
+  max-width: rem(300);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: rem(8);
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (max-width: $max-1300) {
+    max-width: rem(270);
+  }
+  @media (max-width: $max-800) {
+    display: none;
+  }
+}
+.previewImgWrapper {
+  width: rem(80);
+  height: rem(80);
+  max-height: rem(80);
+  overflow: hidden;
+  border-radius: rem(6);
+}
+.errorText {
+  color: #fff;
+  text-align: center;
+  @include noto(400);
+  margin-top: rem(50);
+  font-size: rem(40);
+  position: relative;
+  z-index: 10;
+}
+.previewImg {
+  -o-object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.wrapper {
+  width: 100%;
+  margin-top: rem(20);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icon {
+  max-width: rem(25);
+  width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.text {
+  color: #9d9387;
+  text-align: center;
+  @include gilroy(400);
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+  max-width: rem(300);
+  margin-top: rem(10);
+}

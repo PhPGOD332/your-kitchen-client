@@ -1,0 +1,82 @@
+@import "@/shared/styles/_vars";
+
+.loginPage {
+  min-height: 100vh;
+  padding-top: rem(50);
+  background-color: #433a31;
+  padding-bottom: rem(50);
+}
+.center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  @include container();
+}
+.form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  gap: rem(50);
+  max-width: rem(400);
+  width: 100%;
+  margin: 0 auto;
+}
+.error {
+  font-size: rem(20);
+  color: red;
+  margin-bottom: rem(20);
+  cursor: text;
+  text-align: center;
+}
+.title {
+  @include gilroy(400);
+  font-size: rem(28);
+  text-align: center;
+  color: #fff;
+  margin-top: rem(100);
+  margin-bottom: rem(50);
+}
+.input {
+  max-width: rem(400);
+  width: 100%;
+  color: #000;
+  background-color: #fff;
+  padding: rem(10) rem(30);
+  border-radius: rem(8);
+  outline: none;
+  border: 0;
+}
+.button {
+  @include orange-gradient();
+  max-width: rem(400);
+  width: 100%;
+  padding: rem(10) rem(30);
+  border-radius: rem(8);
+  outline: none;
+  font-size: rem(20);
+  color: #fff;
+}
+.infoText {
+  text-align: center;
+  @include gilroy(400);
+  color: #fff;
+  margin-top: rem(4);
+
+  & button {
+    color: #f28c6b;
+    text-decoration: none;
+    border: 0;
+    outline: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}

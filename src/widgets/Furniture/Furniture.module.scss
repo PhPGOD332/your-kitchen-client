@@ -1,0 +1,34 @@
+@import "@/shared/styles/_vars";
+
+.furniturePage {
+  padding-top: rem(50);
+  padding-bottom: rem(50);
+}
+
+.container {
+  @include container();
+}
+
+.title {
+  @include title(300);
+}
+
+.furnitures {
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: rem(30);
+  margin-top: rem(40);
+  width: 100%;
+  flex-wrap: wrap;
+  margin-bottom: rem(30);
+}
+
+.notFoundText {
+  text-align: center;
+  color: #fff;
+  @include noto(400);
+  font-size: rem(20);
+  margin-top: rem(30);
+}

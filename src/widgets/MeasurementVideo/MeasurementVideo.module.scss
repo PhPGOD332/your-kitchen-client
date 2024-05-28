@@ -1,0 +1,49 @@
+.videoSection {
+
+
+  .videoCard {
+    display: grid;
+    grid-template-columns: 55% 45%;
+
+    @media screen and (max-width: 900px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .videoText {
+    font-size: 16px;
+    padding-right: 70px;
+
+    @media screen and (max-width: 900px) {
+      padding: 0;
+    }
+
+    p:not(:last-of-type) {
+      margin-bottom: 15px;
+    }
+
+    .videoDescription {
+      @media screen and (max-width: 900px) {
+        font-size: 14px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .videoTitle {
+    margin-bottom: 15px;
+    line-height: 130%;
+
+    @media screen and (max-width: 900px) {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+
+  .videoBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

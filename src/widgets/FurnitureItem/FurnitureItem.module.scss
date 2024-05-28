@@ -1,0 +1,135 @@
+@import "@/shared/styles/_vars";
+
+.furniture {
+  max-width: rem(515);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.swiper {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  max-height: rem(370);
+  min-height: rem(370);
+  height: 100%;
+  position: relative;
+  border-radius: rem(12);
+}
+.betweenWrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: rem(4);
+}
+
+.content {
+  margin-top: rem(14);
+  width: 100%;
+  z-index: 2;
+  color: #fff;
+  letter-spacing: rem(0.4);
+}
+
+.name {
+  @include gilroy(700);
+  font-size: rem(22);
+  line-height: 1.5;
+  cursor: text;
+  text-wrap: balance;
+}
+
+.description {
+  @include gilroy(400);
+  font-size: rem(16);
+  line-height: 1.5;
+  margin-top: rem(8);
+  cursor: text;
+  @include strings(6);
+}
+
+.contentWrapper {
+  display: flex;
+  align-items: center;
+  margin-top: rem(14);
+  gap: rem(20);
+
+  @media (max-width: $max-450) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.price {
+  @include noto(400);
+  line-height: 1.3;
+  font-size: rem(22);
+  cursor: text;
+  white-space: nowrap;
+
+  & span {
+    &:last-child {
+      font-size: rem(18);
+    }
+
+    &.brown {
+      color: #73655b;
+      margin-right: rem(5);
+    }
+  }
+}
+.image {
+  width: 100%;
+  height: rem(370);
+  max-height: rem(370);
+  min-height: rem(370);
+  position: relative;
+
+  @media screen and (max-width: $max-600) {
+    height: rem(240);
+    min-height: rem(240);
+    max-height: rem(240);
+  }
+}
+.pagination {
+  top: auto !important;
+  bottom: rem(14) !important;
+}
+
+.img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  border-radius: rem(12);
+  width: 100%;
+  height: 100%;
+  min-height: rem(370);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-mask-image: linear-gradient(
+    0deg,
+    rgb(40, 35, 32, 0.7) 0%,
+    rgba(40, 35, 32, 0.7) 25%,
+    rgba(40, 35, 32, 0.7) 50%,
+    rgba(40, 35, 32, 0.7) 75%,
+    rgba(40, 35, 32, 0.7) 100%
+  );
+
+  mask-image: linear-gradient(
+    0deg,
+    rgb(40, 35, 32, 0.7) 0%,
+    rgba(40, 35, 32, 0.7) 25%,
+    rgba(40, 35, 32, 0.7) 50%,
+    rgba(40, 35, 32, 0.7) 75%,
+    rgba(40, 35, 32, 0.7) 100%
+  );
+}

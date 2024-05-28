@@ -1,0 +1,276 @@
+@import '@/shared/styles/_vars';
+
+.secondScreen {
+	background: linear-gradient(
+		180deg,
+		rgba(67, 58, 49, 0) 0%,
+		#433a31 10%,
+		#332e2a 41.17%,
+		#282320 71.2%
+	);
+	padding-top: rem(150);
+	margin-top: rem(-150);
+
+	// @media (max-width: $max-1000) {
+	//   margin-top: rem(-120);
+	//   padding-top: rem(120);
+	// }
+}
+.container {
+	@include container();
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+
+	@media (max-width: $max-1000) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+			'woman woman'
+			'card1 card2';
+	}
+	@media (max-width: $max-900) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-bottom: rem(100);
+	}
+}
+.title {
+	@include title();
+}
+.card {
+	display: flex;
+	padding-top: rem(112);
+	position: relative;
+	flex-wrap: nowrap;
+	z-index: 10;
+	max-width: rem(232);
+	order: 1;
+	grid-area: card1;
+
+	@media (max-width: $max-1000) {
+		order: 2;
+		width: 50%;
+		padding-top: rem(50);
+		margin: 0 auto;
+	}
+	@media (max-width: $max-900) {
+		padding-top: rem(50);
+		margin: 0;
+		align-self: start;
+		width: 100%;
+		padding-top: 0;
+		margin-top: -8rem;
+	}
+}
+.card2 {
+	display: flex;
+	padding-top: rem(300);
+	position: relative;
+	flex-wrap: nowrap;
+	z-index: 10;
+	max-width: rem(232);
+	order: 3;
+	grid-area: card2;
+
+	@media (max-width: $max-1000) {
+		width: 50%;
+		padding-top: rem(50);
+		margin: 0 auto;
+	}
+	@media (max-width: $max-900) {
+		margin: 0;
+		margin-right: 3rem;
+		align-self: end;
+		width: 100%;
+	}
+}
+
+.first {
+	position: absolute;
+	@include dm();
+	opacity: 0.2;
+	font-weight: 400;
+	font-size: rem(128);
+	@include text-gradient();
+	top: rem(80);
+	left: 15%;
+
+	@media (max-width: $max-1000) {
+		top: rem(624);
+		left: 20%;
+	}
+	@media (max-width: $max-900) {
+		top: 25rem;
+		left: 10%;
+	}
+	@media (max-width: $max-600) {
+		top: 11rem;
+	}
+	@media (max-width: $max-450) {
+		top: 7rem;
+	}
+}
+.ellipse {
+	border-radius: rem(100);
+	background-color: #98826d;
+	-webkit-filter: blur(rem(64));
+	filter: blur(rem(64));
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: rem(384);
+	aspect-ratio: 1/1;
+	z-index: 0;
+	opacity: 0.6;
+
+	@media (max-width: $max-450) {
+		width: 16rem;
+	}
+}
+.second {
+	position: absolute;
+	@include dm();
+	opacity: 0.2;
+	font-weight: 400;
+	font-size: rem(128);
+	top: rem(224);
+	right: 15%;
+
+	@include text-gradient();
+
+	@media (max-width: $max-1000) {
+		top: rem(600);
+		right: 25%;
+	}
+
+	@media (max-width: $max-450) {
+		top: 29rem;
+	}
+}
+.woman {
+	position: relative;
+	z-index: 10;
+	-o-object-fit: contain;
+	object-fit: contain;
+	aspect-ratio: auto;
+	width: 100%;
+	max-width: 28rem;
+	grid-area: woman;
+	order: 2;
+
+	@media (max-width: $max-1000) {
+		margin: 0 auto;
+	}
+	@media (max-width: $max-900) {
+		order: 1;
+		width: 50%;
+		margin-right: 2rem;
+		transform: scaleX(-1);
+	}
+}
+
+.text1 {
+	max-width: 12rem;
+	font-size: 2.25rem /* 36px */;
+	line-height: 1.3;
+	position: absolute;
+	z-index: 2;
+	top: 4rem;
+	left: 0;
+	color: #fff;
+	@include noto(300);
+	cursor: text;
+	white-space: nowrap;
+
+	@media (max-width: $max-900) {
+		top: -14rem;
+		white-space: unset;
+		max-width: rem(160);
+	}
+	@media (max-width: $max-500) {
+		top: -5rem;
+		white-space: unset;
+		max-width: rem(150);
+		font-size: rem(32);
+	}
+}
+
+.text2 {
+	max-width: 12rem;
+	font-size: 2.25rem /* 36px */;
+	line-height: 1.3;
+	position: absolute;
+	top: 13rem;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	@include noto(300);
+	cursor: text;
+	margin-top: rem(64);
+	white-space: nowrap;
+
+	@media (max-width: $max-1000) {
+		top: 4rem;
+		margin-top: 0;
+	}
+	@media (max-width: $max-900) {
+		display: none;
+	}
+}
+.cardWrapper {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 100%;
+	margin-top: rem(64);
+	gap: rem(12);
+	align-items: center;
+	padding: rem(12) rem(40) 0;
+}
+.cardBg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+.cardAsk {
+	@include dm();
+	font-size: rem(48);
+	position: relative;
+	z-index: 10;
+	@include text-gradient2();
+}
+.cardImg {
+	position: relative;
+	z-index: 10;
+	margin-top: rem(-16);
+	width: 100%;
+	-webkit-filter: drop-shadow(0 4px 60px rgba(0, 0, 0, 0.25));
+	filter: drop-shadow(0 4px 60px rgba(0, 0, 0, 0.25));
+}
+.card2Img {
+	position: relative;
+	z-index: 10;
+	width: 100%;
+	margin-top: rem(-12);
+	-webkit-filter: drop-shadow(0 4px 60px rgba(0, 0, 0, 0.25));
+	filter: drop-shadow(0 4px 60px rgba(0, 0, 0, 0.25));
+}
+.cardText {
+	color: #000;
+	font-size: rem(14);
+	line-height: 1.5;
+	position: relative;
+	z-index: 10;
+	margin-top: rem(-4);
+	text-align: center;
+	cursor: text;
+
+	& span {
+		font-weight: 700;
+	}
+}

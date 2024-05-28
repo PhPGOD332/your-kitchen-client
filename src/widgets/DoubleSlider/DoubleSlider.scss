@@ -1,0 +1,140 @@
+.slider {
+
+
+  @media screen and (max-width: 700px) {
+    order: 1;
+    //margin: 0 auto;
+  }
+
+  .sliderWrapper {
+    position: relative;
+    padding: 0 30px;
+  }
+
+  .mini-swiper-prev {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: 5;
+    cursor: pointer;
+
+    &:after {
+      content: "prev";
+      font-family: swiper-icons;
+      font-size: 15px;
+    }
+  }
+
+  .mini-swiper-next {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    z-index: 5;
+    cursor: pointer;
+
+    &:after {
+      content: "next";
+      font-family: swiper-icons;
+      font-size: 15px;
+    }
+  }
+}
+
+.measures-slider {
+  margin-bottom: 20px;
+  border-radius: 12px;
+
+  .swiper-wrapper {
+    .swiper-slide {
+
+      > img {
+        user-select: none;
+        width: 100%;
+      }
+    }
+  }
+
+  .swiper-button-prev {
+    color: #A89E94;
+    opacity: 1;
+
+    &:after {
+      font-size: 22px;
+    }
+  }
+
+  .swiper-button-next {
+    color: #A89E94;
+    opacity: 1;
+
+    &:after {
+      font-size: 22px;
+    }
+  }
+
+  .swiper-button-disabled {
+    opacity: 0.5;
+  }
+
+  .swiper-pagination {
+
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background: #fff;
+    }
+  }
+}
+
+.measures-mini-slider {
+  margin-bottom: 20px;
+  border-radius: 12px;
+  padding: 5px;
+
+  .swiper-wrapper {
+    padding: 5px;
+
+    .swiper-slide {
+      //width: 30%;
+      border-radius: 12px;
+      cursor: pointer;
+
+      > img {
+        border-radius: 12px;
+      }
+    }
+
+    .swiper-slide-thumb-active {
+      border: inset 3px #F28C6B;
+      box-shadow: 0 0 4px 1px #F28C6B;
+    }
+  }
+
+  .swiper-button-prev {
+    color: #fff;
+    opacity: 1;
+    left: -5px;
+
+    &:after {
+      font-size: 20px;
+    }
+  }
+
+  .swiper-button-next {
+    color: #fff;
+    opacity: 1;
+    right: -5px;
+
+    &:after {
+      font-size: 20px;
+    }
+  }
+
+  .swiper-button-disabled {
+    opacity: 0.5;
+  }
+}

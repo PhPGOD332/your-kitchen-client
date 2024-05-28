@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (min-width: 1500px) {
+	:root {
+		font-size: 18px;
+	}
+}
+@media (min-width: 1700px) {
+	:root {
+		font-size: 20px;
+	}
+}
+@media (min-width: 1900px) {
+	:root {
+		font-size: 22px;
+	}
+}
+@media (min-width: 2100px) {
+	:root {
+		font-size: 24px;
+	}
+}
+@media (min-width: 2300px) {
+	:root {
+		font-size: 26px;
+	}
+}
+@media (min-width: 2500px) {
+	:root {
+		font-size: 28px;
+	}
+}
+
+.text-pretty {
+	text-wrap: pretty;
+}
+.filter-shadow {
+	-webkit-filter: drop-shadow(0 0 12px #f28c6b);
+	filter: drop-shadow(0 0 12px #f28c6b);
+}
+@media (max-width: 450px) {
+	.ellipse1 {
+		width: 16rem;
+	}
+}
+.text-gradient-my {
+	background: linear-gradient(
+		180deg,
+		#fff 0%,
+		rgba(255, 255, 255, 0) 100%,
+		rgba(255, 255, 255, 0) 100%
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.text-gradient-my2 {
+	background: linear-gradient(
+		180deg,
+		#ddd5cb -12.9%,
+		rgba(218, 205, 194, 0) 88.22%
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.my-round {
+	border-top-left-radius: 10rem 2.5rem;
+	border-top-right-radius: 10rem 2.5rem;
+	border-color: rgba(152, 130, 109, 0.2);
+}
+.my-mask {
+	-webkit-mask-image: linear-gradient(#2c2825, #322e2c00);
+	mask-image: linear-gradient(#2c2825, #322e2c00);
+}
