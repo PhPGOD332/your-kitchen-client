@@ -113,7 +113,7 @@ export const pagesLinks = {
   furniture: "/korpusnaya_mebel",
   contacts: "/contacts",
   thankyou: "/thankyou",
-  departureMeasurer: "/departure-measurer",
+  departureMeasurer: "/departure_measurer",
   admin: "/admin",
   adminClaims: "/admin/claims",
   adminDiscounts: "/admin/discounts",
