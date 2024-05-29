@@ -7,10 +7,10 @@ const MeasurementRoom: FC = () => {
 
     return (
         <section className={`${styles.measuresScreen} section`}>
-            <h1 className={`${styles.measuresTitle} titleNotoFont`}>
+            <h2 className={`${styles.measuresTitle} titleNotoFont`}>
                 Замер помещения и создание проекта специалистом
                 под кухонный гарнитур и корпусную мебель
-            </h1>
+            </h2>
             <div className={`${styles.measureCard} gridBlock`}>
                 <DoubleSlider
                   title="Фото макета кухни"

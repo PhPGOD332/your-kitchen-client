@@ -10,9 +10,9 @@ import { Icons } from "@/shared/IconsComponents/Icons";
 const MeasurementAdvantages: FC = () => {
   return (
     <section className={`${styles.advantagesSection} section`}>
-      <h1 className={`${styles.advantagesTitle} titleNotoFont`}>
+      <h2 className={`${styles.advantagesTitle} titleNotoFont`}>
         Преимущества вызова замерщика от фабрики «Твоя кухня»
-      </h1>
+      </h2>
       <div className={`${styles.advantagesContainer} gridBlock`}>
         <div className={`${styles.advantagesBlock}`}>
           <div className={`${styles.advantagesItem}`}>
