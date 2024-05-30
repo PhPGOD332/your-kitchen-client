@@ -57,6 +57,7 @@
 
   @media screen and (max-width: $max-950) {
     min-height: rem(850);
+    padding-top: rem(100) !important;
   }
   @media screen and (max-width: $max-700) {
     min-height: rem(800);
@@ -66,6 +67,7 @@
   }
   @media screen and (max-width: $max-400) {
     min-height: rem(790);
+    padding-top: rem(50) !important;
   }
 
   &.screenIpad {
@@ -273,7 +275,7 @@
 
   &.ptHigh {
     @media (max-width: $max-950) {
-      margin-top: rem(130);
+      //margin-top: rem(130);
     }
     @media (max-width: $max-700) {
       margin-top: rem(114);
@@ -311,6 +313,10 @@
       margin-top: rem(30);
     }
   }
+
+  //&.priceFrom {
+  //  margin-bottom: 15px;
+  //}
 
   @media screen and (max-width: $max-950) {
     order: 2;
@@ -355,7 +361,7 @@
 .button {
   position: absolute !important;
   left: rem(20);
-  bottom: rem(140);
+  bottom: rem(110);
   z-index: 10;
 
   &.centerButton {
@@ -368,10 +374,26 @@
     bottom: rem(60);
   }
 
+  @media (max-width:$max-1300) {
+    bottom: rem(180);
+  }
+
+  @media (max-width:$max-1000) {
+    bottom: rem(90);
+  }
+
+  @media (max-width:$max-800) {
+    bottom: rem(50);
+  }
+
+  @media (max-width:$max-700) {
+    bottom: rem(30);
+  }
+
   @media (max-width: $max-768) {
     margin: 0 auto;
     left: 50%;
-    bottom: rem(90);
+    bottom: rem(50);
     transform: translate(-50%, 0);
   }
 }

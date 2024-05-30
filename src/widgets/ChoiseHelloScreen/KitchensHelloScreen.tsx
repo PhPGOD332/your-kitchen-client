@@ -8,6 +8,7 @@ interface ScreenProps {
   tags?: string[];
   title?: string;
   description?: string;
+  priceFrom?: string;
   button?: {
     href: string;
     text: string;
@@ -21,6 +22,7 @@ export const KitchensHelloScreen = ({
   tags,
   title,
   description,
+  priceFrom,
   titleLength,
 }: ScreenProps) => {
   return (
@@ -87,6 +89,13 @@ export const KitchensHelloScreen = ({
             {description
               ? description
               : "Индивидуальные кухни на заказ от производителя в Москве и Московской области с гарантией и возможностью рассрочки до 24 месяцев: выбирайте из широкого ассортимента стилей и материалов, наслаждайтесь уникальным дизайном и комфортом."}
+          </p>
+          <p className={`${styles.subtitle} ${styles.priceFrom}`}>
+            {
+              priceFrom
+              ? priceFrom
+                : "Кухни от 75000 руб."
+            }
           </p>
 
           <OrangeButton
