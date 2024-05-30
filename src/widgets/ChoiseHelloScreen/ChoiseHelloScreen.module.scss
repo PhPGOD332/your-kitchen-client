@@ -7,7 +7,8 @@
   overflow: hidden;
   padding-top: rem(120);
   position: relative;
-  max-height: rem(700);
+  //max-height: rem(700);
+  max-height: 100vh;
 
   &.miniHeight {
     padding-top: rem(20);
@@ -55,12 +56,22 @@
     }
   }
 
+  @media (max-width: $max-1100) {
+    padding-top: rem(120) !important;
+  }
+
   @media screen and (max-width: $max-950) {
     min-height: rem(850);
     padding-top: rem(100) !important;
+    max-height: 100vh !important;
+  }
+  @media screen and (max-width: $max-900) {
+    max-height: 100vh!important;
   }
   @media screen and (max-width: $max-700) {
     min-height: rem(800);
+
+    padding-top: rem(50) !important;
   }
   @media screen and (max-width: $max-600) {
     min-height: rem(780);
@@ -68,6 +79,7 @@
   @media screen and (max-width: $max-400) {
     min-height: rem(790);
     padding-top: rem(50) !important;
+    max-height: 100vh;
   }
 
   &.screenIpad {
@@ -84,6 +96,7 @@
     }
     @media screen and (max-width: $max-768) {
       min-height: rem(850);
+      max-height: 100vh !important;
     }
     @media screen and (max-width: $max-700) {
       min-height: rem(800);
@@ -177,7 +190,7 @@
 
   &.upperTags {
     @media screen and (max-width: $max-950) {
-      margin-top: rem(-30);
+      //margin-top: rem(-30);
     }
   }
 
@@ -192,13 +205,14 @@
       flex-direction: column;
       align-items: flex-start;
       order: 3;
-      margin-top: rem(50);
+      //margin-top: rem(50);
+      margin-bottom: rem(30);
 
       &.upperTags {
-        margin-top: rem(20);
+        //margin-top: rem(20);
 
         @media screen and (max-width: $max-700) {
-          margin-top: rem(40);
+          //margin-top: rem(40);
         }
       }
 
@@ -314,9 +328,13 @@
     }
   }
 
-  //&.priceFrom {
-  //  margin-bottom: 15px;
-  //}
+  &.priceFrom {
+    margin: 20px 0;
+
+    @media (min-width: $max-950) and (max-width: $max-1100) {
+      margin-bottom: 25px;
+    }
+  }
 
   @media screen and (max-width: $max-950) {
     order: 2;
@@ -378,19 +396,28 @@
     bottom: rem(180);
   }
 
+  @media (max-width:$max-1100) {
+    position: inherit !important;
+    left: 0;
+    bottom: 0;
+    order: 4;
+  }
+
   @media (max-width:$max-1000) {
-    bottom: rem(90);
+    //bottom: rem(90);
+
   }
 
   @media (max-width:$max-800) {
-    bottom: rem(50);
+    //bottom: rem(50);
   }
 
   @media (max-width:$max-700) {
-    bottom: rem(30);
+    //bottom: rem(30);
   }
 
   @media (max-width: $max-768) {
+    position: absolute !important;
     margin: 0 auto;
     left: 50%;
     bottom: rem(50);
