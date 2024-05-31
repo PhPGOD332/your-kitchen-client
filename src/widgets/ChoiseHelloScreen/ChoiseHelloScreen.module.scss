@@ -433,7 +433,8 @@
     position: absolute !important;
     margin: 0 auto;
     left: 50%;
-    bottom: rem(50);
+    bottom: rem(85);
+    min-height: rem(5);
     transform: translate(-50%, 0);
   }
 }
