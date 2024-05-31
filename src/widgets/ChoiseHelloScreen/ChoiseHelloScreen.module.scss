@@ -74,7 +74,7 @@
     padding-top: rem(100) !important;
   }
   @media screen and (max-width: $max-600) {
-    min-height: rem(780);
+    min-height: 0;
   }
   @media screen and (max-width: $max-400) {
     min-height: 0;
