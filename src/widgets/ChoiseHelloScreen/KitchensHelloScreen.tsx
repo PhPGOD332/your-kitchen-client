@@ -94,7 +94,7 @@ export const KitchensHelloScreen = ({
             {
               priceFrom
               ? priceFrom
-                : "Кухни от 75000 руб."
+                : `Кухни от 75 000 руб.`
             }
           </p>
 
