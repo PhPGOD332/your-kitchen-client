@@ -433,9 +433,13 @@
     position: absolute !important;
     margin: 0 auto;
     left: 50%;
-    bottom: rem(205);
+    bottom: rem(255);
     min-height: rem(5);
     transform: translate(-50%, 0);
+  }
+
+  @media (max-width: $max-768) and (min-height: $max-500) and (max-height: $max-800) {
+    bottom: rem(120);
   }
 
   @media (max-width: $max-400) and (max-height: $max-800) {
