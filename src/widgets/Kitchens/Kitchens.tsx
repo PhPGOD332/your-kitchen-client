@@ -43,6 +43,7 @@ const Kitchens = ({ kitchens, moreKitchens, threeKitchens }: KitchensProps) => {
           </p>
           <div className={styles.kitchens}>
             {viewKitchens.slice(0, sliceNumber).map((kitchen, index) => (
+              // <DynamicKitchen kitchen={kitchen} key={index} flex={threeKitchens} />
               <Kitchen kitchen={kitchen} key={index} flex={threeKitchens} />
             ))}
           </div>

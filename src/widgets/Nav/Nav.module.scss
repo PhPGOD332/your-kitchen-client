@@ -106,10 +106,10 @@
 }
 .burger {
   position: relative;
-  min-width: rem(35);
-  height: rem(35);
+  min-width: rem(40);
+  height: rem(40);
   border-radius: rem(50);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.25);
   cursor: pointer;
   transition: 0.2s ease-in-out;
 
@@ -119,11 +119,11 @@
 
   & span:first-child {
     position: absolute;
-    top: 40%;
+    top: 38%;
     left: 50%;
     transform: translate(-50%, 0);
-    width: rem(13);
-    height: rem(1);
+    width: rem(15);
+    height: rem(2);
     background-color: #fff;
     border-radius: rem(50);
     transition: 0.2s ease-in-out;
@@ -131,11 +131,11 @@
 
   & span:last-child {
     position: absolute;
-    bottom: 40%;
+    bottom: 38%;
     left: 50%;
     transform: translate(-50%, 0);
-    width: rem(13);
-    height: rem(1);
+    width: rem(15);
+    height: rem(2);
     background-color: #fff;
     border-radius: rem(50);
     transition: 0.2s ease-in-out;
@@ -153,10 +153,10 @@
     }
 
     & span:first-child {
-      transform: rotate(-45deg) translate(-6px, -2px);
+      transform: rotate(-45deg) translate(-8px, -3px);
     }
     & span:last-child {
-      transform: rotate(45deg) translate(-6px, 2px);
+      transform: rotate(45deg) translate(-8px, 3px);
     }
   }
 }
