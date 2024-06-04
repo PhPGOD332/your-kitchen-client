@@ -34,7 +34,7 @@ import AllVariants from "@/widgets/AllVariants/AllVariants";
 import { DiscountsHelloScreenSlider } from "@/widgets/ChoiseHelloScreen/DiscountsHelloScreenSlider";
 import { KitchensHelloScreen } from "@/widgets/ChoiseHelloScreen/KitchensHelloScreen";
 import { Correction } from "@/widgets/Correction/Correction";
-// import Kitchens from "@/widgets/Kitchens/Kitchens";
+import Kitchens from "@/widgets/Kitchens/Kitchens";
 import { LeaveRequestDesigner } from "@/widgets/LeaveRequestDesigner/LeaveRequestDesigner";
 import { MainAdvantages } from "@/widgets/MainAdvantages/MainAdvantages";
 import MainArticles from "@/widgets/MainArticles/MainArticles";
@@ -53,10 +53,6 @@ const getHomeInfo = async () => {
   return { kitchens, reviews, moreKitchens };
 };
 
-const DynamicKithens = dynamic(() => import("@/widgets/Kitchens/Kitchens"), {
-  loading: () => <p className={styles.loading}>Загрузка наших кухонь...</p>
-})
-
 const DynamicReviews = dynamic(() => import("@/widgets/Reviews/Reviews"), {
   loading: () => <p className={styles.loading}>Загрузка отзывов...</p>
 })
@@ -72,16 +68,16 @@ const HomePage = async () => {
       <div className={styles.bg}>
         <KitchensHelloScreen />
         <Stocks location="Главная страница, блок акций" />
-        <DynamicKithens
-          kitchens={kitchens}
-          moreKitchens={moreKitchens}
-          threeKitchens
-        />
-        {/*<Kitchens*/}
+        {/*<DynamicKithens*/}
         {/*  kitchens={kitchens}*/}
         {/*  moreKitchens={moreKitchens}*/}
         {/*  threeKitchens*/}
         {/*/>*/}
+        <Kitchens
+          kitchens={kitchens}
+          moreKitchens={moreKitchens}
+          threeKitchens
+        />
         <div className={styles.darkBg}>
           <LeaveRequestDesigner
             location="Главная страница"
