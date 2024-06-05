@@ -62,7 +62,7 @@ export default function RootLayout({
           <>
             <script src="//code.jivo.ru/widget/d1XdJXNdT6" async></script>
             <script defer src="https://af.click.ru/af.js?id=12257"></script>
-            <Script src="https://www.googletagmanager.com/gtag/js?id=G-9PXGLTWQJK"></Script>
+            <Script src="https://www.googletagmanager.com/gtag/js?id=G-9PXGLTWQJK" async></Script>
             <Script
               id="google-analytics"
               dangerouslySetInnerHTML={{
@@ -72,6 +72,7 @@ export default function RootLayout({
 
   gtag('config', 'G-9PXGLTWQJK');`,
               }}
+              async
             />
             <Script
               id="metrikaScript"
@@ -82,6 +83,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-T7HCN6P');`,
               }}
+              async
             />
           </>
         )}

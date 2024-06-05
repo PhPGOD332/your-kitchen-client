@@ -10,7 +10,8 @@ const nextConfig = {
 	images: {
 		domains: [NEXT_PUBLIC_API_HOSTNAME],
 	},
-	swcMinify: true
+	swcMinify: true,
+	optimizeCss: true
 };
 
 module.exports = nextConfig;
