@@ -57,6 +57,19 @@
   @media (max-width: $max-450) {
     padding: 0 rem(40);
   }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: rem(-10);
+    right: rem(-10);
+    bottom: rem(-30);
+    left: rem(-10);
+    //background-color: rgba(0, 0, 0, 0.3);
+    //mask-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0, #000 100%);
+    border-radius: rem(5);
+    z-index: -1;
+  }
 }
 .name {
   @include gilroy(700);
@@ -149,21 +162,21 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-mask-image: linear-gradient(
-    0deg,
-    rgb(40, 35, 32, 0.3) 0%,
-    rgba(40, 35, 32, 0.4) 25%,
-    rgba(40, 35, 32, 0.8) 50%,
-    rgba(40, 35, 32, 0.75) 75%,
-    rgba(40, 35, 32, 0.8) 100%
-  );
+  //-webkit-mask-image: linear-gradient(
+  //  0deg,
+  //  rgb(40, 35, 32, 0.3) 0%,
+  //  rgba(40, 35, 32, 0.4) 25%,
+  //  rgba(40, 35, 32, 0.8) 50%,
+  //  rgba(40, 35, 32, 0.75) 75%,
+  //  rgba(40, 35, 32, 0.8) 100%
+  //);
   mask-image: linear-gradient(
     0deg,
-    rgb(40, 35, 32, 0.3) 0%,
-    rgba(40, 35, 32, 0.4) 25%,
+    rgb(40, 35, 32, 0.8) 0%,
+    rgba(40, 35, 32, 0.75) 25%,
     rgba(40, 35, 32, 0.8) 50%,
-    rgba(40, 35, 32, 0.75) 75%,
-    rgba(40, 35, 32, 0.8) 100%
+    rgba(40, 35, 32, 0.9) 75%,
+    rgba(40, 35, 32, 1) 100%
   );
 }
 .pagination {
