@@ -10,6 +10,7 @@ import type { IReview } from "@/types/IReview";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import Review from "./Review";
+import { OrangeButton } from "@/shared/ui";
 
 interface ReviewsProps {
   withoutBg?: boolean;
@@ -80,6 +81,9 @@ const Reviews = ({ withoutBg, reviews }: ReviewsProps) => {
             <p className={styles.text}>
               Двигайте ползунок, чтобы посмотреть следующий отзыв
             </p>
+          </div>
+          <div className={styles.string}>
+            <OrangeButton href='/reviews'>Показать еще</OrangeButton>
           </div>
         </div>
       )}

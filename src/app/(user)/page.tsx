@@ -47,7 +47,7 @@ export const revalidate = 30;
 
 const getHomeInfo = async () => {
   const kitchens = await UserKitchenService.getMainKitchens();
-  const reviews = await UserReviewsService.getReviews();
+  const reviews = await UserReviewsService.getMainReviews();
   const moreKitchens = await UserKitchenService.getKitchens();
 
   return { kitchens, reviews, moreKitchens };

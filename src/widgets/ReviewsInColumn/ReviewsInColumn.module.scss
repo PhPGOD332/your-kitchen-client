@@ -1,0 +1,134 @@
+@import "@/shared/styles/_vars";
+
+.reviewsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(0deg, #262324 0%, #2a2827 14.88%, #393632 29.68%, #3b3634 39.07%, #323031 50.95%, #323030 74.93%);
+  padding-top: rem(150);
+  padding-bottom: rem(30);
+}
+
+.bgText {
+  background: linear-gradient(
+                  180deg,
+                  #a89e94 -31.66%,
+                  rgba(161, 153, 141, 0) 79.44%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: rem(260);
+  position: absolute;
+  top: rem(-150);
+  white-space: nowrap;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0.2;
+  @include playfair(700);
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  @media (max-width: $max-1300) {
+    font-size: rem(190);
+  }
+  @media (max-width: $max-1000) {
+    font-size: rem(170);
+  }
+  @media (max-width: $max-900) {
+    font-size: rem(150);
+  }
+  @media (max-width: $max-800) {
+    font-size: rem(86);
+    //top: 0;
+  }
+  @media (max-width: $max-500) {
+    font-size: rem(60);
+    top: rem(-120);
+  }
+}
+
+.title {
+  @include noto(400);
+  font-size: rem(40);
+  line-height: 1.5;
+  //max-width: rem(700);
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 0 rem(20);
+
+  & span {
+    position: relative;
+    margin: 0 30px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: #7b402e;
+      width: rem(200);
+      height: rem(60);
+      //aspect-ratio: 1/1;
+      border-radius: rem(100);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -45%);
+      z-index: -1;
+    }
+  }
+
+  @media (max-width: $max-768) {
+    font-size: rem(24);
+    //max-width: rem(340);
+
+    & span {
+      margin: 0 20px;
+    }
+
+    & span::before {
+      width: rem(130);
+      height: rem(40);
+    }
+  }
+}
+
+.subtitle {
+  margin: 0 auto;
+  margin-top: rem(25);
+  @include gilroy(400);
+  color: #fff;
+  text-align: center;
+  letter-spacing: rem(0.4);
+  margin-bottom: rem(150);
+  padding: 0 rem(20);
+  font-size: rem(18);
+
+  @media (max-width: $max-768) {
+    font-size: rem(15);
+  }
+
+  & span {
+    @include gilroy(700);
+  }
+}
+
+.reviewsList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+}
+
+.string {
+  margin-top: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
