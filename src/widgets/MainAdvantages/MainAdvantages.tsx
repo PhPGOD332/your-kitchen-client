@@ -1,8 +1,8 @@
-import image1 from "@/data/advantages/card1.webp";
-import image2 from "@/data/advantages/card2.webp";
-import image3 from "@/data/advantages/card3.jpeg";
-import image4 from "@/data/advantages/card4.webp";
-import image5 from "@/data/advantages/card5.webp";
+import image1 from "@/data/advantages/Кухни на заказ в Москве.jpg";
+import image2 from "@/data/advantages/Изготовление кухни на заказ по индвидуальным размерам.jpg";
+import image3 from "@/data/advantages/Кухни эноном, премиум, а также элитные.jpg";
+import image4 from "@/data/advantages/Заказать кухню в Москве недорого.jpeg";
+import image5 from "@/data/advantages/Кухни от производителя в москве, на заказ, недорого.jpeg";
 import comp1 from "@/data/companies/comp1.webp";
 import comp2 from "@/data/companies/comp2.webp";
 import comp3 from "@/data/companies/comp3.webp";
@@ -249,14 +249,15 @@ export const MainAdvantages = ({ title }: Props) => {
               <>
                 <hr key={`${index}i`} />
                 <div className={styles.imageCard} key={`${index}c`}>
-                  <Image
-                    src={card.image}
-                    alt={card.title}
-                    className={styles.cardImage}
-                    width={250}
-                    height={220}
-                    draggable={false}
-                  />
+                  {/*<Image*/}
+                  {/*  src={card.image}*/}
+                  {/*  alt={card.title}*/}
+                  {/*  className={styles.cardImage}*/}
+                  {/*  width={800}*/}
+                  {/*  height={800}*/}
+                  {/*  draggable={false}*/}
+                  {/*/>*/}
+                  <img src={card.image.src} alt={card.title} className={styles.cardImage} draggable={false}/>
                   <div className={styles.imageCardContent}>
                     <h5 className={styles.imageCardTitle}>
                       <b>{card.title}</b>

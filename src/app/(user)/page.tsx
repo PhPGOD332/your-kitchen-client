@@ -91,10 +91,10 @@ const HomePage = async () => {
         <WhatsNext />
         <Results />
         <DiscountsHelloScreenSlider centerText miniHeight />
-        <LeaveRequestBlock
-          location='Главная страница, после "Давайте подытожим"'
-          tag="Рассчитать стоимость кухни"
-        />
+        {/*<LeaveRequestBlock*/}
+        {/*  location='Главная страница, после "Давайте подытожим"'*/}
+        {/*  tag="Рассчитать стоимость кухни"*/}
+        {/*/>*/}
         <DynamicReviews reviews={reviews} />
         {/*<Reviews reviews={reviews} />*/}
         <MainArticles />
