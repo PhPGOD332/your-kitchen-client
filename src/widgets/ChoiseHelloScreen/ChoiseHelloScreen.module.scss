@@ -165,6 +165,10 @@
     position: static;
   }
 
+  @media (max-width: $max-768) {
+    height: 100vh;
+  }
+
   @media screen and (max-width: $max-700) {
     padding-top: rem(50) !important;
   }
