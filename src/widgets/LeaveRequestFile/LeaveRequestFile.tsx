@@ -18,6 +18,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import ReactInputMask from "react-input-mask";
 import { TextModal } from "../Modals/TextModal/TextModal";
 import styles from "./LeaveRequestFile.module.scss";
+import Link from "next/link";
 
 interface LeaveRequestProps {
   title?: string;
@@ -46,23 +47,23 @@ export const LeaveRequestFile = ({
     resetField,
   } = useForm<TFormInputsFile>();
   const [filesCount, setFilesCount] = useState(0);
-  const [isOpenPrivacy, setIsOpenPrivacy] = useState(false);
+  // const [isOpenPrivacy, setIsOpenPrivacy] = useState(false);
   const router = useRouter();
 
-  const openPrivacy = () => {
-    setIsOpenPrivacy(true);
-    document.body.classList.add("overflow");
-  };
+  // const openPrivacy = () => {
+  //   setIsOpenPrivacy(true);
+  //   document.body.classList.add("overflow");
+  // };
 
-  useEffect(() => {
-    document.addEventListener("keydown", (event) => {
-      closeModalOnEscape(event, setIsOpenPrivacy);
-    });
-    return () =>
-      document.removeEventListener("keydown", (event) => {
-        closeModalOnEscape(event, setIsOpenPrivacy);
-      });
-  }, []);
+  // useEffect(() => {
+  //   document.addEventListener("keydown", (event) => {
+  //     closeModalOnEscape(event, setIsOpenPrivacy);
+  //   });
+  //   return () =>
+  //     document.removeEventListener("keydown", (event) => {
+  //       closeModalOnEscape(event, setIsOpenPrivacy);
+  //     });
+  // }, []);
 
   const onSubmitLeaveRequest: SubmitHandler<TFormInputsFile> = async (data) => {
     const form = new FormData();
@@ -96,11 +97,11 @@ export const LeaveRequestFile = ({
 
   return (
     <>
-      <TextModal
-        isOpen={isOpenPrivacy}
-        setIsOpen={setIsOpenPrivacy}
-        text={PrivacyPolicy}
-      />
+      {/*<TextModal*/}
+      {/*  isOpen={isOpenPrivacy}*/}
+      {/*  setIsOpen={setIsOpenPrivacy}*/}
+      {/*  text={PrivacyPolicy}*/}
+      {/*/>*/}
       <div className={`${styles.wrapper} ${noPadding && styles.noPadding}`}>
         <div className={styles.container}>
           <div className={styles.leaveRequest}>
@@ -215,9 +216,14 @@ export const LeaveRequestFile = ({
                     </OrangeButton>
                     <p className={styles.infoText}>
                       <span>Нажимая на кнопку «Отправить» вы даёте </span>
-                      <button type="button" onClick={openPrivacy}>
+                      <Link
+                        href={pagesLinks.PrivacyPolicy}
+                        type="button"
+                        // onClick={openPrivacy}
+                        target={"_blank"}
+                      >
                         согласие на обработку персональных данных
-                      </button>
+                      </Link>
                     </p>
                   </div>
                 </form>

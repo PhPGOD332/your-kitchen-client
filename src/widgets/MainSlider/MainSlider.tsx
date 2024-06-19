@@ -17,7 +17,7 @@ import styles from "./MainSlider.module.scss";
 
 export const MainSlider = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isOpenPrivacy, setIsOpenPrivacy] = useState(false);
+  // const [isOpenPrivacy, setIsOpenPrivacy] = useState(false);
   const [swiper, setSwiper] = useState<typeSwiper | null>(null);
   const openModal = () => {
     setIsOpen(true);
@@ -26,16 +26,16 @@ export const MainSlider = () => {
 
   return (
     <>
-      <TextModal
-        isOpen={isOpenPrivacy}
-        setIsOpen={setIsOpenPrivacy}
-        text={PrivacyPolicy}
-        key={"main-privacy"}
-      />
+      {/*<TextModal*/}
+      {/*  isOpen={isOpenPrivacy}*/}
+      {/*  setIsOpen={setIsOpenPrivacy}*/}
+      {/*  text={PrivacyPolicy}*/}
+      {/*  key={"main-privacy"}*/}
+      {/*/>*/}
       <LeaveRequestFileModal
         isOpen={isOpen}
         setIsOpen={setIsOpen}
-        setIsOpenPrivacy={setIsOpenPrivacy}
+        // setIsOpenPrivacy={setIsOpenPrivacy}
         key={"main-modal"}
       />
       <div className={styles.firstBlock}>

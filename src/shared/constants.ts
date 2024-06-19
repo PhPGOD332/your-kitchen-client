@@ -96,6 +96,14 @@ export const pagesData: IPages = {
     keywords: "отзывы Твоя кухня, отзывы клиентов Твоя кухня",
     url: `${CLIENT_URL}/reviews`,
     type: "website"
+  },
+  privacyPolicy: {
+    name: `privacy_policy`,
+    title: "Политика конфиденциальности | Твоя кухня",
+    description: "Политика конфиденциальности фабрики Твоя кухня",
+    keywords: "Политика конфиденциальности фабрики Твоя кухня",
+    url: `${CLIENT_URL}/privacy_policy`,
+    type: "website"
   }
 };
 
@@ -122,6 +130,7 @@ export const pagesLinks = {
   contacts: "/contacts",
   thankyou: "/thankyou",
   departureMeasurer: "/departure_measurer",
+  PrivacyPolicy: "/privacy_policy",
   admin: "/admin",
   adminClaims: "/admin/claims",
   adminDiscounts: "/admin/discounts",

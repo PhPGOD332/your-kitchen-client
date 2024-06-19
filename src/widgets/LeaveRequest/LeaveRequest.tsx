@@ -50,7 +50,7 @@ export const LeaveRequest = ({
   } = useForm<TFormInputs>();
 
   const router = useRouter();
-  const [isOpenPrivacy, setIsOpenPrivacy] = useState(false);
+  // const [isOpenPrivacy, setIsOpenPrivacy] = useState(false);
 
   const onSubmitLeaveRequest: SubmitHandler<TFormInputs> = async (data) => {
     const newClaim = new CreateClaimDto({
@@ -77,11 +77,11 @@ export const LeaveRequest = ({
   if (isModal && setIsOpen) {
     return (
       <>
-        <TextModal
-          isOpen={isOpenPrivacy}
-          setIsOpen={setIsOpenPrivacy}
-          text={PrivacyPolicy}
-        />
+        {/*<TextModal*/}
+        {/*  isOpen={isOpenPrivacy}*/}
+        {/*  setIsOpen={setIsOpenPrivacy}*/}
+        {/*  text={PrivacyPolicy}*/}
+        {/*/>*/}
         <div className={styles.container} onClick={onClick}>
           {/* Карточка */}
           <div className={styles.card}>
@@ -220,9 +220,14 @@ export const LeaveRequest = ({
                 </OrangeButton>
                 <p className={styles.infoText}>
                   Нажимая на кнопку «Отправить» вы даёте{" "}
-                  <button type="button" onClick={() => setIsOpenPrivacy(true)}>
+                  <Link
+                    href={pagesLinks.PrivacyPolicy}
+                    type="button"
+                    // onClick={() => setIsOpenPrivacy(true)}
+                    target={"_blank"}
+                  >
                     согласие на обработку персональных данных
-                  </button>
+                  </Link>
                 </p>
               </div>
             </div>
@@ -233,11 +238,11 @@ export const LeaveRequest = ({
   }
   return (
     <>
-      <TextModal
-        isOpen={isOpenPrivacy}
-        setIsOpen={setIsOpenPrivacy}
-        text={PrivacyPolicy}
-      />
+      {/*<TextModal*/}
+      {/*  isOpen={isOpenPrivacy}*/}
+      {/*  setIsOpen={setIsOpenPrivacy}*/}
+      {/*  text={PrivacyPolicy}*/}
+      {/*/>*/}
       <div className={styles.leaveRequest}>
         <div className={styles.container} onClick={onClick}>
           {/* Карточка */}
@@ -368,9 +373,14 @@ export const LeaveRequest = ({
                 </OrangeButton>
                 <p className={styles.infoText}>
                   Нажимая на кнопку «Отправить» вы даёте{" "}
-                  <button type="button" onClick={() => setIsOpenPrivacy(true)}>
+                  <Link
+                    href={pagesLinks.PrivacyPolicy}
+                    type="button"
+                    // onClick={() => setIsOpenPrivacy(true)}
+                    target={"_blank"}
+                  >
                     согласие на обработку персональных данных
-                  </button>
+                  </Link>
                 </p>
               </div>
             </div>
