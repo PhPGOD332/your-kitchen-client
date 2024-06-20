@@ -217,7 +217,7 @@ export const LeaveRequestFile = ({
                     <p className={styles.infoText}>
                       <span>Нажимая на кнопку «Отправить» вы даёте </span>
                       <Link
-                        href={pagesLinks.PrivacyPolicy}
+                        href={pagesLinks.privacyPolicy}
                         type="button"
                         // onClick={openPrivacy}
                         target={"_blank"}

@@ -120,7 +120,7 @@ const ClientLoginPage = () => {
           <p className={styles.infoText}>
             Нажимая кнопку войти, вы соглашаетесь с{" "}
             <Link
-              href={pagesLinks.PrivacyPolicy}
+              href={pagesLinks.privacyPolicy}
               type="button"
               // onClick={() => setIsOpenPrivacy(true)}
               target={"_blank"}

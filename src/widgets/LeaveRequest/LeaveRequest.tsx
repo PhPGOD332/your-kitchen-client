@@ -221,7 +221,7 @@ export const LeaveRequest = ({
                 <p className={styles.infoText}>
                   Нажимая на кнопку «Отправить» вы даёте{" "}
                   <Link
-                    href={pagesLinks.PrivacyPolicy}
+                    href={pagesLinks.privacyPolicy}
                     type="button"
                     // onClick={() => setIsOpenPrivacy(true)}
                     target={"_blank"}
@@ -374,7 +374,7 @@ export const LeaveRequest = ({
                 <p className={styles.infoText}>
                   Нажимая на кнопку «Отправить» вы даёте{" "}
                   <Link
-                    href={pagesLinks.PrivacyPolicy}
+                    href={pagesLinks.privacyPolicy}
                     type="button"
                     // onClick={() => setIsOpenPrivacy(true)}
                     target={"_blank"}

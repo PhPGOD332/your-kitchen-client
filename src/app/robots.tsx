@@ -30,6 +30,7 @@ export default function robots(): MetadataRoute.Robots {
           `${pagesLinks.advantages}/*?*`,
           `${pagesLinks.furniture}/*?*`,
           `${pagesLinks.thankyou}/*?*`,
+          `${pagesLinks.privacyPolicy}/`
         ],
       },
       {
@@ -58,6 +59,7 @@ export default function robots(): MetadataRoute.Robots {
           `${pagesLinks.advantages}/*?*`,
           `${pagesLinks.furniture}/*?*`,
           `${pagesLinks.thankyou}/*?*`,
+          `${pagesLinks.privacyPolicy}/`
         ],
       },
     ],

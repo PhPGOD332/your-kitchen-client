@@ -99,8 +99,9 @@ export const pagesData: IPages = {
   },
   privacyPolicy: {
     name: `privacy_policy`,
-    title: "Политика конфиденциальности | Твоя кухня",
-    description: "Политика конфиденциальности фабрики Твоя кухня",
+    title: "Политика обработки персональных данных | Твоя кухня",
+    description: "Политика предназначена для информирования Вас о наших действиях по сбору, обработке и защите Ваших персональных данных для достижения нами заявленных целей обработки персональных данных на сайте .\n" +
+      "Мы соблюдаем требования российского законодательства в области персональных данных. При обработке персональных данных мы придерживаемся принципов, изложенных в ст. 5 Федерального закона от 27.07.2006 г №152-ФЗ «О персональных данных» (далее – 152-ФЗ).",
     keywords: "Политика конфиденциальности фабрики Твоя кухня",
     url: `${CLIENT_URL}/privacy_policy`,
     type: "website"
@@ -130,7 +131,7 @@ export const pagesLinks = {
   contacts: "/contacts",
   thankyou: "/thankyou",
   departureMeasurer: "/departure_measurer",
-  PrivacyPolicy: "/privacy_policy",
+  privacyPolicy: "/privacy_policy",
   admin: "/admin",
   adminClaims: "/admin/claims",
   adminDiscounts: "/admin/discounts",

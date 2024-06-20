@@ -182,7 +182,7 @@ export const LeaveRequestDesigner = ({
                     </OrangeButton>
                     <p className={styles.infoText}>
                       <span>Нажимая на кнопку «Отправить» вы даёте </span>
-                      <Link href={pagesLinks.PrivacyPolicy} type="button" target="_blank">
+                      <Link href={pagesLinks.privacyPolicy} type="button" target="_blank">
                         согласие на обработку персональных данных
                       </Link>
                     </p>

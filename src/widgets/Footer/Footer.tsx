@@ -126,7 +126,7 @@ const Footer = () => {
                 ». Все права защищены.
               </p>
               <Link
-                href={pagesLinks.PrivacyPolicy}
+                href={pagesLinks.privacyPolicy}
                 type="button"
                 className={styles.privacyButton}
                 // onClick={openPrivacy}
