@@ -3,17 +3,15 @@
 import { isErrorStyles } from "@/features/isErrorStyles";
 import ClaimService from "@/services/admin/ClaimService";
 import { Icons } from "@/shared/IconsComponents/Icons";
-import { PrivacyPolicy } from "@/shared/PrivacyPolicy";
 import { links, pagesLinks } from "@/shared/constants";
 import { OrangeButton } from "@/shared/ui";
 import { TFormInputsNames, type TFormInputs } from "@/types/TFormInputs";
 import { CreateClaimDto } from "@/types/dtos/CreateClaim.dto";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState, type ReactNode } from "react";
+import { type ReactNode } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import ReactInputMask from "react-input-mask";
-import { TextModal } from "../Modals/TextModal/TextModal";
 import styles from "./LeaveRequest2.module.scss";
 
 interface LeaveRequestProps {
@@ -28,6 +26,7 @@ interface LeaveRequestProps {
     title?: string;
     subtitle?: string;
   };
+  withoutBg?: boolean;
 }
 
 export const LeaveRequest2 = ({
@@ -39,6 +38,7 @@ export const LeaveRequest2 = ({
   tag,
   location,
   before,
+  withoutBg,
 }: LeaveRequestProps) => {
   const {
     register,
@@ -217,7 +217,11 @@ export const LeaveRequest2 = ({
       {/*  setIsOpen={setIsOpenPrivacy}*/}
       {/*  text={PrivacyPolicy}*/}
       {/*/>*/}
-      <div className={styles.leaveRequest}>
+      <div
+        className={`${styles.leaveRequest} ${
+          withoutBg ? styles.withoutBg : ""
+        }`}
+      >
         <div className={styles.container} onClick={onClick}>
           {/* Карточка */}
           {before && before.title && (

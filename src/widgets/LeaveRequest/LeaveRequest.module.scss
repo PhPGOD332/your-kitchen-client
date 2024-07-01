@@ -13,6 +13,10 @@
   );
   overflow: hidden;
 
+  &.withoutBg {
+    background: transparent;
+  }
+
   @media (max-width: $max-800) {
     min-height: rem(950);
     overflow: hidden;
