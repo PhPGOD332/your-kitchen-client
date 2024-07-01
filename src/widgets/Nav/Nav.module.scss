@@ -87,10 +87,12 @@
   gap: rem(16);
 
   @media (max-width: $max-1100) {
-    justify-content: flex-start;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
     position: relative;
     width: 100%;
+    gap: rem(0);
 
     &::before {
       position: absolute;
@@ -173,6 +175,10 @@
   opacity: 0.5;
   display: flex;
 
+  @media (max-width: $max-1100) {
+    font-size: rem(17);
+  }
+
   &:hover {
     opacity: 1;
     -webkit-filter: drop-shadow(0 0 12px #f28c6b);
@@ -219,6 +225,10 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #fff;
+
+  @media (max-width: $max-1100) {
+    font-size: rem(18);
+  }
 }
 .icon {
   width: 1.1rem;
@@ -233,6 +243,12 @@
   margin-left: rem(-22);
   -webkit-filter: drop-shadow(0 0 12px #f28c6b);
   filter: drop-shadow(0 0 12px #f28c6b);
+
+  @media (max-width: $max-1100) {
+    width: 6rem;
+    margin-left: rem(-29);
+    margin-right: rem(-10);
+  }
 }
 .menuWrapper {
   display: flex;
@@ -281,6 +297,15 @@
   // border-bottom: 2px solid #fff;
 }
 
+.iconsBlock {
+  display: flex;
+  gap: rem(10);
+
+  @media (max-width: $max-1100) {
+    gap: rem(20);
+  }
+}
+
 .navIcons {
   display: flex;
   gap: rem(8);
@@ -289,4 +314,8 @@
 }
 .navIcon {
   width: rem(18);
+
+  @media (max-width: $max-1100) {
+    width: rem(30);
+  }
 }

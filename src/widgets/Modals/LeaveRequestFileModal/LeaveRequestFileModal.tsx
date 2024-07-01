@@ -17,6 +17,7 @@ import { useEffect, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import ReactInputMask from "react-input-mask";
 import styles from "./LeaveRequestFileModal.module.scss";
+import Link from "next/link";
 
 const isOpenStyles = (isOpen: boolean) =>
   isOpen ? styles.modal : `${styles.modal} ${styles.hidden}`;
@@ -32,7 +33,7 @@ export const LeaveRequestFileModal = ({
   cardTitle,
   isOpen,
   setIsOpen,
-  setIsOpenPrivacy,
+  // setIsOpenPrivacy,
 }: FileModal) => {
   const {
     register,
@@ -43,12 +44,12 @@ export const LeaveRequestFileModal = ({
   } = useForm<TFormInputsFile>();
   const [filesCount, setFilesCount] = useState(0);
   const router = useRouter();
-  const openPrivacy = () => {
-    if (setIsOpenPrivacy) {
-      setIsOpenPrivacy(true);
-      document.body.classList.add("overflow");
-    }
-  };
+  // const openPrivacy = () => {
+  //   if (setIsOpenPrivacy) {
+  //     setIsOpenPrivacy(true);
+  //     document.body.classList.add("overflow");
+  //   }
+  // };
 
   useEffect(() => {
     document.addEventListener("keydown", (event) => {
@@ -215,9 +216,14 @@ export const LeaveRequestFileModal = ({
                     </OrangeButton>
                     <p className={styles.infoText}>
                       Нажимая на кнопку «Отправить» вы даёте{" "}
-                      <button type="button" onClick={openPrivacy}>
+                      <Link
+                        href={pagesLinks.privacyPolicy}
+                        type="button"
+                        // onClick={openPrivacy}
+                        target={"_blank"}
+                      >
                         согласие на обработку персональных данных
-                      </button>
+                      </Link>
                     </p>
                   </div>
                 </form>

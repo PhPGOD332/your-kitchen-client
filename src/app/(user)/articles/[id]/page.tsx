@@ -43,7 +43,7 @@ export const generateMetadata = async ({
           ? article.meta.keywords
           : undefined,
       openGraph: {
-        type: pagesData.articles.type,
+        type: "article",
         title:
           article.meta && article.meta.title
             ? `${article.meta.title}`

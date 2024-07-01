@@ -27,8 +27,8 @@
     &.furnitureScreen {
       padding-top: rem(140);
 
-      @media screen and (max-width: $max-600) {
-        padding-top: rem(120);
+      @media (max-width: $max-1100) and (min-width: $max-950) {
+        max-height: rem(150);
       }
 
       &.miniHeight {
@@ -39,6 +39,10 @@
         @media screen and (max-width: $max-600) {
           min-height: rem(400);
           max-height: rem(400);
+        }
+
+        @media (max-width: $max-1100) and (min-width: $max-950) {
+          max-height: rem(600);
         }
       }
     }
@@ -159,6 +163,10 @@
 
   @media screen and (max-width: $max-1000) {
     position: static;
+  }
+
+  @media (max-width: $max-768) {
+    height: 100vh;
   }
 
   @media screen and (max-width: $max-700) {
@@ -399,6 +407,16 @@
     margin: 0 auto;
     left: 50%;
     transform: translate(-50%, 0);
+  }
+
+  &.discCenterButton {
+    margin: 0 auto;
+    left: 50%;
+    transform: translate(-50%, 0);
+    
+    @media (max-width: $max-1100) {
+      position: absolute !important;
+    }
   }
 
   &.lower {

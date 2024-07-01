@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: pagesData.main.description,
   keywords: pagesData.main.keywords,
   openGraph: {
-    type: pagesData.main.type,
+    type: "website",
     title: pagesData.main.title,
     url: pagesData.main.url,
     description: pagesData.main.description,
@@ -24,22 +24,21 @@ export const metadata: Metadata = {
   },
 };
 
-import dynamic from "next/dynamic";
 import styles from "@/pages/FurniturePage.module.scss";
 import { UserKitchenService } from "@/services/shared/UserKitchenService";
 import { UserReviewsService } from "@/services/shared/UserReviewsService";
-import { LeaveRequestBlock } from "@/shared/LeaveRequestBlock";
 import { LeaveRequestBlock2 } from "@/shared/LeaveRequestBlock2";
 import AllVariants from "@/widgets/AllVariants/AllVariants";
 import { DiscountsHelloScreenSlider } from "@/widgets/ChoiseHelloScreen/DiscountsHelloScreenSlider";
 import { KitchensHelloScreen } from "@/widgets/ChoiseHelloScreen/KitchensHelloScreen";
 import { Correction } from "@/widgets/Correction/Correction";
-// import Kitchens from "@/widgets/Kitchens/Kitchens";
+import Kitchens from "@/widgets/Kitchens/Kitchens";
 import { LeaveRequestDesigner } from "@/widgets/LeaveRequestDesigner/LeaveRequestDesigner";
-import { MainAdvantages } from "@/widgets/MainAdvantages/MainAdvantages";
 import MainArticles from "@/widgets/MainArticles/MainArticles";
 import Results from "@/widgets/Results/Results";
+import dynamic from "next/dynamic";
 // import Reviews from "@/widgets/Reviews/Reviews";
+import { MainAdvantages } from "@/widgets/MainAdvantages/MainAdvantages";
 import { Stocks } from "@/widgets/Stocks/Stocks";
 import WhatsNext from "@/widgets/WhatsNext/WhatsNext";
 
@@ -47,19 +46,15 @@ export const revalidate = 30;
 
 const getHomeInfo = async () => {
   const kitchens = await UserKitchenService.getMainKitchens();
-  const reviews = await UserReviewsService.getReviews();
+  const reviews = await UserReviewsService.getMainReviews();
   const moreKitchens = await UserKitchenService.getKitchens();
 
   return { kitchens, reviews, moreKitchens };
 };
 
-const DynamicKithens = dynamic(() => import("@/widgets/Kitchens/Kitchens"), {
-  loading: () => <p className={styles.loading}>Загрузка наших кухонь...</p>
-})
-
 const DynamicReviews = dynamic(() => import("@/widgets/Reviews/Reviews"), {
-  loading: () => <p className={styles.loading}>Загрузка отзывов...</p>
-})
+  loading: () => <p className={styles.loading}>Загрузка отзывов...</p>,
+});
 
 const HomePage = async () => {
   const { kitchens, reviews, moreKitchens } = await getHomeInfo();
@@ -72,16 +67,16 @@ const HomePage = async () => {
       <div className={styles.bg}>
         <KitchensHelloScreen />
         <Stocks location="Главная страница, блок акций" />
-        <DynamicKithens
-          kitchens={kitchens}
-          moreKitchens={moreKitchens}
-          threeKitchens
-        />
-        {/*<Kitchens*/}
+        {/*<DynamicKithens*/}
         {/*  kitchens={kitchens}*/}
         {/*  moreKitchens={moreKitchens}*/}
         {/*  threeKitchens*/}
         {/*/>*/}
+        <Kitchens
+          kitchens={kitchens}
+          moreKitchens={moreKitchens}
+          threeKitchens
+        />
         <div className={styles.darkBg}>
           <LeaveRequestDesigner
             location="Главная страница"
@@ -95,10 +90,10 @@ const HomePage = async () => {
         <WhatsNext />
         <Results />
         <DiscountsHelloScreenSlider centerText miniHeight />
-        <LeaveRequestBlock
-          location='Главная страница, после "Давайте подытожим"'
-          tag="Рассчитать стоимость кухни"
-        />
+        {/*<LeaveRequestBlock*/}
+        {/*  location='Главная страница, после "Давайте подытожим"'*/}
+        {/*  tag="Рассчитать стоимость кухни"*/}
+        {/*/>*/}
         <DynamicReviews reviews={reviews} />
         {/*<Reviews reviews={reviews} />*/}
         <MainArticles />

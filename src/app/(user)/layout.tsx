@@ -60,9 +60,18 @@ export default function RootLayout({
         ></script>
         {process.env.NODE_ENV === "production" && (
           <>
-            <script src="//code.jivo.ru/widget/d1XdJXNdT6" async></script>
+            {/*<Script*/}
+            {/*  src="//code.jivo.ru/widget/d1XdJXNdT6"*/}
+            {/*  async*/}
+            {/*  strategy="lazyOnload"*/}
+            {/*></Script>*/}
             <script defer src="https://af.click.ru/af.js?id=12257"></script>
-            <Script src="https://www.googletagmanager.com/gtag/js?id=G-9PXGLTWQJK"></Script>
+
+            <Script
+              src="https://www.googletagmanager.com/gtag/js?id=G-9PXGLTWQJK"
+              async
+              strategy="lazyOnload"
+            ></Script>
             <Script
               id="google-analytics"
               dangerouslySetInnerHTML={{
@@ -72,6 +81,8 @@ export default function RootLayout({
 
   gtag('config', 'G-9PXGLTWQJK');`,
               }}
+              async
+              strategy="lazyOnload"
             />
             <Script
               id="metrikaScript"
@@ -82,6 +93,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-T7HCN6P');`,
               }}
+              async
+              strategy="lazyOnload"
             />
           </>
         )}

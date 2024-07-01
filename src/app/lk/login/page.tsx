@@ -12,6 +12,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import styles from "./LoginPage.module.scss";
+import Link from "next/link";
 
 interface TInputs {
   email: string;
@@ -28,7 +29,7 @@ const texts = {
 const ClientLoginPage = () => {
   const { register, handleSubmit, getValues } = useForm<TInputs>();
   const [error, setError] = useState<IError>({ isError: false, value: "" });
-  const [isOpenPrivacy, setIsOpenPrivacy] = useState(false);
+  // const [isOpenPrivacy, setIsOpenPrivacy] = useState(false);
   const [isOpenDocument, setIsOpenDocument] = useState(false);
 
   const dispatch = useAppDispatch();
@@ -85,11 +86,11 @@ const ClientLoginPage = () => {
           onClick: () => checkClientAgree(getValues()),
         }}
       />
-      <TextModal
-        isOpen={isOpenPrivacy}
-        setIsOpen={setIsOpenPrivacy}
-        text={PrivacyPolicy}
-      />
+      {/*<TextModal*/}
+      {/*  isOpen={isOpenPrivacy}*/}
+      {/*  setIsOpen={setIsOpenPrivacy}*/}
+      {/*  text={PrivacyPolicy}*/}
+      {/*/>*/}
       <div className={styles.container}>
         <div className={styles.center}>
           <Logo />
@@ -118,9 +119,14 @@ const ClientLoginPage = () => {
           </button>
           <p className={styles.infoText}>
             Нажимая кнопку войти, вы соглашаетесь с{" "}
-            <button type="button" onClick={() => setIsOpenPrivacy(true)}>
+            <Link
+              href={pagesLinks.privacyPolicy}
+              type="button"
+              // onClick={() => setIsOpenPrivacy(true)}
+              target={"_blank"}
+            >
               Политикой обработки персональных данных
-            </button>
+            </Link>
           </p>
         </form>
       </div>

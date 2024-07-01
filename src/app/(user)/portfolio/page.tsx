@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description: pagesData.portfolio.description,
   keywords: pagesData.portfolio.keywords,
   openGraph: {
-    type: pagesData.portfolio.type,
+    type: "website",
     title: pagesData.portfolio.title,
     url: pagesData.portfolio.url,
     description: pagesData.portfolio.description,

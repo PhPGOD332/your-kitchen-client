@@ -27,8 +27,8 @@ export const DiscountsHelloScreenSlider = ({
           className={styles.bgImage}
           alt="Фон"
           draggable={false}
-          priority
           quality={100}
+          loading="lazy"
         />
         <div className={styles.container}>
           {hasTags && (
@@ -54,7 +54,7 @@ export const DiscountsHelloScreenSlider = ({
           </p>
 
           <OrangeButton
-            className={`${styles.button} ${centerText && styles.centerButton} ${
+            className={`${styles.button} ${centerText && styles.centerButton && styles.discCenterButton} ${
               miniHeight && styles.lower
             }`}
             href={pagesLinks.discounts}

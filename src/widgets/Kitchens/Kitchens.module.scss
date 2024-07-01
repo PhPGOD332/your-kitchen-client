@@ -117,6 +117,7 @@
   gap: rem(20);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(rem(320), 1fr));
+  align-items: stretch;
 }
 .moreKitchens {
   margin: 0 auto;

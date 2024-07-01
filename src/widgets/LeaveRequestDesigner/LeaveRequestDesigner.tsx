@@ -4,18 +4,16 @@ import requestBgImage from "@/data/images/leave_request_designer_bg.jpg";
 import { isErrorStyles } from "@/features/isErrorStyles";
 import ClaimService from "@/services/admin/ClaimService";
 import { Icons } from "@/shared/IconsComponents/Icons";
-import { PrivacyPolicy } from "@/shared/PrivacyPolicy";
 import { pagesLinks } from "@/shared/constants";
-import { closeModalOnEscape } from "@/shared/helpers/closeModalOnEscape";
 import { OrangeButton } from "@/shared/ui";
 import { TFormInputsNames } from "@/types/TFormInputs";
 import type { TFormInputsFile } from "@/types/TFormInputsFile";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useState, type ReactNode } from "react";
+import { type ReactNode } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import ReactInputMask from "react-input-mask";
-import { TextModal } from "../Modals/TextModal/TextModal";
 import styles from "./LeaveRequestDesigner.module.scss";
 
 interface LeaveRequestProps {
@@ -48,23 +46,23 @@ export const LeaveRequestDesigner = ({
     setValue,
     resetField,
   } = useForm<TFormInputsFile>();
-  const [isOpenPrivacy, setIsOpenPrivacy] = useState(false);
+  // const [isOpenPrivacy, setIsOpenPrivacy] = useState(false);
   const router = useRouter();
 
-  const openPrivacy = () => {
-    setIsOpenPrivacy(true);
-    document.body.classList.add("overflow");
-  };
+  // const openPrivacy = () => {
+  //   setIsOpenPrivacy(true);
+  //   document.body.classList.add("overflow");
+  // };
 
-  useEffect(() => {
-    document.addEventListener("keydown", (event) => {
-      closeModalOnEscape(event, setIsOpenPrivacy);
-    });
-    return () =>
-      document.removeEventListener("keydown", (event) => {
-        closeModalOnEscape(event, setIsOpenPrivacy);
-      });
-  }, []);
+  // useEffect(() => {
+  //   document.addEventListener("keydown", (event) => {
+  //     closeModalOnEscape(event, setIsOpenPrivacy);
+  //   });
+  //   return () =>
+  //     document.removeEventListener("keydown", (event) => {
+  //       closeModalOnEscape(event, setIsOpenPrivacy);
+  //     });
+  // }, []);
 
   const onSubmitLeaveRequest: SubmitHandler<TFormInputsFile> = async (data) => {
     const form = new FormData();
@@ -91,11 +89,11 @@ export const LeaveRequestDesigner = ({
 
   return (
     <>
-      <TextModal
-        isOpen={isOpenPrivacy}
-        setIsOpen={setIsOpenPrivacy}
-        text={PrivacyPolicy}
-      />
+      {/*<TextModal*/}
+      {/*  isOpen={isOpenPrivacy}*/}
+      {/*  setIsOpen={setIsOpenPrivacy}*/}
+      {/*  text={PrivacyPolicy}*/}
+      {/*/>*/}
       <div className={`${styles.wrapper} ${noPadding && styles.noPadding}`}>
         <div className={styles.container}>
           <div className={styles.leaveRequest}>
@@ -181,9 +179,13 @@ export const LeaveRequestDesigner = ({
                     </OrangeButton>
                     <p className={styles.infoText}>
                       <span>Нажимая на кнопку «Отправить» вы даёте </span>
-                      <button type="button" onClick={openPrivacy}>
+                      <Link
+                        href={pagesLinks.privacyPolicy}
+                        type="button"
+                        target="_blank"
+                      >
                         согласие на обработку персональных данных
-                      </button>
+                      </Link>
                     </p>
                   </div>
                 </form>

@@ -20,6 +20,9 @@
 
 .container {
   @include container();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .bgText {
   background: linear-gradient(
@@ -112,7 +115,7 @@
 
   @media (max-width: $max-1300) {
     max-width: rem(760);
-    width: 100%;
+    width: 100vw;
   }
   @media (max-width: $max-800) {
     height: rem(550);
@@ -337,6 +340,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: rem(20);
 }
 .icon {
   max-width: rem(25);
@@ -355,4 +359,11 @@
   letter-spacing: 0.32px;
   max-width: rem(300);
   margin-top: rem(10);
+}
+
+.string {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }

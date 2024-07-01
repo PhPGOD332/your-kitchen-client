@@ -13,16 +13,8 @@
 .leaveRequest {
   width: 100%;
   @include container();
-  padding: rem(20) rem(20) rem(10);
-  background: linear-gradient(
-    180deg,
-    #262324 0%,
-    #2a2827 14.88%,
-    #393632 29.68%,
-    #3b3634 39.07%,
-    #323031 50.95%,
-    #323030 74.93%
-  );
+  padding: rem(30) rem(30) rem(30);
+  background: rgba(255, 255, 255, 0.9);
   border-radius: rem(12);
   overflow: hidden;
   margin: 0 auto;
@@ -48,35 +40,35 @@
   @media (max-width: $max-768) {
   }
 }
-.bgImage {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: center;
-  object-position: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-filter: blur(rem(8));
-  filter: blur(rem(8));
-  -webkit-mask-image: linear-gradient(
-    90deg,
-    rgba(64, 56, 48, 0) 0%,
-    rgba(64, 56, 48, 0.5) 100%
-  );
-  mask-image: linear-gradient(
-    90deg,
-    rgba(64, 56, 48, 0) 10%,
-    rgba(64, 56, 48, 0.5) 100%
-  );
-}
+// .bgImage {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   z-index: 0;
+//   width: 100%;
+//   height: 100%;
+//   -o-object-fit: cover;
+//   object-fit: cover;
+//   -o-object-position: center;
+//   object-position: center;
+//   -webkit-user-select: none;
+//   -moz-user-select: none;
+//   -ms-user-select: none;
+//   user-select: none;
+//   -webkit-filter: blur(rem(8));
+//   filter: blur(rem(8));
+//   -webkit-mask-image: linear-gradient(
+//     90deg,
+//     rgba(64, 56, 48, 0) 0%,
+//     rgba(64, 56, 48, 0.5) 100%
+//   );
+//   mask-image: linear-gradient(
+//     90deg,
+//     rgba(64, 56, 48, 0) 10%,
+//     rgba(64, 56, 48, 0.5) 100%
+//   );
+// }
 .left {
   display: flex;
   flex-direction: column;
@@ -88,10 +80,10 @@
   }
 }
 .title {
-  @include noto(500);
+  @include gilroy(500);
   font-size: rem(40);
   line-height: 1.3;
-  color: $white;
+  color: $text-dark;
   text-wrap: balance;
   position: relative;
   z-index: 2;
@@ -101,11 +93,11 @@
   }
 }
 .description {
-  @include gilroy(500);
+  @include gilroy(600);
   font-size: rem(16);
-  color: $white;
+  color: $text-dark;
   line-height: 1.5;
-  margin-top: rem(30);
+  margin-top: rem(20);
   text-wrap: balance;
   position: relative;
   z-index: 2;
@@ -142,8 +134,9 @@
 .askText {
   @include gilroy(500);
   font-size: rem(16);
-  color: #f28c6b;
+  color: #ff5a24;
   line-height: 1.3;
+  text-wrap: balance;
 }
 .right {
   position: absolute;
@@ -168,6 +161,21 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  position: relative;
+  z-index: 3;
+}
+.ellipse {
+  width: 100%;
+  height: rem(500);
+  border-radius: rem(100);
+  background-color: #a89e94;
+  position: absolute;
+  top: 20%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  -webkit-filter: blur(rem(158));
+  filter: blur(rem(158));
 }
 .card {
   margin-top: rem(20);
@@ -189,7 +197,7 @@
 .cardTitle {
   @include gilroy(400);
   font-size: rem(16);
-  color: $white;
+  color: $text-dark;
   line-height: 1.5;
   display: flex;
 
@@ -243,7 +251,7 @@
 .labelText {
   @include gilroy(400);
   font-size: rem(12);
-  color: $white;
+  color: $text-dark;
   line-height: 1.5;
   white-space: nowrap;
 }
@@ -252,6 +260,8 @@
   min-width: rem(260);
   width: 100%;
   position: relative;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
   @media (max-width: $max-1100) {
     width: 100%;
@@ -332,6 +342,8 @@
   position: relative;
   cursor: pointer;
   transition: 0.2s;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
   &:hover {
     background: linear-gradient(
@@ -342,8 +354,8 @@
   }
 }
 .inputIconCenter {
-  color: #f28c6b;
-  fill: #f28c6b;
+  color: #d3613d;
+  fill: #d3613d;
   max-width: rem(17);
   width: 100%;
   position: absolute;
@@ -361,6 +373,7 @@
   }
 }
 .text {
+  text-align: center;
   @media screen and (max-width: $max-800) {
     display: flex;
     flex-direction: column;
@@ -371,14 +384,14 @@
 .infoText {
   @include gilroy(400);
   font-size: rem(10);
-  color: $white;
+  color: $text-dark;
   margin-top: rem(4);
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  & button {
+  & a {
     color: #f28c6b;
     text-decoration: none;
     border: 0;
@@ -398,14 +411,15 @@
 }
 
 .moreText {
-  @include gilroy(500);
-  font-style: italic;
+  @include gilroy(600);
   text-wrap: pretty;
   position: relative;
   z-index: 2;
-  font-size: rem(16);
-  color: #a3863d;
+  text-transform: uppercase;
+  font-size: rem(12);
+  color: #ff460b;
   display: inline;
+  text-align: center;
 
   & span {
     font-weight: 700;

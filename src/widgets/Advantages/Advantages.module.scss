@@ -148,19 +148,19 @@
 		object-position: center;
 		border-radius: rem(6);
 
-		-webkit-mask: linear-gradient(
-			0deg,
-			rgba(40, 35, 32, 0.4) 0%,
-			rgba(40, 35, 32, 1) 56.4%,
-			rgba(40, 35, 32, 0.4) 100%
-		);
+		//-webkit-mask: linear-gradient(
+		//	0deg,
+		//	rgba(40, 35, 32, 0.4) 0%,
+		//	rgba(40, 35, 32, 1) 56.4%,
+		//	rgba(40, 35, 32, 0.4) 100%
+		//);
 
-		mask: linear-gradient(
-			0deg,
-			rgba(40, 35, 32, 0.4) 0%,
-			rgba(40, 35, 32, 1) 56.4%,
-			rgba(40, 35, 32, 0.4) 100%
-		);
+		//mask: linear-gradient(
+		//	0deg,
+		//	rgba(40, 35, 32, 0.4) 0%,
+		//	rgba(40, 35, 32, 1) 56.4%,
+		//	rgba(40, 35, 32, 0.4) 100%
+		//);
 
 		&.company {
 			max-width: rem(190);
@@ -187,18 +187,18 @@
 			-o-object-position: center;
 			object-position: center;
 			object-fit: cover;
-			-webkit-mask-image: linear-gradient(
-				0deg,
-				rgba(40, 35, 32, 0.4) 0%,
-				rgb(40, 35, 32) 56.4%,
-				rgba(40, 35, 32, 0.4) 100%
-			);
-			mask-image: linear-gradient(
-				0deg,
-				rgba(40, 35, 32, 0.4) 0%,
-				rgb(40, 35, 32) 56.4%,
-				rgba(40, 35, 32, 0.4) 100%
-			);
+			//-webkit-mask-image: linear-gradient(
+			//	0deg,
+			//	rgba(40, 35, 32, 0.4) 0%,
+			//	rgb(40, 35, 32) 56.4%,
+			//	rgba(40, 35, 32, 0.4) 100%
+			//);
+			//mask-image: linear-gradient(
+			//	0deg,
+			//	rgba(40, 35, 32, 0.4) 0%,
+			//	rgb(40, 35, 32) 56.4%,
+			//	rgba(40, 35, 32, 0.4) 100%
+			//);
 
 			@media (max-width: $max-1000) {
 				max-width: clamp(rem(270), 70%, rem(500));
@@ -313,11 +313,13 @@
 }
 
 .imageCard {
-	display: flex;
+	display: grid;
+	grid-template-columns: rem(220) 1fr;
 	gap: rem(20);
 	align-items: flex-start;
 
 	@media (max-width: $max-1000) {
+		display: flex;
 		flex-direction: column;
 		align-items: center;
 	}

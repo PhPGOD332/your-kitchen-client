@@ -115,21 +115,21 @@
   -ms-user-select: none;
   user-select: none;
 
-  -webkit-mask-image: linear-gradient(
-    0deg,
-    rgb(40, 35, 32, 0.7) 0%,
-    rgba(40, 35, 32, 0.7) 25%,
-    rgba(40, 35, 32, 0.7) 50%,
-    rgba(40, 35, 32, 0.7) 75%,
-    rgba(40, 35, 32, 0.7) 100%
-  );
+  //-webkit-mask-image: linear-gradient(
+  //  0deg,
+  //  rgb(40, 35, 32, 0.7) 0%,
+  //  rgba(40, 35, 32, 0.7) 25%,
+  //  rgba(40, 35, 32, 0.7) 50%,
+  //  rgba(40, 35, 32, 0.7) 75%,
+  //  rgba(40, 35, 32, 0.7) 100%
+  //);
 
-  mask-image: linear-gradient(
-    0deg,
-    rgb(40, 35, 32, 0.7) 0%,
-    rgba(40, 35, 32, 0.7) 25%,
-    rgba(40, 35, 32, 0.7) 50%,
-    rgba(40, 35, 32, 0.7) 75%,
-    rgba(40, 35, 32, 0.7) 100%
-  );
+  //mask-image: linear-gradient(
+  //  0deg,
+  //  rgb(40, 35, 32, 0.7) 0%,
+  //  rgba(40, 35, 32, 0.7) 25%,
+  //  rgba(40, 35, 32, 0.7) 50%,
+  //  rgba(40, 35, 32, 0.7) 75%,
+  //  rgba(40, 35, 32, 0.7) 100%
+  //);
 }

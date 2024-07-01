@@ -14,6 +14,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import ReactInputMask from "react-input-mask";
 import { TextModal } from "../Modals/TextModal/TextModal";
 import styles from "./LeaveRequestMini.module.scss";
+import Link from "next/link";
 
 const API_URL: string | undefined = process.env.NEXT_PUBLIC_API_URL;
 
@@ -75,7 +76,7 @@ export const LeaveRequestMini = ({
     setValue,
   } = useForm<TFormInputs>();
 
-  const [isOpenPrivacy, setIsOpenPrivacy] = useState(false);
+  // const [isOpenPrivacy, setIsOpenPrivacy] = useState(false);
   const router = useRouter();
 
   const onSubmitLeaveRequest: SubmitHandler<TFormInputs> = async (data) => {
@@ -101,11 +102,11 @@ export const LeaveRequestMini = ({
   if (isModal && setIsOpen) {
     return (
       <>
-        <TextModal
-          isOpen={isOpenPrivacy}
-          setIsOpen={setIsOpenPrivacy}
-          text={PrivacyPolicy}
-        />
+        {/*<TextModal*/}
+        {/*  isOpen={isOpenPrivacy}*/}
+        {/*  setIsOpen={setIsOpenPrivacy}*/}
+        {/*  text={PrivacyPolicy}*/}
+        {/*/>*/}
         <div className={styles.leaveRequest}>
           <div className={styles.container} onClick={onClick}>
             {/* Карточка */}
@@ -181,12 +182,14 @@ export const LeaveRequestMini = ({
                     </OrangeButton>
                     <p className={styles.infoText}>
                       Нажимая на кнопку «Отправить» вы даёте{" "}
-                      <button
+                      <Link
+                        href={pagesLinks.privacyPolicy}
                         type="button"
-                        onClick={() => setIsOpenPrivacy(true)}
+                        // onClick={() => setIsOpenPrivacy(true)}
+                        target={"_blank"}
                       >
                         согласие на обработку персональных данных
-                      </button>
+                      </Link>
                     </p>
                   </div>
                 </div>
@@ -203,11 +206,11 @@ export const LeaveRequestMini = ({
 
   return (
     <>
-      <TextModal
-        isOpen={isOpenPrivacy}
-        setIsOpen={setIsOpenPrivacy}
-        text={PrivacyPolicy}
-      />
+      {/*<TextModal*/}
+      {/*  isOpen={isOpenPrivacy}*/}
+      {/*  setIsOpen={setIsOpenPrivacy}*/}
+      {/*  text={PrivacyPolicy}*/}
+      {/*/>*/}
       <div className={styles.leaveRequest}>
         <div className={styles.container}>
           {/* Карточка */}
@@ -273,12 +276,14 @@ export const LeaveRequestMini = ({
                   </OrangeButton>
                   <p className={styles.infoText}>
                     Нажимая на кнопку «Отправить» вы даёте{" "}
-                    <button
+                    <Link
+                      href={pagesLinks.privacyPolicy}
                       type="button"
-                      onClick={() => setIsOpenPrivacy(true)}
+                      // onClick={() => setIsOpenPrivacy(true)}
+                      target={"_blank"}
                     >
                       согласие на обработку персональных данных
-                    </button>
+                    </Link>
                   </p>
                 </div>
               </div>

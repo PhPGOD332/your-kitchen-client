@@ -1,8 +1,8 @@
-import image1 from "@/data/advantages/card1.webp";
-import image2 from "@/data/advantages/card2.webp";
-import image3 from "@/data/advantages/card3.jpeg";
-import image4 from "@/data/advantages/card4.webp";
-import image5 from "@/data/advantages/card5.webp";
+import image4 from "@/data/advantages/Заказать кухню в Москве недорого.jpeg";
+import image2 from "@/data/advantages/Изготовление кухни на заказ по индвидуальным размерам.jpg";
+import image1 from "@/data/advantages/Кухни на заказ в Москве.jpg";
+import image5 from "@/data/advantages/Кухни от производителя в москве, на заказ, недорого.jpeg";
+import image3 from "@/data/advantages/Кухни эноном, премиум, а также элитные.jpg";
 import comp1 from "@/data/companies/comp1.webp";
 import comp2 from "@/data/companies/comp2.webp";
 import comp3 from "@/data/companies/comp3.webp";
@@ -27,10 +27,10 @@ const imageCards: ImageCard[] = [
     title: "Каркасы",
     text: (
       <p>
-        “Твоя кухня” использует высокопрочные ДСП от ведущих австрийских
-        производителей - Egger и Kronospan для изготовления своих каркасов
-        мебели. Эти ДСП соответствуют ГОСТам и самым строгим европейским
-        стандартам экологической и санитарной безопасности, что подтверждено
+        Мы используем высокопрочные ДСП от ведущих австрийских производителей -
+        Egger и Kronospan для изготовления своих каркасов мебели. Эти ДСП
+        соответствуют ГОСТам и самым строгим европейским стандартам
+        экологической и санитарной безопасности, что подтверждено
         соответствующими сертификатами. Это гарантирует безопасность
         использования нашей мебели для человека и домашних животных.
       </p>
@@ -42,9 +42,9 @@ const imageCards: ImageCard[] = [
     text: (
       <>
         <p>
-          “Твоя кухня” предлагает изготовление фасадов из экологически чистых,
-          современных материалов. Мы даем возможность нашим клиентам создать
-          индивидуальный дизайн и проектирование, используя различные материалы.
+          Мы предлагаем изготовление фасадов из экологически чистых, современных
+          материалов. Мы даем возможность нашим клиентам создать индивидуальный
+          дизайн и проектирование, используя различные материалы.
         </p>
         <br />
         <p>
@@ -69,7 +69,7 @@ const imageCards: ImageCard[] = [
     text: (
       <>
         <p>
-          “Твоя кухня” предлагает столешницы из практичных и безопасных
+          « Твоя кухня » предлагает столешницы из практичных и безопасных
           материалов, таких как ДСП с покрытием из HPL-пластика, искусственного
           и натурального камня.
         </p>
@@ -164,8 +164,7 @@ export const MainAdvantages = ({ title }: Props) => {
               <p className={styles.cardText}>
                 Высокое качество. Фабрика сотрудничает только с надежными
                 проверенными поставщиками – лидерами в своей отрасли. Мы уверены
-                в качестве своей продукции, поэтому гарантия на мебель «Твоя
-                кухня» – 10 лет.
+                в качестве своей продукции, поэтому гарантия на мебель – 10 лет.
               </p>
             </div>
             <div className={styles.companies}>
@@ -247,15 +246,21 @@ export const MainAdvantages = ({ title }: Props) => {
           </div>
           <div className={styles.upperText}>
             {imageCards.map((card, index) => (
-              <>
-                <hr key={`${index}i`} />
-                <div className={styles.imageCard} key={`${index}c`}>
-                  <Image
-                    src={card.image}
+              <div key={index}>
+                <hr />
+                <div className={styles.imageCard}>
+                  {/*<Image*/}
+                  {/*  src={card.image}*/}
+                  {/*  alt={card.title}*/}
+                  {/*  className={styles.cardImage}*/}
+                  {/*  width={800}*/}
+                  {/*  height={800}*/}
+                  {/*  draggable={false}*/}
+                  {/*/>*/}
+                  <img
+                    src={card.image.src}
                     alt={card.title}
                     className={styles.cardImage}
-                    width={250}
-                    height={220}
                     draggable={false}
                   />
                   <div className={styles.imageCardContent}>
@@ -266,7 +271,7 @@ export const MainAdvantages = ({ title }: Props) => {
                     {card.text}
                   </div>
                 </div>
-              </>
+              </div>
             ))}
           </div>
         </div>

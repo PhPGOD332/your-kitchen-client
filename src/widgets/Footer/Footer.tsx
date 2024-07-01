@@ -10,20 +10,20 @@ import { TextModal } from "../Modals/TextModal/TextModal";
 import styles from "./Footer.module.scss";
 
 const Footer = () => {
-  const [isOpenPrivacy, setIsOpenPrivacy] = useState(false);
-  const openPrivacy = () => {
-    setIsOpenPrivacy(true);
-    document.body.classList.add("overflow");
-  };
+  // const [isOpenPrivacy, setIsOpenPrivacy] = useState(false);
+  // const openPrivacy = () => {
+  //   setIsOpenPrivacy(true);
+  //   document.body.classList.add("overflow");
+  // };
 
   return (
     <>
-      <TextModal
-        isOpen={isOpenPrivacy}
-        setIsOpen={setIsOpenPrivacy}
-        text={PrivacyPolicy}
-        key={"footer-privacy"}
-      />
+      {/*<TextModal*/}
+      {/*  isOpen={isOpenPrivacy}*/}
+      {/*  setIsOpen={setIsOpenPrivacy}*/}
+      {/*  text={PrivacyPolicy}*/}
+      {/*  key={"footer-privacy"}*/}
+      {/*/>*/}
       <footer
         className={styles.footer}
         itemScope
@@ -125,13 +125,15 @@ const Footer = () => {
                 <span itemProp="name">Твоя Кухня</span>
                 ». Все права защищены.
               </p>
-              <button
+              <Link
+                href={pagesLinks.privacyPolicy}
                 type="button"
                 className={styles.privacyButton}
-                onClick={openPrivacy}
+                // onClick={openPrivacy}
+                target="_blank"
               >
                 Согласие на обработку персональных данных
-              </button>
+              </Link>
             </div>
             <div className={styles.footerIcons}>
               <Link aria-label="Телеграм" href={links.tgGroup} target="_blank">
