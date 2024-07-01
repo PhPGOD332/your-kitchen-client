@@ -7,16 +7,23 @@ interface LeaveRequestBlockProps {
     title?: string;
     subtitle?: string;
   };
+  withoutBg?: boolean;
 }
 
 export const LeaveRequestBlock2 = ({
   location,
   tag,
   before,
+  withoutBg,
 }: LeaveRequestBlockProps) => {
   return (
     <>
-      <LeaveRequest2 location={location} tag={tag} before={before} />
+      <LeaveRequest2
+        location={location}
+        tag={tag}
+        before={before}
+        withoutBg={withoutBg}
+      />
     </>
   );
 };

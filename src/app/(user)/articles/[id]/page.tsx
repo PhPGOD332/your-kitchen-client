@@ -169,6 +169,7 @@ const ArticlePage = async ({ params }: Props) => {
         <LeaveRequestBlock2
           location={`Страница статьи ${article.title}`}
           tag="Рассчитать стоимость кухни"
+          withoutBg
         />
       </article>
     </>

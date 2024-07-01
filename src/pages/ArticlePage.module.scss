@@ -246,20 +246,6 @@
   @media (max-width: $max-768) {
     max-height: rem(200);
   }
-
-  // -webkit-mask: linear-gradient(
-  //   0deg,
-  //   rgba(40, 35, 32, 0.4) 0%,
-  //   rgba(40, 35, 32, 1) 56.4%,
-  //   rgba(40, 35, 32, 0.4) 100%
-  // );
-
-  // mask: linear-gradient(
-  //   0deg,
-  //   rgba(40, 35, 32, 0.4) 0%,
-  //   rgba(40, 35, 32, 1) 56.4%,
-  //   rgba(40, 35, 32, 0.4) 100%
-  // );
 }
 .contentString {
   display: flex;
