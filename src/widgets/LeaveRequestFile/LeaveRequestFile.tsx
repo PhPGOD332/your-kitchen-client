@@ -1,24 +1,20 @@
 "use client";
 
-import requestBgImage from "@/data/images/bg_request_file.webp";
 import ipadImg from "@/data/images/ipad_project.webp";
 import { isErrorStyles } from "@/features/isErrorStyles";
 import ClaimService from "@/services/admin/ClaimService";
 import { Icons } from "@/shared/IconsComponents/Icons";
-import { PrivacyPolicy } from "@/shared/PrivacyPolicy";
 import { pagesLinks } from "@/shared/constants";
-import { closeModalOnEscape } from "@/shared/helpers/closeModalOnEscape";
 import { OrangeButton } from "@/shared/ui";
 import { TFormInputsNames } from "@/types/TFormInputs";
 import type { TFormInputsFile } from "@/types/TFormInputsFile";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useState, type ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import ReactInputMask from "react-input-mask";
-import { TextModal } from "../Modals/TextModal/TextModal";
 import styles from "./LeaveRequestFile.module.scss";
-import Link from "next/link";
 
 interface LeaveRequestProps {
   title?: string;
@@ -105,12 +101,12 @@ export const LeaveRequestFile = ({
       <div className={`${styles.wrapper} ${noPadding && styles.noPadding}`}>
         <div className={styles.container}>
           <div className={styles.leaveRequest}>
-            <Image
+            {/* <Image
               src={requestBgImage}
               alt="Фон"
               className={styles.bgImage}
               draggable={false}
-            />
+            /> */}
             <div className={styles.left}>
               <div className={styles.title}>
                 {title ? title : "Есть проект - сравните цены!"}
@@ -123,19 +119,16 @@ export const LeaveRequestFile = ({
               <div className={styles.asks}>
                 <div className={styles.ask}>
                   <Icons.lamp className={styles.icon} />
-                  <p className={styles.askText}>
-                    Как оформить и улучшить проект?
-                  </p>
+                  <p className={styles.askText}>Как улучшить проект?</p>
                 </div>
                 <div className={styles.ask}>
                   <Icons.keys className={styles.icon} />
                   <p className={styles.askText}>
-                    Из чего сделать надежную и долговечную мебель?
+                    Из чего сделать надежную и долговечную кухню?
                   </p>
                 </div>
                 <div className={styles.ask}>
                   <Icons.house className={styles.icon} />
-
                   <p className={styles.askText}>
                     Лучшие варианты и сочетания, примеры? Где заказать? Какая
                     подойдет в частный дом? Прямая или угловая?
@@ -149,6 +142,7 @@ export const LeaveRequestFile = ({
                   draggable={false}
                   className={styles.rightImage}
                 />
+                <div className={styles.ellipse}></div>
               </div>
               <div className={styles.card}>
                 <div className={styles.text}>

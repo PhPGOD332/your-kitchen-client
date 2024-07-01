@@ -2,14 +2,21 @@
 
 .articlePage {
   padding-top: rem(150);
+  // background: linear-gradient(
+  //   180deg,
+  //   #312d2a 0%,
+  //   #2a2827 23.59%,
+  //   #393632 38.43%,
+  //   #312d2a 48.32%,
+  //   #35302c 57.29%,
+  //   #2d2928 100%
+  // );
   background: linear-gradient(
     180deg,
-    #312d2a 0%,
-    #2a2827 23.59%,
-    #393632 38.43%,
-    #312d2a 48.32%,
-    #35302c 57.29%,
-    #2d2928 100%
+    #827269 0%,
+    #73655a 25.78%,
+    #897b70 57.29%,
+    #75685c 100%
   );
   padding-bottom: rem(50);
 }
@@ -240,19 +247,19 @@
     max-height: rem(200);
   }
 
-  -webkit-mask: linear-gradient(
-    0deg,
-    rgba(40, 35, 32, 0.4) 0%,
-    rgba(40, 35, 32, 1) 56.4%,
-    rgba(40, 35, 32, 0.4) 100%
-  );
+  // -webkit-mask: linear-gradient(
+  //   0deg,
+  //   rgba(40, 35, 32, 0.4) 0%,
+  //   rgba(40, 35, 32, 1) 56.4%,
+  //   rgba(40, 35, 32, 0.4) 100%
+  // );
 
-  mask: linear-gradient(
-    0deg,
-    rgba(40, 35, 32, 0.4) 0%,
-    rgba(40, 35, 32, 1) 56.4%,
-    rgba(40, 35, 32, 0.4) 100%
-  );
+  // mask: linear-gradient(
+  //   0deg,
+  //   rgba(40, 35, 32, 0.4) 0%,
+  //   rgba(40, 35, 32, 1) 56.4%,
+  //   rgba(40, 35, 32, 0.4) 100%
+  // );
 }
 .contentString {
   display: flex;

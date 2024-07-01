@@ -4,20 +4,17 @@ import requestBgImage from "@/data/images/leave_request_designer_bg.jpg";
 import { isErrorStyles } from "@/features/isErrorStyles";
 import ClaimService from "@/services/admin/ClaimService";
 import { Icons } from "@/shared/IconsComponents/Icons";
-import { PrivacyPolicy } from "@/shared/PrivacyPolicy";
 import { pagesLinks } from "@/shared/constants";
-import { closeModalOnEscape } from "@/shared/helpers/closeModalOnEscape";
 import { OrangeButton } from "@/shared/ui";
 import { TFormInputsNames } from "@/types/TFormInputs";
 import type { TFormInputsFile } from "@/types/TFormInputsFile";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useState, type ReactNode } from "react";
+import { type ReactNode } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import ReactInputMask from "react-input-mask";
-import { TextModal } from "../Modals/TextModal/TextModal";
 import styles from "./LeaveRequestDesigner.module.scss";
-import Link from "next/link";
 
 interface LeaveRequestProps {
   title?: string;
@@ -182,7 +179,11 @@ export const LeaveRequestDesigner = ({
                     </OrangeButton>
                     <p className={styles.infoText}>
                       <span>Нажимая на кнопку «Отправить» вы даёте </span>
-                      <Link href={pagesLinks.privacyPolicy} type="button" target="_blank">
+                      <Link
+                        href={pagesLinks.privacyPolicy}
+                        type="button"
+                        target="_blank"
+                      >
                         согласие на обработку персональных данных
                       </Link>
                     </p>

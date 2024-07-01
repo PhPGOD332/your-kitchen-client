@@ -1,8 +1,8 @@
-import image1 from "@/data/advantages/Кухни на заказ в Москве.jpg";
-import image2 from "@/data/advantages/Изготовление кухни на заказ по индвидуальным размерам.jpg";
-import image3 from "@/data/advantages/Кухни эноном, премиум, а также элитные.jpg";
 import image4 from "@/data/advantages/Заказать кухню в Москве недорого.jpeg";
+import image2 from "@/data/advantages/Изготовление кухни на заказ по индвидуальным размерам.jpg";
+import image1 from "@/data/advantages/Кухни на заказ в Москве.jpg";
 import image5 from "@/data/advantages/Кухни от производителя в москве, на заказ, недорого.jpeg";
+import image3 from "@/data/advantages/Кухни эноном, премиум, а также элитные.jpg";
 import comp1 from "@/data/companies/comp1.webp";
 import comp2 from "@/data/companies/comp2.webp";
 import comp3 from "@/data/companies/comp3.webp";
@@ -27,10 +27,10 @@ const imageCards: ImageCard[] = [
     title: "Каркасы",
     text: (
       <p>
-        Мы используем высокопрочные ДСП от ведущих австрийских
-        производителей - Egger и Kronospan для изготовления своих каркасов
-        мебели. Эти ДСП соответствуют ГОСТам и самым строгим европейским
-        стандартам экологической и санитарной безопасности, что подтверждено
+        Мы используем высокопрочные ДСП от ведущих австрийских производителей -
+        Egger и Kronospan для изготовления своих каркасов мебели. Эти ДСП
+        соответствуют ГОСТам и самым строгим европейским стандартам
+        экологической и санитарной безопасности, что подтверждено
         соответствующими сертификатами. Это гарантирует безопасность
         использования нашей мебели для человека и домашних животных.
       </p>
@@ -42,9 +42,9 @@ const imageCards: ImageCard[] = [
     text: (
       <>
         <p>
-          Мы предлагаем изготовление фасадов из экологически чистых,
-          современных материалов. Мы даем возможность нашим клиентам создать
-          индивидуальный дизайн и проектирование, используя различные материалы.
+          Мы предлагаем изготовление фасадов из экологически чистых, современных
+          материалов. Мы даем возможность нашим клиентам создать индивидуальный
+          дизайн и проектирование, используя различные материалы.
         </p>
         <br />
         <p>
@@ -246,9 +246,9 @@ export const MainAdvantages = ({ title }: Props) => {
           </div>
           <div className={styles.upperText}>
             {imageCards.map((card, index) => (
-              <>
-                <hr key={`${index}i`} />
-                <div className={styles.imageCard} key={`${index}c`}>
+              <div key={index}>
+                <hr />
+                <div className={styles.imageCard}>
                   {/*<Image*/}
                   {/*  src={card.image}*/}
                   {/*  alt={card.title}*/}
@@ -257,7 +257,12 @@ export const MainAdvantages = ({ title }: Props) => {
                   {/*  height={800}*/}
                   {/*  draggable={false}*/}
                   {/*/>*/}
-                  <img src={card.image.src} alt={card.title} className={styles.cardImage} draggable={false}/>
+                  <img
+                    src={card.image.src}
+                    alt={card.title}
+                    className={styles.cardImage}
+                    draggable={false}
+                  />
                   <div className={styles.imageCardContent}>
                     <h5 className={styles.imageCardTitle}>
                       <b>{card.title}</b>
@@ -266,7 +271,7 @@ export const MainAdvantages = ({ title }: Props) => {
                     {card.text}
                   </div>
                 </div>
-              </>
+              </div>
             ))}
           </div>
         </div>

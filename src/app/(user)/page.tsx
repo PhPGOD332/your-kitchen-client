@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: pagesData.main.description,
   keywords: pagesData.main.keywords,
   openGraph: {
-    type: pagesData.main.type,
+    type: "website",
     title: pagesData.main.title,
     url: pagesData.main.url,
     description: pagesData.main.description,
@@ -24,11 +24,9 @@ export const metadata: Metadata = {
   },
 };
 
-import dynamic from "next/dynamic";
 import styles from "@/pages/FurniturePage.module.scss";
 import { UserKitchenService } from "@/services/shared/UserKitchenService";
 import { UserReviewsService } from "@/services/shared/UserReviewsService";
-import { LeaveRequestBlock } from "@/shared/LeaveRequestBlock";
 import { LeaveRequestBlock2 } from "@/shared/LeaveRequestBlock2";
 import AllVariants from "@/widgets/AllVariants/AllVariants";
 import { DiscountsHelloScreenSlider } from "@/widgets/ChoiseHelloScreen/DiscountsHelloScreenSlider";
@@ -36,10 +34,11 @@ import { KitchensHelloScreen } from "@/widgets/ChoiseHelloScreen/KitchensHelloSc
 import { Correction } from "@/widgets/Correction/Correction";
 import Kitchens from "@/widgets/Kitchens/Kitchens";
 import { LeaveRequestDesigner } from "@/widgets/LeaveRequestDesigner/LeaveRequestDesigner";
-import { MainAdvantages } from "@/widgets/MainAdvantages/MainAdvantages";
 import MainArticles from "@/widgets/MainArticles/MainArticles";
 import Results from "@/widgets/Results/Results";
+import dynamic from "next/dynamic";
 // import Reviews from "@/widgets/Reviews/Reviews";
+import { MainAdvantages } from "@/widgets/MainAdvantages/MainAdvantages";
 import { Stocks } from "@/widgets/Stocks/Stocks";
 import WhatsNext from "@/widgets/WhatsNext/WhatsNext";
 
@@ -54,8 +53,8 @@ const getHomeInfo = async () => {
 };
 
 const DynamicReviews = dynamic(() => import("@/widgets/Reviews/Reviews"), {
-  loading: () => <p className={styles.loading}>Загрузка отзывов...</p>
-})
+  loading: () => <p className={styles.loading}>Загрузка отзывов...</p>,
+});
 
 const HomePage = async () => {
   const { kitchens, reviews, moreKitchens } = await getHomeInfo();
