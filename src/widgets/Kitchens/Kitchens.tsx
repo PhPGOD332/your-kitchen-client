@@ -32,7 +32,7 @@ const Kitchens = ({ kitchens, moreKitchens, threeKitchens }: KitchensProps) => {
       <div className={styles.kitchensPage} id="kitchens">
         <div className={styles.container}>
           <h3 className={styles.title}>
-            За <span>9</span> лет фабрика &quot;Твоя кухня&quot; произвела более
+            За <span>12</span> лет фабрика &quot;Твоя кухня&quot; произвела более
             1.5&nbsp;тысяч гарнитуров в&nbsp;Москве
           </h3>
           <p className={styles.subtitle2}>
