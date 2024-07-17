@@ -85,7 +85,7 @@ const HomePage = async () => {
         </div>
         <MainAdvantages />
         {/* <SecondScreen /> */}
-        <Correction />
+        <Correction card1Hide={true} card2Hide={true} card3Hide={true}/>
         <AllVariants />
         <WhatsNext />
         <Results />

@@ -26,9 +26,9 @@ const AllVariants = () => {
       <div className={styles.allvariants}>
         <div className={styles.container}>
           <div className={styles.titleWrapper}>
-            <h3 className={styles.title1}>Так вы рассмотрите все варианты</h3>
+            {/*<h3 className={styles.title1}>Так вы рассмотрите все варианты</h3>*/}
             <h2 className={styles.title2}>
-              И получите дизайн-проект идеальной для себя кухни
+              Получите дизайн-проект идеальной для себя кухни
             </h2>
             <Icons.ruble className={styles.icon} />
             <p className={styles.title3}>с идеальным бюджетом</p>
