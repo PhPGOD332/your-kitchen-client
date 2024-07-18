@@ -6,6 +6,9 @@
 }
 .container {
   @include container();
+  display: flex;
+  flex-direction: column;
+  padding-bottom: rem(50);
 }
 .title {
   @include noto(400);
@@ -16,6 +19,7 @@
   position: relative;
   z-index: 2;
   color: $white;
+  order: 1;
 
   &.left {
     text-align: left;
@@ -38,6 +42,7 @@
   text-align: center;
   letter-spacing: rem(0.4);
   font-size: rem(22);
+  order: 2;
 
   @media (max-width: $max-768) {
     font-size: rem(18);
@@ -50,7 +55,7 @@
 }
 .slide {
   width: 100%;
-  min-width: rem(300);
+  //min-width: rem(300);
   height: rem(200);
   -o-object-fit: cover;
   object-fit: cover;
@@ -119,6 +124,20 @@
     aspect-ratio: 16/9;
   }
 }
+.onlyVideo {
+  border-radius: rem(12);
+  width: 100%;
+  //max-width: rem(512);
+  height: 65vh;
+  overflow: hidden;
+  position: relative;
+
+  @media screen and (max-width: $max-950) {
+    //max-width: rem(700);
+    height: 100%;
+    aspect-ratio: 16/9;
+  }
+}
 .videoPreview {
   width: 100%;
   height: 100%;
@@ -127,6 +146,7 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  object-fit: cover;
 }
 .openVideoButton {
   position: absolute;

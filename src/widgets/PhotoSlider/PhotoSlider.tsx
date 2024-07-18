@@ -10,7 +10,7 @@ import img7 from "@/data/images/contacts-slider/XL (7).webp";
 import videoPreviewImg from "@/data/images/video-preview1.jpg";
 import { Icons } from "@/shared/IconsComponents/Icons";
 import "@/shared/styles/swiper-my.css";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -35,6 +35,10 @@ interface Props {
   title?: string;
   subtitle?: string;
   withoutManyText?: boolean;
+  onlyVideo?: boolean;
+  previewVideo?: string;
+  withoutLowerText?: boolean;
+  firstVideoBlock?: boolean;
 }
 
 export const PhotoSlider = ({
@@ -42,6 +46,10 @@ export const PhotoSlider = ({
   subtitle,
   title,
   withoutManyText,
+  onlyVideo,
+  previewVideo,
+  withoutLowerText,
+  firstVideoBlock
 }: Props) => {
   const [isOpenPreview, setIsOpenPreview] = useState(false);
   const [isOpenVideo, setIsOpenVideo] = useState(false);
@@ -79,6 +87,7 @@ export const PhotoSlider = ({
           {title && <h3 className={styles.title}>{title}</h3>}
           {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
           <Swiper
+            style={firstVideoBlock ? {order: 4} : {}}
             className={styles.swiper}
             spaceBetween={30}
             navigation={{
@@ -124,8 +133,8 @@ export const PhotoSlider = ({
             ))}
           </Swiper>
           {!withoutManyText && (
-            <div className={styles.textWithVideo}>
-              <div className={styles.leftText}>
+            <div className={styles.textWithVideo} style={firstVideoBlock ? {order: 3} : {}}>
+              {!onlyVideo && <div className={styles.leftText}>
                 <h4 className={`${styles.title} ${styles.left}`}>
                   Работаем с&nbsp;1998 года для&nbsp;вас.
                 </h4>
@@ -145,9 +154,10 @@ export const PhotoSlider = ({
                   </strong>
                 </p>
               </div>
-              <div className={styles.rightVideo}>
+              }
+              <div className={onlyVideo ? styles.onlyVideo : styles.rightVideo}>
                 <Image
-                  src={videoPreviewImg}
+                  src={previewVideo ? previewVideo : videoPreviewImg}
                   alt="Видео"
                   width={512}
                   height={356}
@@ -164,11 +174,12 @@ export const PhotoSlider = ({
               </div>
             </div>
           )}
-          <p className={styles.lowerText}>
+          {!withoutLowerText && <p className={styles.lowerText}>
             Закажите обратный звонок чтобы обсудить детали вашего проекта,
             оформить выезд дизайнера для проведения замера помещения под кухню
             или другую корпусную мебель, создать визуализацию и 3D-проект.
           </p>
+          }
         </div>
       </div>
     </>
