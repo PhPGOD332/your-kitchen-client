@@ -108,9 +108,9 @@ export const PhotoSlider = ({
               1024: {
                 slidesPerView: 3,
               },
-              1440: {
-                slidesPerView: 4,
-              },
+              // 1440: {
+              //   slidesPerView: 4,
+              // },
             }}
             loop={true}
             modules={[Navigation]}

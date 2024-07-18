@@ -97,6 +97,7 @@ const HomePage = async () => {
           threeKitchens
         />
         <PhotoSlider
+          title={"Наше производство и технологии"}
           photos={initialImages}
           onlyVideo={true}
           previewVideo={previewVideoSlider.src}
