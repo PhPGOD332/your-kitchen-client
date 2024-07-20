@@ -103,6 +103,7 @@ const HomePage = async () => {
           previewVideo={previewVideoSlider.src}
           withoutLowerText={true}
           firstVideoBlock={true}
+          bgColor='linear-gradient(180deg, #322d29 0%, #322d29 35.47%, #35302c 78.81%, #2d2928 137.57%)'
         />
         <div className={styles.darkBg}>
           <LeaveRequestDesigner
@@ -112,7 +113,7 @@ const HomePage = async () => {
         </div>
         <MainAdvantages />
         {/* <SecondScreen /> */}
-        <Correction card1Hide={true} card2Hide={true} card3Hide={true}/>
+        <Correction card1Hide={true} card2Hide={true} card3Hide={true} titleView={false}/>
         <AllVariants />
         <WhatsNext />
         <Results />

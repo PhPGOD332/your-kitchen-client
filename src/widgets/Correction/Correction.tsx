@@ -16,12 +16,13 @@ import styles from "./Correction.module.scss";
 
 interface Props {
   title?: string;
+  titleView?: boolean;
   card1Hide?: boolean;
   card2Hide?: boolean;
   card3Hide?: boolean;
 }
 
-export const Correction = ({ title, card1Hide, card2Hide, card3Hide }: Props) => {
+export const Correction = ({ title, card1Hide, card2Hide, card3Hide, titleView }: Props) => {
   const [isOpenModal, setIsOpenModal] = useState(false);
   const [isOpenVideo, setIsOpenVideo] = useState(false);
   return (
@@ -44,9 +45,13 @@ export const Correction = ({ title, card1Hide, card2Hide, card3Hide }: Props) =>
       <div className={styles.correctionPage} id="how-we-work">
         <div className={styles.container}>
           <h2 className={styles.title1}>
-            {title
-              ? title
-              : "Процесс выбора и этапы при заказе кухонного гарнитура по индивидуальному проекту"}
+            {
+              titleView ?
+                title
+                ? title
+                : "Процесс выбора и этапы при заказе кухонного гарнитура по индивидуальному проекту"
+              : ''
+            }
           </h2>
 
           {/* Card 01 */}

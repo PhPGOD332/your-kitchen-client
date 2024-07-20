@@ -39,6 +39,7 @@ interface Props {
   previewVideo?: string;
   withoutLowerText?: boolean;
   firstVideoBlock?: boolean;
+  bgColor?: string;
 }
 
 export const PhotoSlider = ({
@@ -49,7 +50,8 @@ export const PhotoSlider = ({
   onlyVideo,
   previewVideo,
   withoutLowerText,
-  firstVideoBlock
+  firstVideoBlock,
+  bgColor
 }: Props) => {
   const [isOpenPreview, setIsOpenPreview] = useState(false);
   const [isOpenVideo, setIsOpenVideo] = useState(false);
@@ -82,7 +84,7 @@ export const PhotoSlider = ({
         isOpen={isOpenPreview}
         photos={previewPhotos}
       />
-      <div className={styles.photoSlider}>
+      <div className={styles.photoSlider} style={bgColor ? {background: bgColor} : {}}>
         <div className={styles.container}>
           {title && <h3 className={styles.title}>{title}</h3>}
           {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
