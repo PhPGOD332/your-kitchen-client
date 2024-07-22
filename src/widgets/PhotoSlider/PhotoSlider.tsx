@@ -11,7 +11,7 @@ import videoPreviewImg from "@/data/images/video-preview1.jpg";
 import { Icons } from "@/shared/IconsComponents/Icons";
 import "@/shared/styles/swiper-my.css";
 import Image, { StaticImageData } from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
@@ -40,6 +40,7 @@ interface Props {
   withoutLowerText?: boolean;
   firstVideoBlock?: boolean;
   bgColor?: string;
+  wide?: boolean;
 }
 
 export const PhotoSlider = ({
@@ -51,7 +52,8 @@ export const PhotoSlider = ({
   previewVideo,
   withoutLowerText,
   firstVideoBlock,
-  bgColor
+  bgColor,
+  wide
 }: Props) => {
   const [isOpenPreview, setIsOpenPreview] = useState(false);
   const [isOpenVideo, setIsOpenVideo] = useState(false);
@@ -85,7 +87,7 @@ export const PhotoSlider = ({
         photos={previewPhotos}
       />
       <div className={styles.photoSlider} style={bgColor ? {background: bgColor} : {}}>
-        <div className={styles.container}>
+        <div className={[styles.container, wide ? styles.wideContainer : ''].join(' ')}>
           {title && <h3 className={styles.title}>{title}</h3>}
           {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
           <Swiper
@@ -117,7 +119,7 @@ export const PhotoSlider = ({
             loop={true}
             modules={[Navigation]}
           >
-            {initialImages.map((photo, index) => (
+            {previewPhotos.map((photo, index) => (
               <SwiperSlide
                 key={index}
                 className={styles.slide}

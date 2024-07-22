@@ -42,13 +42,12 @@ import { MainAdvantages } from "@/widgets/MainAdvantages/MainAdvantages";
 import { Stocks } from "@/widgets/Stocks/Stocks";
 import WhatsNext from "@/widgets/WhatsNext/WhatsNext";
 import { PhotoSlider } from "@/widgets/PhotoSlider/PhotoSlider";
-import img1 from "@/data/images/contacts-slider/XL (1).webp";
-import img2 from "@/data/images/contacts-slider/XL (2).webp";
-import img3 from "@/data/images/contacts-slider/XL (3).webp";
-import img4 from "@/data/images/contacts-slider/XL (4).webp";
-import img5 from "@/data/images/contacts-slider/XL (5).webp";
-import img6 from "@/data/images/contacts-slider/XL (6).webp";
-import img7 from "@/data/images/contacts-slider/XL (7).webp";
+import img1 from "@/data/images/contacts-slider/MAIN (1).webp";
+import img2 from "@/data/images/contacts-slider/MAIN (2).webp";
+import img3 from "@/data/images/contacts-slider/MAIN (3).webp";
+import img4 from "@/data/images/contacts-slider/MAIN (4).webp";
+import img5 from "@/data/images/contacts-slider/MAIN (5).webp";
+import img6 from "@/data/images/contacts-slider/MAIN (6).webp";
 import previewVideoSlider from "@/data/images/video-preview1.jpg";
 
 export const revalidate = 30;
@@ -65,14 +64,13 @@ const DynamicReviews = dynamic(() => import("@/widgets/Reviews/Reviews"), {
   loading: () => <p className={styles.loading}>Загрузка отзывов...</p>,
 });
 
-const initialImages = [
+const initialImagesSlider = [
   img1.src,
   img2.src,
   img3.src,
   img4.src,
   img5.src,
   img6.src,
-  img7.src,
 ];
 
 const HomePage = async () => {
@@ -98,12 +96,13 @@ const HomePage = async () => {
         />
         <PhotoSlider
           title={"Наше производство и технологии"}
-          photos={initialImages}
+          photos={initialImagesSlider}
           onlyVideo={true}
           previewVideo={previewVideoSlider.src}
           withoutLowerText={true}
           firstVideoBlock={true}
           bgColor='linear-gradient(180deg, #322d29 0%, #322d29 35.47%, #35302c 78.81%, #2d2928 137.57%)'
+          wide={true}
         />
         <div className={styles.darkBg}>
           <LeaveRequestDesigner
