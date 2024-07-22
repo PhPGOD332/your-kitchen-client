@@ -163,8 +163,8 @@ export const PhotoSlider = ({
                 <Image
                   src={previewVideo ? previewVideo : videoPreviewImg}
                   alt="Видео"
-                  width={512}
-                  height={356}
+                  width={1280}
+                  height={666}
                   draggable={false}
                   className={styles.videoPreview}
                 />
