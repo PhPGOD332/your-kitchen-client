@@ -48,6 +48,10 @@ import img3 from "@/data/images/contacts-slider/MAIN (3).webp";
 import img4 from "@/data/images/contacts-slider/MAIN (4).webp";
 import img5 from "@/data/images/contacts-slider/MAIN (5).webp";
 import img6 from "@/data/images/contacts-slider/MAIN (6).webp";
+import img7 from "@/data/images/contacts-slider/MAIN (7).webp";
+import img8 from "@/data/images/contacts-slider/MAIN (8).webp";
+import img9 from "@/data/images/contacts-slider/MAIN (9).webp";
+import img10 from "@/data/images/contacts-slider/MAIN (10).webp";
 import previewVideoSlider from "@/data/images/video-preview1.jpg";
 
 export const revalidate = 30;
@@ -71,6 +75,10 @@ const initialImagesSlider = [
   img4.src,
   img5.src,
   img6.src,
+  img7.src,
+  img8.src,
+  img9.src,
+  img10.src,
 ];
 
 const HomePage = async () => {
