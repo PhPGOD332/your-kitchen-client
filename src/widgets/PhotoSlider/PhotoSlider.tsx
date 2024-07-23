@@ -1,12 +1,19 @@
 "use client";
 
-import img1 from "@/data/images/contacts-slider/XL (1).webp";
-import img2 from "@/data/images/contacts-slider/XL (2).webp";
-import img3 from "@/data/images/contacts-slider/XL (3).webp";
-import img4 from "@/data/images/contacts-slider/XL (4).webp";
-import img5 from "@/data/images/contacts-slider/XL (5).webp";
-import img6 from "@/data/images/contacts-slider/XL (6).webp";
-import img7 from "@/data/images/contacts-slider/XL (7).webp";
+import img1 from "@/data/images/contacts-slider/MAIN (1).webp";
+import img2 from "@/data/images/contacts-slider/MAIN (2).webp";
+import img3 from "@/data/images/contacts-slider/MAIN (3).webp";
+import img4 from "@/data/images/contacts-slider/XL (1).webp";
+import img5 from "@/data/images/contacts-slider/XL (2).webp";
+import img6 from "@/data/images/contacts-slider/XL (3).webp";
+import img7 from "@/data/images/contacts-slider/XL (4).webp";
+import img8 from "@/data/images/contacts-slider/XL (5).webp";
+import img9 from "@/data/images/contacts-slider/XL (6).webp";
+import img10 from "@/data/images/contacts-slider/XL (7).webp";
+import img11 from "@/data/images/contacts-slider/MAIN (7).webp";
+import img12 from "@/data/images/contacts-slider/MAIN (8).webp";
+import img13 from "@/data/images/contacts-slider/MAIN (9).webp";
+import img14 from "@/data/images/contacts-slider/MAIN (10).webp";
 import videoPreviewImg from "@/data/images/video-preview1.jpg";
 import { Icons } from "@/shared/IconsComponents/Icons";
 import "@/shared/styles/swiper-my.css";
@@ -28,6 +35,13 @@ const initialImages = [
   img5.src,
   img6.src,
   img7.src,
+  img8.src,
+  img9.src,
+  img10.src,
+  img11.src,
+  img12.src,
+  img13.src,
+  img14.src,
 ];
 
 interface Props {
