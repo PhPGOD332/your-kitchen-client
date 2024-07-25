@@ -20,7 +20,7 @@ export const initialStocks: IStock[] = [
     variant: "orange",
   },
   {
-    title: "Дополнительная скидка 5% новоселам",
+    title: "Дополнительная скидка 10% новоселам",
     rightPhoto: stock2Img,
     button: {
       text: "Применить",
@@ -34,28 +34,28 @@ export const initialStocks: IStock[] = [
     leftPhoto: stock31Img,
     variant: "white",
   },
-  {
-    title: "Платим 3000₽ за рекомендацию",
-    rightPhoto: stock4Img,
-    variant: "transparent",
-    button: {
-      text: "Отправить контакты",
-      variant: "white",
-    },
-  },
-  {
-    title: "Рассрочка без процентов на срок до 24 месяцев",
-    rightPhoto: stock5Img,
-    button: {
-      text: "Рассрочка 0%",
-      variant: "transparent",
-    },
-  },
-  {
-    title: "Гарантия самой выгодной цены!",
-    description:
-      "Если у вас уже есть просчитанный проект, пришлите его нам, и мы сделаем более выгодное предложение",
-    rightPhoto: stock6Img,
-    variant: "white",
-  },
+  // {
+  //   title: "Платим 3000₽ за рекомендацию",
+  //   rightPhoto: stock4Img,
+  //   variant: "transparent",
+  //   button: {
+  //     text: "Отправить контакты",
+  //     variant: "white",
+  //   },
+  // },
+  // {
+  //   title: "Рассрочка без процентов на срок до 24 месяцев",
+  //   rightPhoto: stock5Img,
+  //   button: {
+  //     text: "Рассрочка 0%",
+  //     variant: "transparent",
+  //   },
+  // },
+  // {
+  //   title: "Гарантия самой выгодной цены!",
+  //   description:
+  //     "Если у вас уже есть просчитанный проект, пришлите его нам, и мы сделаем более выгодное предложение",
+  //   rightPhoto: stock6Img,
+  //   variant: "white",
+  // },
 ];

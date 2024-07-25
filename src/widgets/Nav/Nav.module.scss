@@ -239,6 +239,7 @@
   color: #fff;
   fill: #fff;
   width: 4rem;
+  margin-right: rem(-20);
   // margin-top: rem(-22);
   margin-left: rem(-22);
   -webkit-filter: drop-shadow(0 0 12px #f28c6b);
@@ -247,7 +248,7 @@
   @media (max-width: $max-1100) {
     width: 6rem;
     margin-left: rem(-29);
-    margin-right: rem(-10);
+    margin-right: rem(-25);
   }
 }
 .menuWrapper {

@@ -53,6 +53,7 @@ import img8 from "@/data/images/contacts-slider/MAIN (8).webp";
 import img9 from "@/data/images/contacts-slider/MAIN (9).webp";
 import img10 from "@/data/images/contacts-slider/MAIN (10).webp";
 import previewVideoSlider from "@/data/images/video-preview1.jpg";
+import { LeaveRequestBlock } from "@/shared/LeaveRequestBlock";
 
 export const revalidate = 30;
 
@@ -132,15 +133,24 @@ const HomePage = async () => {
         <DynamicReviews reviews={reviews} />
         {/*<Reviews reviews={reviews} />*/}
         <MainArticles />
-        <LeaveRequestBlock2
+        <LeaveRequestBlock
           location="Главная страница, последняя форма"
           tag="Рассчитать стоимость кухни"
-          before={{
-            title: "Вы в поисках где купить кухню?",
-            subtitle:
-              "Мы изготавливаем современные стильные кухни по индивидуальным размерам, как дорогие, так и недорогие проекты, эноном, премиум, а также элитные. Рассчитать стоимость, узнать цены и получить скидку вы можете, отправив заявку через наш сайт.",
-          }}
+          // before={{
+          //   title: "Вы в поисках где купить кухню?",
+          //   subtitle:
+          //     "Мы изготавливаем современные стильные кухни по индивидуальным размерам, как дорогие, так и недорогие проекты, эноном, премиум, а также элитные. Рассчитать стоимость, узнать цены и получить скидку вы можете, отправив заявку через наш сайт.",
+          // }}
         />
+        {/*<LeaveRequestBlock2*/}
+        {/*  location="Главная страница, последняя форма"*/}
+        {/*  tag="Рассчитать стоимость кухни"*/}
+        {/*  before={{*/}
+        {/*    title: "Вы в поисках где купить кухню?",*/}
+        {/*    subtitle:*/}
+        {/*      "Мы изготавливаем современные стильные кухни по индивидуальным размерам, как дорогие, так и недорогие проекты, эноном, премиум, а также элитные. Рассчитать стоимость, узнать цены и получить скидку вы можете, отправив заявку через наш сайт.",*/}
+        {/*  }}*/}
+        {/*/>*/}
       </div>
     </>
   );

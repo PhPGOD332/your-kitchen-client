@@ -65,7 +65,6 @@ const page = async () => {
   const { workers } = await getAdvantagesInfo();
   return (
     <>
-      <Advantages />
       <PhotoSlider
         title={"Наше производство и технологии"}
         photos={initialImagesSlider}
@@ -73,9 +72,11 @@ const page = async () => {
         previewVideo={previewVideoSlider.src}
         withoutLowerText={true}
         firstVideoBlock={true}
-        bgColor='#2d2928'
+        bgColor='#312d2a'
         wide={true}
+        firstOnPage={true}
       />
+      <Advantages />
       <OurTeam team={workers} />
       <LeaveRequestBlock
         location="Страница преимуществ"
