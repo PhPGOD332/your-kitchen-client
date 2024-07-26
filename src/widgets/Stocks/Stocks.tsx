@@ -12,6 +12,7 @@ interface Props {
   stocks?: IStock[];
   withoutBg?: boolean;
   location?: string;
+  bgColor?: string;
 }
 
 const getStockVariant = (
@@ -28,7 +29,7 @@ const getStockVariant = (
   }
 };
 
-export const Stocks = ({ stocks, withoutBg, location }: Props) => {
+export const Stocks = ({ stocks, withoutBg, location, bgColor }: Props) => {
   const [isOpenModal, setIsOpenModal] = useState(false);
   const [selectedStock, setSelectedStock] = useState<IStock | null>(null);
 
@@ -49,7 +50,7 @@ export const Stocks = ({ stocks, withoutBg, location }: Props) => {
         location={location}
         type="call"
       />
-      <div className={`${styles.stocks} ${withoutBg ? styles.withoutBg : ""}`}>
+      <div className={`${styles.stocks} ${withoutBg ? styles.withoutBg : ""} `} style={bgColor ? {backgroundColor: bgColor} : {}}>
         <div className={styles.container}>
           <div className={styles.stocksCards}>
             {initialStocks.map((stock, index) => (

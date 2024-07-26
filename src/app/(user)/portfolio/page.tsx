@@ -71,7 +71,7 @@ const PortfolioPage = async () => {
         <meta itemProp="name" content={SITE_NAME} />
       </div>
       <KitchenExamples kitchens={kitchens} />
-      <Stocks location="Страница портфолио, блок акций" />
+      <Stocks location="Страница портфолио, блок акций" bgColor={'#35302c'} />
       <PhotoSlider
         title={"Наше производство и технологии"}
         photos={initialImagesSlider}
