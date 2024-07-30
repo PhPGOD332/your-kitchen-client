@@ -11,6 +11,7 @@ import { Contacts } from "@/widgets/Contacts/Contacts";
 import { LeaveRequestMini } from "@/widgets/LeaveRequestMini/LeaveRequestMini";
 import { PhotoSlider } from "@/widgets/PhotoSlider/PhotoSlider";
 import { Metadata } from "next";
+import ContactsYouCan from "@/widgets/ContactsYouCan/ContactsYouCan";
 
 export const metadata: Metadata = {
   metadataBase: new URL(pagesData.contacts.url),
@@ -46,6 +47,7 @@ export default function ContactsPage() {
         title='Производство мебельной фабрики "Твоя кухня"'
         subtitle="Адрес: г.&nbsp;Ульяновск, 42 Инженерный проезд, д.&nbsp;6"
       />
+      <ContactsYouCan/>
       <LeaveRequestMini
         tag="Заказать обратный звонок"
         location="Страница контактов"
