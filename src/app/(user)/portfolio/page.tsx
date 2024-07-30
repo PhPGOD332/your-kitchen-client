@@ -81,6 +81,7 @@ const PortfolioPage = async () => {
         firstVideoBlock={true}
         bgColor='#332e2a'
         wide={true}
+        withoutYouCan={true}
       />
       <Reviews reviews={reviews} />
       <LeaveRequestBlock

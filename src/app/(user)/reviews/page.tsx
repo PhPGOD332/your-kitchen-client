@@ -68,6 +68,7 @@ const ReviewsPage = async () => {
         firstVideoBlock={true}
         bgColor='#262324'
         wide={true}
+        withoutYouCan={true}
       />
       <LeaveRequestBlock
         location='Главная страница, после "Давайте подытожим"'
