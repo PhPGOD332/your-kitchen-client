@@ -26,6 +26,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { ModalVideo } from "../Modals";
 import PreviewPhotos from "../PreviewPhotos/PreviewPhotos";
 import styles from "./PhotoSlider.module.scss";
+import ContactsYouCan from "@/widgets/ContactsYouCan/ContactsYouCan";
 
 const initialImages = [
   img1.src,
@@ -56,6 +57,7 @@ interface Props {
   bgColor?: string;
   wide?: boolean;
   firstOnPage?: boolean;
+  withoutYouCan?: boolean;
 }
 
 export const PhotoSlider = ({
@@ -69,7 +71,8 @@ export const PhotoSlider = ({
   firstVideoBlock,
   bgColor,
   wide,
-  firstOnPage
+  firstOnPage,
+  withoutYouCan
 }: Props) => {
   const [isOpenPreview, setIsOpenPreview] = useState(false);
   const [isOpenVideo, setIsOpenVideo] = useState(false);
@@ -194,6 +197,10 @@ export const PhotoSlider = ({
               </div>
             </div>
           )}
+          {
+            !withoutYouCan && <ContactsYouCan order={5}/>
+          }
+
           {!withoutLowerText && <p className={styles.lowerText}>
             Закажите обратный звонок чтобы обсудить детали вашего проекта,
             оформить выезд дизайнера для проведения замера помещения под кухню

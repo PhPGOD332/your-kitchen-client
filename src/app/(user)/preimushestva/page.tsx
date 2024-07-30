@@ -75,6 +75,7 @@ const page = async () => {
         bgColor='#312d2a'
         wide={true}
         firstOnPage={true}
+        withoutYouCan={true}
       />
       <Advantages />
       <OurTeam team={workers} />

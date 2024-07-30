@@ -112,6 +112,7 @@ const HomePage = async () => {
           firstVideoBlock={true}
           bgColor='linear-gradient(180deg, #322d29 0%, #322d29 35.47%, #35302c 78.81%, #2d2928 137.57%)'
           wide={true}
+          withoutYouCan={true}
         />
         <div className={styles.darkBg}>
           <LeaveRequestDesigner

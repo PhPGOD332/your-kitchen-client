@@ -2,9 +2,13 @@ import React from "react";
 import styles from "@/widgets/Contacts/Contacts.module.scss";
 import { Icons } from "@/shared/IconsComponents/Icons";
 
-const ContactsYouCan = () => {
+interface Props {
+  order?: number;
+}
+
+const ContactsYouCan = ({order}:Props) => {
   return (
-    <div className={styles.content}>
+    <div className={styles.content} style={order ? {order: order} : {}}>
       <div className={styles.upperText}>
         <h5>
           <b>В нашем офисе вы всегда в спокойной обстановке можете:</b>

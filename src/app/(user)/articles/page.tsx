@@ -71,6 +71,7 @@ const page = async () => {
         firstVideoBlock={true}
         bgColor='#262324'
         wide={true}
+        withoutYouCan={true}
       />
       <LeaveRequestBlock
         location="Страница статей"

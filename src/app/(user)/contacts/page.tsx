@@ -47,7 +47,6 @@ export default function ContactsPage() {
         title='Производство мебельной фабрики "Твоя кухня"'
         subtitle="Адрес: г.&nbsp;Ульяновск, 42 Инженерный проезд, д.&nbsp;6"
       />
-      <ContactsYouCan/>
       <LeaveRequestMini
         tag="Заказать обратный звонок"
         location="Страница контактов"

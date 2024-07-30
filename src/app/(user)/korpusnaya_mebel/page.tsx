@@ -84,6 +84,7 @@ export default async function page() {
         firstVideoBlock={true}
         bgColor='linear-gradient(180deg, #433a31 0%, #3D3733 55.47%, #3D3733 78.81%, #3D3733 107.57%)'
         wide={true}
+        withoutYouCan={true}
       />
       <FurnitureAdvantages />
       <LeaveRequestMini
