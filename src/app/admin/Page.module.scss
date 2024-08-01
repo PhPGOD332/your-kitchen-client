@@ -392,6 +392,16 @@
   left: rem(20);
   opacity: 1;
 }
+.kitchenOrder {
+  padding: rem(10);
+  color: #fff;
+  position: absolute;
+  right: rem(15);
+  top: rem(345);
+  background-color: rgba(40, 34, 26, 0.6);
+  border-radius: rem(5);
+  z-index: 2;
+}
 .checkboxInput {
   max-width: rem(40);
   width: 100%;

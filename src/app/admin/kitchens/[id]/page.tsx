@@ -86,6 +86,7 @@ interface TInputs {
     title?: string;
     keywords?: string;
   };
+  order: number;
 }
 
 // Тексты
@@ -453,6 +454,7 @@ const EditKitchenPage = () => {
     form.append("term", data.term);
     form.append("slug", data.slug);
     form.append("meta", JSON.stringify(data.meta));
+    form.append("order", data.order.toString());
 
     const oldPhotos = photos.map((photo: string) => photo.split("/").at(-1));
     form.append("photos", JSON.stringify(oldPhotos));
@@ -483,6 +485,7 @@ const EditKitchenPage = () => {
           keywords: "",
         },
         slug: "",
+        order: 1000
       });
       setFiles([]);
       setPhotos([]);
@@ -665,6 +668,23 @@ const EditKitchenPage = () => {
               <p>Будет отображаться так:</p>
               <p>Срок {`${termValue || kitchen.term}`}</p>
             </div>
+          </div>
+
+          {/* Очередность */}
+          <div className={styles.inputWrapper}>
+            <label htmlFor="order" className={styles.label}>
+              Очередность
+            </label>
+            <input
+              type="text"
+              placeholder="1000"
+              id="order"
+              defaultValue={kitchen.order}
+              {...register("order", {
+                required: true,
+              })}
+              className={styles.textInput}
+            />
           </div>
 
           <EditorContent editor={editor} className={styles.editor}>

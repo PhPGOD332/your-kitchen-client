@@ -13,4 +13,5 @@ export interface IKitchen {
   term: string;
   slug: string;
   meta: IMeta;
+  order: number;
 }
