@@ -100,6 +100,9 @@ const KitchensPage = () => {
                       {texts.onMainPageText}
                     </p>
                   )}
+                  <div className={styles.kitchenOrder}>
+                    <span>Позиция: {kitchen.order}</span>
+                  </div>
                   <Kitchen
                     kitchen={kitchen}
                     link={`/admin/kitchens/${kitchen._id}`}

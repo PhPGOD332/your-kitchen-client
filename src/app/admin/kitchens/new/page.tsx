@@ -86,6 +86,7 @@ interface TInputs {
   onMainPage: boolean;
   slug: string;
   meta: IMeta;
+  order: number;
 }
 
 // Тексты
@@ -315,6 +316,7 @@ const NewKitchenPage = () => {
     form.append("term", data.term);
     form.append("slug", data.slug);
     form.append("meta", JSON.stringify(data.meta));
+    form.append("order", data.order.toString());
 
     const response = await KitchenService.addKitchen(form);
     if (response.status === 201) {
@@ -522,6 +524,22 @@ const NewKitchenPage = () => {
                   <p>Будет отображаться так:</p>
                   <p>Срок {`${termValue}`}</p>
                 </div>
+              </div>
+
+              {/* Очередность */}
+              <div className={styles.inputWrapper}>
+                <label htmlFor="order" className={styles.label}>
+                  Очередность
+                </label>
+                <input
+                  type="text"
+                  placeholder="1000"
+                  id="order"
+                  {...register("order", {
+                    required: true,
+                  })}
+                  className={styles.textInput}
+                />
               </div>
 
               <EditorContent editor={editor} className={styles.editor}>
