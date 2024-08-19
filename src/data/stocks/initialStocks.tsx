@@ -9,7 +9,7 @@ import stock6Img from "./stock6.webp";
 
 export const initialStocks: IStock[] = [
   {
-    title: "Микроволновая печь в подарок в июле 2024!",
+    title: "Духовой шкаф в подарок в августе 2024!",
     description:
       "",
     rightPhoto: stock1Img,
