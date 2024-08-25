@@ -1,11 +1,13 @@
 "use client";
 
-import bgImage from "@/data/images/bg_mebel.jpg";
+import bgImageDesktop from "@/data/images/bg_mebel.jpg";
+import bgImageMobile from "@/data/images/bg_mebel_mobile_1.jpg";
 import { OrangeButton } from "@/shared/ui";
 import Image from "next/image";
 import { useState } from "react";
 import { Modal1 } from "../Modals/Modal1";
 import styles from "./FurnitureHelloScreen.module.scss";
+import WidgetsList from "@/widgets/WidgetsList/WidgetsList";
 
 interface Props {
   isBold?: boolean;
@@ -30,8 +32,16 @@ export const FurnitureHelloScreen = ({ isBold }: Props) => {
       />
       <div className={styles.helloScreen}>
         <Image
-          src={bgImage}
-          className={styles.bgImage}
+          src={bgImageMobile}
+          className={[styles.bgImageMobile, styles.bgImage].join(' ')}
+          alt="Фон"
+          draggable={false}
+          priority
+          quality={100}
+        />
+        <Image
+          src={bgImageDesktop}
+          className={[styles.bgImageDesktop, styles.bgImage].join(' ')}
           alt="Фон"
           draggable={false}
           priority
@@ -57,15 +67,18 @@ export const FurnitureHelloScreen = ({ isBold }: Props) => {
             тумбы, мебельные гарнитуры для кухни и многое другое.
           </p>
 
-          <OrangeButton
-            className={styles.button}
-            onClick={() => {
-              setIsOpen(true);
-              document.body.classList.add("overflow");
-            }}
-          >
-            Рассчитать стоимость
-          </OrangeButton>
+          <div className={styles.btnBlock}>
+            <OrangeButton
+              className={styles.button}
+              onClick={() => {
+                setIsOpen(true);
+                document.body.classList.add("overflow");
+              }}
+            >
+              Рассчитать стоимость
+            </OrangeButton>
+            <WidgetsList zoonHide={true} />
+          </div>
         </div>
       </div>
     </>

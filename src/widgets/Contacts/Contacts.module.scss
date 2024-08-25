@@ -296,11 +296,19 @@
   width: 100%;
   gap: rem(60);
 
-  & iframe {
-    min-width: rem(580);
-    max-width: rem(580);
-    width: 100%;
-    border-radius: rem(8);
+  .mapBlock {
+
+    & .mapFrame {
+      min-width: rem(580);
+      max-width: rem(580);
+      width: 100%;
+      border-radius: rem(8);
+      margin-bottom: rem(10);
+    }
+
+    @media (max-width: $max-768) {
+      margin-bottom: rem(20);
+    }
   }
 
   @media screen and (max-width: $max-1000) {

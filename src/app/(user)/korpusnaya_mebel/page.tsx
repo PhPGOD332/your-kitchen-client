@@ -29,6 +29,7 @@ import img8 from "@/data/images/contacts-slider/MAIN (8).webp";
 import img9 from "@/data/images/contacts-slider/MAIN (9).webp";
 import img10 from "@/data/images/contacts-slider/MAIN (10).webp";
 import previewVideoSlider from "@/data/images/video-preview1.jpg";
+import { Stocks } from "@/widgets/Stocks/Stocks";
 
 export const metadata: Metadata = {
   metadataBase: new URL(pagesData.furniture.url),
@@ -74,6 +75,7 @@ export default async function page() {
   return (
     <div className={styles.bg}>
       <FurnitureHelloScreen />
+      <Stocks location="Главная страница, блок акций" bgColor="rgb(67, 58, 49)"/>
       {furniture && furniture.length && <Furniture furniture={furniture} />}
       <PhotoSlider
         title={"Наше производство и технологии"}

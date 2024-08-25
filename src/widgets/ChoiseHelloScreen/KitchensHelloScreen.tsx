@@ -2,6 +2,7 @@ import bgImage from "@/data/images/bg_kitchen_screen.jpg";
 import { OrangeButton } from "@/shared/ui";
 import Image, { type StaticImageData } from "next/image";
 import styles from "./ChoiseHelloScreen.module.scss";
+import WidgetsList from "@/widgets/WidgetsList/WidgetsList";
 
 interface ScreenProps {
   image?: StaticImageData;
@@ -98,12 +99,15 @@ export const KitchensHelloScreen = ({
             }
           </p>
 
-          <OrangeButton
-            className={styles.button}
-            href={button && button.href ? button.href : "#kitchens"}
-          >
-            {button && button.text ? button.text : "Подробнее"}
-          </OrangeButton>
+          <div className={styles.btnBlock}>
+            <OrangeButton
+              className={styles.button}
+              href={button && button.href ? button.href : "#kitchens"}
+            >
+              {button && button.text ? button.text : "Подробнее"}
+            </OrangeButton>
+            <WidgetsList zoonHide={true}/>
+          </div>
         </div>
       </div>
     </>

@@ -9,6 +9,7 @@ import { useState } from "react";
 import { TextModal } from "../Modals/TextModal/TextModal";
 import styles from "./Footer.module.scss";
 import Script from "next/script";
+import WidgetsList from "@/widgets/WidgetsList/WidgetsList";
 
 const Footer = () => {
   // const [isOpenPrivacy, setIsOpenPrivacy] = useState(false);
@@ -110,16 +111,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className={styles.badge}>
-          <iframe
-            title="Рейтинг в Яндекс"
-            src="https://yandex.ru/sprav/widget/rating-badge/192446974752?type=rating&theme=dark"
-            width="150"
-            height="50"
-          ></iframe>
-          <iframe id="medium_dark_70000001079809399" frameBorder="0" width="150px" height="50px"
-                  sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe>
-        </div>
+        <WidgetsList twoGisHide={true}/>
         <div className={styles.footerDown}>
           <div className={styles.downContainer}>
             <div className={styles.column}>
@@ -179,15 +171,6 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      <Script
-        id={"2gisScript"}
-        dangerouslySetInnerHTML={{
-          __html: `((r, p
-        )=>{const l=document.getElementById(r);l.contentWindow.document.open(),l.contentWindow.document.write(decodeURIComponent(escape(atob(p)))),l.contentWindow.document.close()})
-        ("medium_dark_70000001079809399", "PGhlYWQ+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPgogICAgd2luZG93Ll9fc2l6ZV9fPSdtZWRpdW0nOwogICAgd2luZG93Ll9fdGhlbWVfXz0nZGFyayc7CiAgICB3aW5kb3cuX19icmFuY2hJZF9fPSc3MDAwMDAwMTA3OTgwOTM5OScKICAgIHdpbmRvdy5fX29yZ0lkX189JycKICAgPC9zY3JpcHQ+PHNjcmlwdCBjcm9zc29yaWdpbj0iYW5vbnltb3VzIiB0eXBlPSJtb2R1bGUiIHNyYz0iaHR0cHM6Ly9kaXNrLjJnaXMuY29tL3dpZGdldC1jb25zdHJ1Y3Rvci9hc3NldHMvaWZyYW1lLmpzIj48L3NjcmlwdD48bGluayByZWw9Im1vZHVsZXByZWxvYWQiIGNyb3Nzb3JpZ2luPSJhbm9ueW1vdXMiIGhyZWY9Imh0dHBzOi8vZGlzay4yZ2lzLmNvbS93aWRnZXQtY29uc3RydWN0b3IvYXNzZXRzL2RlZmF1bHRzLmpzIj48bGluayByZWw9InN0eWxlc2hlZXQiIGNyb3Nzb3JpZ2luPSJhbm9ueW1vdXMiIGhyZWY9Imh0dHBzOi8vZGlzay4yZ2lzLmNvbS93aWRnZXQtY29uc3RydWN0b3IvYXNzZXRzL2RlZmF1bHRzLmNzcyI+PC9oZWFkPjxib2R5PjxkaXYgaWQ9ImlmcmFtZSI+PC9kaXY+PC9ib2R5Pg=="
-        )`
-        }}
-      />
     </>
   );
 };

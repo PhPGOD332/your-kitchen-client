@@ -4,6 +4,7 @@ import Review from "@/widgets/Reviews/Review";
 import styles from "./ReviewsInColumn.module.scss";
 import { OrangeButton } from "@/shared/ui";
 import { IReview } from "@/types";
+import WidgetsList from "@/widgets/WidgetsList/WidgetsList";
 
 interface ReviewsProps {
   reviews: IReview[];
@@ -35,6 +36,7 @@ const ReviewsInColumn = (
     <div className={styles.reviewsContainer}>
       <h1 className={styles.title}><span>Отзывы</span> клиентов фабрики &quot;Твоя кухня&quot;</h1>
       <p className={styles.subtitle}>Реальные отзывы клиентов о компании, сотрудниках, процессе взаимодействия. качестве материалов</p>
+      <WidgetsList />
       <div className={styles.reviewsList}>
         <p className={styles.bgText}>Отзывы</p>
         {

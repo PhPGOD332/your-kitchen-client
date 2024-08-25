@@ -2,6 +2,7 @@ import { Icons } from "@/shared/IconsComponents/Icons";
 import { links } from "@/shared/constants";
 import Link from "next/link";
 import styles from "./Contacts.module.scss";
+import WidgetsList from "@/widgets/WidgetsList/WidgetsList";
 
 interface Props {
   title?: string;
@@ -55,12 +56,16 @@ export const Contacts = ({ title }: Props) => {
         {/*</div>*/}
         <h3 className={styles.title}>{title ? title : "Офис в Москве:"}</h3>
         <div className={styles.map}>
-          <iframe
-            src="https://yandex.ru/map-widget/v1/?lang=ru_RU&scroll=true&source=constructor-api&um=constructor%3Ad66f7eaf9a8447cb43b64b598a5c4463dffa981e89572461d273a5661a32c9a6"
-            width="610"
-            height="400"
-            allowFullScreen
-          ></iframe>
+          <div className={styles.mapBlock}>
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?lang=ru_RU&scroll=true&source=constructor-api&um=constructor%3Ad66f7eaf9a8447cb43b64b598a5c4463dffa981e89572461d273a5661a32c9a6"
+              width="610"
+              height="400"
+              allowFullScreen
+              className={styles.mapFrame}
+            ></iframe>
+            <WidgetsList />
+          </div>
           <div className={styles.content}>
             <div className={styles.card}>
               <Icons.gps className={styles.icon} />
