@@ -1,6 +1,6 @@
 "use client";
 
-import { initialStocks } from "@/data/stocks/initialStocks";
+import { initialStocks, furnitureStocks } from "@/data/stocks/initialStocks";
 import { OrangeButton } from "@/shared/ui";
 import type { IStock } from "@/types/IStock";
 import Image from "next/image";
@@ -13,23 +13,26 @@ interface Props {
   withoutBg?: boolean;
   location?: string;
   bgColor?: string;
+  isFurnitureStocks?: boolean;
 }
 
 const getStockVariant = (
-  variant: "orange" | "transparent" | "white" = "orange",
+  variant: "orange" | "transparent" | "white" | "dark" = "orange",
 ): string => {
   switch (variant) {
     case "white":
       return styles.white;
     case "transparent":
       return styles.transparent;
+    case "dark":
+      return styles.darkBrown;
     case "orange":
     default:
       return styles.orange;
   }
 };
 
-export const Stocks = ({ stocks, withoutBg, location, bgColor }: Props) => {
+export const Stocks = ({ stocks, withoutBg, location, bgColor, isFurnitureStocks }: Props) => {
   const [isOpenModal, setIsOpenModal] = useState(false);
   const [selectedStock, setSelectedStock] = useState<IStock | null>(null);
 
@@ -38,6 +41,8 @@ export const Stocks = ({ stocks, withoutBg, location, bgColor }: Props) => {
     setIsOpenModal(true);
     document.body.classList.add("overflow");
   };
+
+  const usingStocks = isFurnitureStocks ? furnitureStocks : initialStocks;
 
   return (
     <>
@@ -53,7 +58,7 @@ export const Stocks = ({ stocks, withoutBg, location, bgColor }: Props) => {
       <div className={`${styles.stocks} ${withoutBg ? styles.withoutBg : ""} `} style={bgColor ? {backgroundColor: bgColor} : {}}>
         <div className={styles.container}>
           <div className={styles.stocksCards}>
-            {initialStocks.map((stock, index) => (
+            {usingStocks.map((stock, index) => (
               <div
                 className={`${styles.stock} ${getStockVariant(stock.variant)}`}
                 key={index}

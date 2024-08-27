@@ -46,6 +46,7 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  z-index: 0;
 
   @media (max-width: $max-1300) {
     font-size: rem(190);

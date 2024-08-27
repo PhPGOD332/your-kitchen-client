@@ -75,7 +75,7 @@ export default async function page() {
   return (
     <div className={styles.bg}>
       <FurnitureHelloScreen />
-      <Stocks location="Главная страница, блок акций" bgColor="rgb(67, 58, 49)"/>
+      <Stocks location="Главная страница, блок акций" bgColor="rgb(67, 58, 49)" isFurnitureStocks={true}/>
       {furniture && furniture.length && <Furniture furniture={furniture} />}
       <PhotoSlider
         title={"Наше производство и технологии"}

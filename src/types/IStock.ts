@@ -9,5 +9,5 @@ export interface IStock {
   };
   rightPhoto: StaticImageData;
   leftPhoto?: StaticImageData;
-  variant?: "orange" | "transparent" | "white";
+  variant?: "orange" | "transparent" | "white" | "dark";
 }

@@ -55,6 +55,10 @@
     background: linear-gradient(180deg, #95663a 37%, #c8a787 100%);
     color: $white;
   }
+  &.darkBrown {
+    background-color: #282320;
+    color: $white;
+  }
 }
 .content {
   padding: rem(20);

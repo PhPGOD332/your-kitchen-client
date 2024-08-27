@@ -7,6 +7,11 @@ import stock4Img from "./stock4.webp";
 import stock5Img from "./stock5.webp";
 import stock6Img from "./stock6.webp";
 
+// Мебель
+import stockFurniture1Img from "./stock-furniture1.webp";
+import stockFurniture2Img from "./stock-furniture2.webp";
+import stockFurniture3Img from "./stock-furniture3.webp";
+
 export const initialStocks: IStock[] = [
   {
     title: "Духовой шкаф в подарок в августе 2024!",
@@ -59,3 +64,30 @@ export const initialStocks: IStock[] = [
   //   variant: "white",
   // },
 ];
+
+export const furnitureStocks: IStock[] = [
+  {
+    title: "Скидка 15% на корпусную мебель при заказе кухни у нас",
+    rightPhoto: stockFurniture1Img,
+    button: {
+      text: "Заказать звонок",
+      variant: "white"
+    },
+    variant: "dark"
+  },
+  {
+    title: "Дополнительная скидка 5% при заказе от 250 тыс.",
+    rightPhoto: stockFurniture2Img,
+    button: {
+      text: "Заказать звонок",
+      variant: "transparent"
+    },
+    variant: "orange"
+  },
+  {
+    title: "Гарантия самой выгодной цены!",
+    description: "Если есть просчет другой компании, пришлите его нам, и мы сделаем более выгодное предложение",
+    rightPhoto: stockFurniture3Img,
+    variant: "white"
+  }
+]

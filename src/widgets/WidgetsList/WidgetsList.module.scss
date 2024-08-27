@@ -9,6 +9,7 @@
   flex-direction: row;
   width: 100%;
   margin: 0 auto;
+  z-index: 1;
 
   @media (max-width: $max-768) {
     gap: rem(5);
