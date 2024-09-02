@@ -14,7 +14,7 @@ import stockFurniture3Img from "./stock-furniture3.webp";
 
 export const initialStocks: IStock[] = [
   {
-    title: "Духовой шкаф в подарок в августе 2024!",
+    title: "Бесплатная сборка и монтаж при заказе до 30 сентября!",
     description:
       "",
     rightPhoto: stock1Img,
