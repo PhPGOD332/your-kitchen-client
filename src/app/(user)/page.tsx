@@ -41,6 +41,19 @@ import dynamic from "next/dynamic";
 import { MainAdvantages } from "@/widgets/MainAdvantages/MainAdvantages";
 import { Stocks } from "@/widgets/Stocks/Stocks";
 import WhatsNext from "@/widgets/WhatsNext/WhatsNext";
+import { PhotoSlider } from "@/widgets/PhotoSlider/PhotoSlider";
+import img1 from "@/data/images/contacts-slider/MAIN (1).webp";
+import img2 from "@/data/images/contacts-slider/MAIN (2).webp";
+import img3 from "@/data/images/contacts-slider/MAIN (3).webp";
+import img4 from "@/data/images/contacts-slider/MAIN (4).webp";
+import img5 from "@/data/images/contacts-slider/MAIN (5).webp";
+import img6 from "@/data/images/contacts-slider/MAIN (6).webp";
+import img7 from "@/data/images/contacts-slider/MAIN (7).webp";
+import img8 from "@/data/images/contacts-slider/MAIN (8).webp";
+import img9 from "@/data/images/contacts-slider/MAIN (9).webp";
+import img10 from "@/data/images/contacts-slider/MAIN (10).webp";
+import previewVideoSlider from "@/data/images/video-preview1.jpg";
+import { LeaveRequestBlock } from "@/shared/LeaveRequestBlock";
 
 export const revalidate = 30;
 
@@ -55,6 +68,19 @@ const getHomeInfo = async () => {
 const DynamicReviews = dynamic(() => import("@/widgets/Reviews/Reviews"), {
   loading: () => <p className={styles.loading}>Загрузка отзывов...</p>,
 });
+
+const initialImagesSlider = [
+  img1.src,
+  img2.src,
+  img3.src,
+  img4.src,
+  img5.src,
+  img6.src,
+  img7.src,
+  img8.src,
+  img9.src,
+  img10.src,
+];
 
 const HomePage = async () => {
   const { kitchens, reviews, moreKitchens } = await getHomeInfo();
@@ -77,6 +103,17 @@ const HomePage = async () => {
           moreKitchens={moreKitchens}
           threeKitchens
         />
+        <PhotoSlider
+          title={"Наше производство и технологии"}
+          photos={initialImagesSlider}
+          onlyVideo={true}
+          previewVideo={previewVideoSlider.src}
+          withoutLowerText={true}
+          firstVideoBlock={true}
+          bgColor='linear-gradient(180deg, #322d29 0%, #322d29 35.47%, #35302c 78.81%, #2d2928 137.57%)'
+          wide={true}
+          withoutYouCan={true}
+        />
         <div className={styles.darkBg}>
           <LeaveRequestDesigner
             location="Главная страница"
@@ -85,7 +122,7 @@ const HomePage = async () => {
         </div>
         <MainAdvantages />
         {/* <SecondScreen /> */}
-        <Correction />
+        <Correction card1Hide={true} card2Hide={true} card3Hide={true} titleView={false}/>
         <AllVariants />
         <WhatsNext />
         <Results />
@@ -97,15 +134,24 @@ const HomePage = async () => {
         <DynamicReviews reviews={reviews} />
         {/*<Reviews reviews={reviews} />*/}
         <MainArticles />
-        <LeaveRequestBlock2
+        <LeaveRequestBlock
           location="Главная страница, последняя форма"
           tag="Рассчитать стоимость кухни"
-          before={{
-            title: "Вы в поисках где купить кухню?",
-            subtitle:
-              "Мы изготавливаем современные стильные кухни по индивидуальным размерам, как дорогие, так и недорогие проекты, эноном, премиум, а также элитные. Рассчитать стоимость, узнать цены и получить скидку вы можете, отправив заявку через наш сайт.",
-          }}
+          // before={{
+          //   title: "Вы в поисках где купить кухню?",
+          //   subtitle:
+          //     "Мы изготавливаем современные стильные кухни по индивидуальным размерам, как дорогие, так и недорогие проекты, эноном, премиум, а также элитные. Рассчитать стоимость, узнать цены и получить скидку вы можете, отправив заявку через наш сайт.",
+          // }}
         />
+        {/*<LeaveRequestBlock2*/}
+        {/*  location="Главная страница, последняя форма"*/}
+        {/*  tag="Рассчитать стоимость кухни"*/}
+        {/*  before={{*/}
+        {/*    title: "Вы в поисках где купить кухню?",*/}
+        {/*    subtitle:*/}
+        {/*      "Мы изготавливаем современные стильные кухни по индивидуальным размерам, как дорогие, так и недорогие проекты, эноном, премиум, а также элитные. Рассчитать стоимость, узнать цены и получить скидку вы можете, отправив заявку через наш сайт.",*/}
+        {/*  }}*/}
+        {/*/>*/}
       </div>
     </>
   );

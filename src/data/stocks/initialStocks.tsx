@@ -7,9 +7,14 @@ import stock4Img from "./stock4.webp";
 import stock5Img from "./stock5.webp";
 import stock6Img from "./stock6.webp";
 
+// Мебель
+import stockFurniture1Img from "./stock-furniture1.webp";
+import stockFurniture2Img from "./stock-furniture2.webp";
+import stockFurniture3Img from "./stock-furniture3.webp";
+
 export const initialStocks: IStock[] = [
   {
-    title: "Дарим сборку и монтаж кухни! Минус 10% от стоимости в июне 2024!",
+    title: "Бесплатная сборка и монтаж при заказе до 30 сентября!",
     description:
       "",
     rightPhoto: stock1Img,
@@ -20,7 +25,7 @@ export const initialStocks: IStock[] = [
     variant: "orange",
   },
   {
-    title: "Дополнительная скидка 5% новоселам",
+    title: "Дополнительная скидка 10% новоселам",
     rightPhoto: stock2Img,
     button: {
       text: "Применить",
@@ -34,28 +39,55 @@ export const initialStocks: IStock[] = [
     leftPhoto: stock31Img,
     variant: "white",
   },
+  // {
+  //   title: "Платим 3000₽ за рекомендацию",
+  //   rightPhoto: stock4Img,
+  //   variant: "transparent",
+  //   button: {
+  //     text: "Отправить контакты",
+  //     variant: "white",
+  //   },
+  // },
+  // {
+  //   title: "Рассрочка без процентов на срок до 24 месяцев",
+  //   rightPhoto: stock5Img,
+  //   button: {
+  //     text: "Рассрочка 0%",
+  //     variant: "transparent",
+  //   },
+  // },
+  // {
+  //   title: "Гарантия самой выгодной цены!",
+  //   description:
+  //     "Если у вас уже есть просчитанный проект, пришлите его нам, и мы сделаем более выгодное предложение",
+  //   rightPhoto: stock6Img,
+  //   variant: "white",
+  // },
+];
+
+export const furnitureStocks: IStock[] = [
   {
-    title: "Платим 3000₽ за рекомендацию",
-    rightPhoto: stock4Img,
-    variant: "transparent",
+    title: "Скидка 15% на корпусную мебель при заказе кухни у нас",
+    rightPhoto: stockFurniture1Img,
     button: {
-      text: "Отправить контакты",
-      variant: "white",
+      text: "Заказать звонок",
+      variant: "white"
     },
+    variant: "dark"
   },
   {
-    title: "Рассрочка без процентов на срок до 24 месяцев",
-    rightPhoto: stock5Img,
+    title: "Дополнительная скидка 5% при заказе от 250 тыс.",
+    rightPhoto: stockFurniture2Img,
     button: {
-      text: "Рассрочка 0%",
-      variant: "transparent",
+      text: "Заказать звонок",
+      variant: "transparent"
     },
+    variant: "orange"
   },
   {
     title: "Гарантия самой выгодной цены!",
-    description:
-      "Если у вас уже есть просчитанный проект, пришлите его нам, и мы сделаем более выгодное предложение",
-    rightPhoto: stock6Img,
-    variant: "white",
-  },
-];
+    description: "Если есть просчет другой компании, пришлите его нам, и мы сделаем более выгодное предложение",
+    rightPhoto: stockFurniture3Img,
+    variant: "white"
+  }
+]

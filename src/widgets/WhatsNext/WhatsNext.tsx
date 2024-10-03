@@ -30,7 +30,7 @@ const WhatsNext = () => {
             alt="Мужчина"
           />
           <div className={styles.titleWrapper}>
-            <p className={styles.text1}>Что будет после дизайн-проекта?</p>
+            {/*<p className={styles.text1}>Что будет после дизайн-проекта?</p>*/}
             <h3 className={styles.title}>
               Производство кухни за <span>21</span> день в полном соответствии с
               проектом, которая

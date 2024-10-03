@@ -2,7 +2,7 @@
 
 .stocks {
   padding: rem(60) 0;
-  background: #332e2a;
+  background: #282320;
 
   &.withoutBg {
     background: transparent;
@@ -53,6 +53,10 @@
   }
   &.orange {
     background: linear-gradient(180deg, #95663a 37%, #c8a787 100%);
+    color: $white;
+  }
+  &.darkBrown {
+    background-color: #282320;
     color: $white;
   }
 }

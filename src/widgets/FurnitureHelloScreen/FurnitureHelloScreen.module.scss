@@ -41,7 +41,39 @@
     -o-object-position: right;
     object-position: right;
   }
+
+  @media (max-width: $max-768) {
+    -webkit-mask-image: linear-gradient(
+      0deg,
+      rgba(64, 56, 48, 0) 0%,
+      rgba(255, 255, 255, 1) 60.29%
+    );
+
+    mask-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(255, 255, 255, 1) 60.29%
+    );
+    background-color: #000;
+  }
 }
+
+.bgImageMobile {
+  display: none;
+
+  @media (max-width: $max-768) {
+    display: block;
+  }
+}
+
+.bgImageDesktop {
+  display: block;
+
+  @media (max-width: $max-768) {
+    display: none;
+  }
+}
+
 .container {
   @include container();
   position: relative;
@@ -112,6 +144,54 @@
   }
 }
 
+.btnBlock {
+  position: absolute !important;
+  left: rem(20);
+  bottom: rem(110);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: rem(50);
+  z-index: 10;
+
+  @media (max-width:$max-1300) {
+    bottom: rem(110);
+  }
+
+  @media (max-width:$max-1100) {
+    //position: inherit !important;
+    //left: 0;
+    //bottom: rem(-100);
+    //order: 4;
+  }
+
+  @media (max-width: $max-768) {
+    position: absolute !important;
+    margin: 0 auto;
+    left: 50%;
+    //bottom: rem(255);
+    bottom: rem(60);
+    gap: rem(30);
+    min-height: rem(5);
+    transform: translate(-50%, 0);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  @media (max-width: $max-768) and (min-height: $max-500) and (max-height: $max-800) {
+    bottom: rem(60);
+  }
+
+  @media (max-width: $max-400) and (max-height: $max-800) {
+    bottom: rem(60);
+  }
+
+  @media (max-width: $max-400) and (max-height: $max-700) {
+    bottom: rem(85);
+  }
+}
+
 .button {
-  margin-top: rem(50);
+  //margin-top: rem(50);
 }

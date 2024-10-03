@@ -8,6 +8,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { TextModal } from "../Modals/TextModal/TextModal";
 import styles from "./Footer.module.scss";
+import Script from "next/script";
+import WidgetsList from "@/widgets/WidgetsList/WidgetsList";
 
 const Footer = () => {
   // const [isOpenPrivacy, setIsOpenPrivacy] = useState(false);
@@ -109,14 +111,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className={styles.badge}>
-          <iframe
-            title="Рейтинг в Яндекс"
-            src="https://yandex.ru/sprav/widget/rating-badge/192446974752?type=rating&theme=dark"
-            width="150"
-            height="50"
-          ></iframe>
-        </div>
+        <WidgetsList twoGisHide={true}/>
         <div className={styles.footerDown}>
           <div className={styles.downContainer}>
             <div className={styles.column}>

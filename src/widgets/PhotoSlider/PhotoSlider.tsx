@@ -1,17 +1,24 @@
 "use client";
 
-import img1 from "@/data/images/contacts-slider/XL (1).webp";
-import img2 from "@/data/images/contacts-slider/XL (2).webp";
-import img3 from "@/data/images/contacts-slider/XL (3).webp";
-import img4 from "@/data/images/contacts-slider/XL (4).webp";
-import img5 from "@/data/images/contacts-slider/XL (5).webp";
-import img6 from "@/data/images/contacts-slider/XL (6).webp";
-import img7 from "@/data/images/contacts-slider/XL (7).webp";
+import img1 from "@/data/images/contacts-slider/MAIN (1).webp";
+import img2 from "@/data/images/contacts-slider/MAIN (2).webp";
+import img3 from "@/data/images/contacts-slider/MAIN (3).webp";
+import img4 from "@/data/images/contacts-slider/XL (1).webp";
+import img5 from "@/data/images/contacts-slider/XL (2).webp";
+import img6 from "@/data/images/contacts-slider/XL (3).webp";
+import img7 from "@/data/images/contacts-slider/XL (4).webp";
+import img8 from "@/data/images/contacts-slider/XL (5).webp";
+import img9 from "@/data/images/contacts-slider/XL (6).webp";
+import img10 from "@/data/images/contacts-slider/XL (7).webp";
+import img11 from "@/data/images/contacts-slider/MAIN (7).webp";
+import img12 from "@/data/images/contacts-slider/MAIN (8).webp";
+import img13 from "@/data/images/contacts-slider/MAIN (9).webp";
+import img14 from "@/data/images/contacts-slider/MAIN (10).webp";
 import videoPreviewImg from "@/data/images/video-preview1.jpg";
 import { Icons } from "@/shared/IconsComponents/Icons";
 import "@/shared/styles/swiper-my.css";
-import Image from "next/image";
-import { useState } from "react";
+import Image, { StaticImageData } from "next/image";
+import { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
@@ -19,6 +26,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { ModalVideo } from "../Modals";
 import PreviewPhotos from "../PreviewPhotos/PreviewPhotos";
 import styles from "./PhotoSlider.module.scss";
+import ContactsYouCan from "@/widgets/ContactsYouCan/ContactsYouCan";
 
 const initialImages = [
   img1.src,
@@ -28,6 +36,13 @@ const initialImages = [
   img5.src,
   img6.src,
   img7.src,
+  img8.src,
+  img9.src,
+  img10.src,
+  img11.src,
+  img12.src,
+  img13.src,
+  img14.src,
 ];
 
 interface Props {
@@ -35,6 +50,14 @@ interface Props {
   title?: string;
   subtitle?: string;
   withoutManyText?: boolean;
+  onlyVideo?: boolean;
+  previewVideo?: string;
+  withoutLowerText?: boolean;
+  firstVideoBlock?: boolean;
+  bgColor?: string;
+  wide?: boolean;
+  firstOnPage?: boolean;
+  withoutYouCan?: boolean;
 }
 
 export const PhotoSlider = ({
@@ -42,6 +65,14 @@ export const PhotoSlider = ({
   subtitle,
   title,
   withoutManyText,
+  onlyVideo,
+  previewVideo,
+  withoutLowerText,
+  firstVideoBlock,
+  bgColor,
+  wide,
+  firstOnPage,
+  withoutYouCan
 }: Props) => {
   const [isOpenPreview, setIsOpenPreview] = useState(false);
   const [isOpenVideo, setIsOpenVideo] = useState(false);
@@ -74,11 +105,12 @@ export const PhotoSlider = ({
         isOpen={isOpenPreview}
         photos={previewPhotos}
       />
-      <div className={styles.photoSlider}>
-        <div className={styles.container}>
+      <div className={[styles.photoSlider, firstOnPage ? styles.firstOnPage : ''].join(' ')} style={bgColor ? {background: bgColor} : {}}>
+        <div className={[styles.container, wide ? styles.wideContainer : ''].join(' ')}>
           {title && <h3 className={styles.title}>{title}</h3>}
           {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
           <Swiper
+            style={firstVideoBlock ? {order: 4} : {}}
             className={styles.swiper}
             spaceBetween={30}
             navigation={{
@@ -99,14 +131,14 @@ export const PhotoSlider = ({
               1024: {
                 slidesPerView: 3,
               },
-              1440: {
-                slidesPerView: 4,
-              },
+              // 1440: {
+              //   slidesPerView: 4,
+              // },
             }}
             loop={true}
             modules={[Navigation]}
           >
-            {initialImages.map((photo, index) => (
+            {previewPhotos.map((photo, index) => (
               <SwiperSlide
                 key={index}
                 className={styles.slide}
@@ -124,8 +156,8 @@ export const PhotoSlider = ({
             ))}
           </Swiper>
           {!withoutManyText && (
-            <div className={styles.textWithVideo}>
-              <div className={styles.leftText}>
+            <div className={styles.textWithVideo} style={firstVideoBlock ? {order: 3} : {}}>
+              {!onlyVideo && <div className={styles.leftText}>
                 <h4 className={`${styles.title} ${styles.left}`}>
                   Работаем с&nbsp;1998 года для&nbsp;вас.
                 </h4>
@@ -145,12 +177,13 @@ export const PhotoSlider = ({
                   </strong>
                 </p>
               </div>
-              <div className={styles.rightVideo}>
+              }
+              <div className={onlyVideo ? styles.onlyVideo : styles.rightVideo}>
                 <Image
-                  src={videoPreviewImg}
+                  src={previewVideo ? previewVideo : videoPreviewImg}
                   alt="Видео"
-                  width={512}
-                  height={356}
+                  width={1280}
+                  height={666}
                   draggable={false}
                   className={styles.videoPreview}
                 />
@@ -164,11 +197,16 @@ export const PhotoSlider = ({
               </div>
             </div>
           )}
-          <p className={styles.lowerText}>
+          {
+            !withoutYouCan && <ContactsYouCan order={5}/>
+          }
+
+          {!withoutLowerText && <p className={styles.lowerText}>
             Закажите обратный звонок чтобы обсудить детали вашего проекта,
             оформить выезд дизайнера для проведения замера помещения под кухню
             или другую корпусную мебель, создать визуализацию и 3D-проект.
           </p>
+          }
         </div>
       </div>
     </>

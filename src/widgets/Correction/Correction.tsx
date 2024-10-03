@@ -16,9 +16,13 @@ import styles from "./Correction.module.scss";
 
 interface Props {
   title?: string;
+  titleView?: boolean;
+  card1Hide?: boolean;
+  card2Hide?: boolean;
+  card3Hide?: boolean;
 }
 
-export const Correction = ({ title }: Props) => {
+export const Correction = ({ title, card1Hide, card2Hide, card3Hide, titleView }: Props) => {
   const [isOpenModal, setIsOpenModal] = useState(false);
   const [isOpenVideo, setIsOpenVideo] = useState(false);
   return (
@@ -41,12 +45,17 @@ export const Correction = ({ title }: Props) => {
       <div className={styles.correctionPage} id="how-we-work">
         <div className={styles.container}>
           <h2 className={styles.title1}>
-            {title
-              ? title
-              : "Процесс выбора и этапы при заказе кухонного гарнитура по индивидуальному проекту"}
+            {
+              titleView ?
+                title
+                ? title
+                : "Процесс выбора и этапы при заказе кухонного гарнитура по индивидуальному проекту"
+              : ''
+            }
           </h2>
 
           {/* Card 01 */}
+          { !card1Hide ?
           <div className={styles.card1}>
             <p className={styles.bgText}>01</p>
             <div className={styles.ellipse1}></div>
@@ -95,8 +104,11 @@ export const Correction = ({ title }: Props) => {
               </div>
             </div>
           </div>
+          :
+          ''}
 
           {/* Card 02 */}
+          { !card2Hide ?
           <div className={styles.card1}>
             <p className={styles.bgText}>02</p>
             <div className={styles.ellipse2}></div>
@@ -149,8 +161,11 @@ export const Correction = ({ title }: Props) => {
               </div>
             </div>
           </div>
+          :
+          ''}
 
           {/* Card 03 */}
+          { !card3Hide ?
           <div className={styles.card2}>
             <p className={styles.bgText2}>03</p>
             <div className={styles.ellipse3}></div>
@@ -222,6 +237,8 @@ export const Correction = ({ title }: Props) => {
               </div>
             </div>
           </div>
+          :
+          ''}
           <LeaveRequestFile
             noPadding
             location="Главная страница"

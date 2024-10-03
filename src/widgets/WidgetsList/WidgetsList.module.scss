@@ -1,0 +1,19 @@
+@import "@/shared/styles/_vars";
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: rem(5);
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 1;
+
+  @media (max-width: $max-768) {
+    gap: rem(5);
+    //max-width: rem(450);
+    //justify-content: center;
+  }
+}
