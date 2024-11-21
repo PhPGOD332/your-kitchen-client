@@ -47,7 +47,7 @@ export const DiscountsHelloScreenSlider = ({
           >
             Подарки и техника новым и действующим клиентам фабрики «Твоя кухня»
           </h2>
-          <p className={`${styles.subtitle} ${centerText && styles.center}`}>
+          <p className={`${styles.subtitle} ${styles.discSubtitle} ${centerText && styles.center}`}>
             Актуальный каталог акций и скидок на кухни и корпусную мебель в
             Москве. Выгодные предложения на покупку кухонного гарнитура и другой
             мебели на заказ.
