@@ -14,7 +14,7 @@ import stockFurniture3Img from "./stock-furniture3.webp";
 
 export const initialStocks: IStock[] = [
   {
-    title: "Дарим посудомоечную машину в Ноябре 2024",
+    title: "Сборка кухни в подарок до 31 декабря!",
     description:
       "",
     rightPhoto: stock1Img,
