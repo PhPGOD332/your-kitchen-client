@@ -14,12 +14,12 @@ import stockFurniture3Img from "./stock-furniture3.webp";
 
 export const initialStocks: IStock[] = [
   {
-    title: "Сборка кухни в подарок до 31 декабря!",
+    title: "Скидки до 25% на кухни до конца января!",
     description:
       "",
     rightPhoto: stock1Img,
     button: {
-      text: "Бесплатно",
+      text: "Применить",
       variant: "transparent",
     },
     variant: "orange",
