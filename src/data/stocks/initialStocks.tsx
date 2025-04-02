@@ -14,7 +14,7 @@ import stockFurniture3Img from "./stock-furniture3.webp";
 
 export const initialStocks: IStock[] = [
   {
-    title: "Скидка 8% на всю мебель в Марте 2025 года",
+    title: "Варочные панели в подарок до 30 апреля!",
     description:
       "",
     rightPhoto: stock1Img,
