@@ -3,6 +3,7 @@ import Nav from "@/widgets/Nav/Nav";
 import { Metadata } from "next";
 import Script from "next/script";
 import "../styles";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   manifest: "/manifest.webmanifest",
@@ -63,14 +64,14 @@ export default function RootLayout({
             <Script
               src="//code.jivo.ru/widget/d1XdJXNdT6"
               async
-              strategy="lazyOnload"
+              strategy="afterInteractive"
             ></Script>
             <script defer src="https://af.click.ru/af.js?id=12257"></script>
 
             <Script
               src="https://www.googletagmanager.com/gtag/js?id=G-9PXGLTWQJK"
               async
-              strategy="lazyOnload"
+              strategy="afterInteractive"
             ></Script>
             <Script
               id="google-analytics"
@@ -82,9 +83,10 @@ export default function RootLayout({
   gtag('config', 'G-9PXGLTWQJK');`,
               }}
               async
-              strategy="lazyOnload"
+              strategy="afterInteractive"
             />
-            <Script
+            <GoogleTagManager gtmId="GTM-T7HCN6P"/>
+            {/* <Script
               id="metrikaScript"
               dangerouslySetInnerHTML={{
                 __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -94,8 +96,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-T7HCN6P');`,
               }}
               async
-              strategy="lazyOnload"
-            />
+              strategy="afterInteractive"
+            /> */}
           </>
         )}
       </head>
