@@ -169,7 +169,7 @@ interface IPage {
   description: string;
   keywords?: string;
   url: string;
-  type?:
+  type:
     | "website"
     | "article"
     | "book"
