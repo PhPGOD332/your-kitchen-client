@@ -6,7 +6,6 @@ module.exports = {
       script: 'npm',
       args: '-p 3000',
       exec_mode: 'cluster',
-      instances: 'max',
       max_memory_restart: "1G",
       autorestart: true
     }
