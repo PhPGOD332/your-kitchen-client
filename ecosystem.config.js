@@ -2,8 +2,7 @@ module.exports = {
   apps: [
     {
       name: 'your-kitchen-client',
-      cwd: "node_modules/next/dist/bin/next",
-      script: 'npm',
+      script: 'node_modules/next/dist/bin/next',
       args: '-p 3000',
       exec_mode: 'cluster',
       max_memory_restart: "1G",
