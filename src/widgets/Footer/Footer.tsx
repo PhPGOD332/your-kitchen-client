@@ -129,6 +129,33 @@ const Footer = () => {
               >
                 Согласие на обработку персональных данных
               </Link>
+              <Link
+                href={pagesLinks.newsletterAgreement}
+                type="button"
+                className={styles.privacyButton}
+                // onClick={openPrivacy}
+                target="_blank"
+              >
+                Соглашение на информационную рассылку
+              </Link>
+              <Link
+                href={pagesLinks.cookieUsageStatus}
+                type="button"
+                className={styles.privacyButton}
+                // onClick={openPrivacy}
+                target="_blank"
+              >
+                Положение использования файлов Cookie
+              </Link>
+              <Link
+                href={pagesLinks.websiteUsageRegulations}
+                type="button"
+                className={styles.privacyButton}
+                // onClick={openPrivacy}
+                target="_blank"
+              >
+                Положение о пользовании сайтом
+              </Link>
             </div>
             <div className={styles.footerIcons}>
               <Link aria-label="Телеграм" href={links.tgGroup} target="_blank">

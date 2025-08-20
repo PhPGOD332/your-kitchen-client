@@ -1,3 +1,6 @@
+import { NewsletterAgreement } from "@/shared/NewsletterAgreement";
+import { CookieUsageStatus } from "@/shared/CookieUsageStatus";
+
 export const SITE_NAME = "Твоя кухня";
 export const CLIENT_URL = "https://youkuhnya.ru";
 export const YANDEX_ANALYTICS = 94024143;
@@ -108,6 +111,30 @@ export const pagesData: IPages = {
     url: `${CLIENT_URL}/privacy_policy`,
     type: "website",
   },
+  newsletterAgreement: {
+    name: `newsletter_agreement`,
+    title: "Соглашение на информационную рассылку | Твоя кухня",
+    description:
+      "Соглашение на информационную рассылку",
+    url: `${CLIENT_URL}/newsletter_agreement`,
+    type: "website"
+  },
+  cookieUsageStatus: {
+    name: `cookie_usage_status`,
+    title: "Положение использования файлов Cookie | Твоя кухня",
+    description:
+      "Положение использования файлов Cookie",
+    url: `${CLIENT_URL}/cookie_usage_status`,
+    type: "website"
+  },
+  websiteUsageRegulations: {
+    name: `website_usage_regulations`,
+    title: "Положение о пользовании сайтом | Твоя кухня",
+    description:
+      "Положение о пользовании сайтом",
+    url: `${CLIENT_URL}/website_usage_regulations`,
+    type: "website"
+  }
 };
 
 export const links: ILink = {
@@ -134,6 +161,9 @@ export const pagesLinks = {
   thankyou: "/thankyou",
   departureMeasurer: "/departure_measurer",
   privacyPolicy: "/privacy_policy",
+  newsletterAgreement: "/newsletter_agreement",
+  cookieUsageStatus: "/cookie_usage_status",
+  websiteUsageRegulations: "/website_usage_regulations",
   admin: "/admin",
   adminClaims: "/admin/claims",
   adminDiscounts: "/admin/discounts",

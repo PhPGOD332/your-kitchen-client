@@ -26,7 +26,7 @@ const Page = () => {
     <div className={styles.container}>
       <h1 className={styles.pageTitle}>Политика конфиденциальности</h1>
       { PrivacyPolicy }
-    </div>
+   </div>
   );
 };
 
