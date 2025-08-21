@@ -114,48 +114,68 @@ const Footer = () => {
         <WidgetsList twoGisHide={true}/>
         <div className={styles.footerDown}>
           <div className={styles.downContainer}>
-            <div className={styles.column}>
+            <div className={`${styles.column} ${styles.docsColumn}`}>
               <p className={styles.footerDownText}>
                 &copy; 2023 Мебельная фабрика «
                 <span itemProp="name">Твоя Кухня</span>
                 ». Все права защищены.
               </p>
-              <Link
-                href={pagesLinks.privacyPolicy}
-                type="button"
-                className={styles.privacyButton}
-                // onClick={openPrivacy}
-                target="_blank"
-              >
-                Согласие на обработку персональных данных
-              </Link>
-              <Link
-                href={pagesLinks.newsletterAgreement}
-                type="button"
-                className={styles.privacyButton}
-                // onClick={openPrivacy}
-                target="_blank"
-              >
-                Соглашение на информационную рассылку
-              </Link>
-              <Link
-                href={pagesLinks.cookieUsageStatus}
-                type="button"
-                className={styles.privacyButton}
-                // onClick={openPrivacy}
-                target="_blank"
-              >
-                Положение использования файлов Cookie
-              </Link>
-              <Link
-                href={pagesLinks.websiteUsageRegulations}
-                type="button"
-                className={styles.privacyButton}
-                // onClick={openPrivacy}
-                target="_blank"
-              >
-                Положение о пользовании сайтом
-              </Link>
+              <div className={styles.columnRow}>
+                <Link
+                  href={pagesLinks.privacyPolicy}
+                  type="button"
+                  className={styles.privacyButton}
+                  // onClick={openPrivacy}
+                  target="_blank"
+                >
+                  Согласие на обработку <br/> персональных данных
+                </Link>
+                <Link
+                  href={pagesLinks.newsletterAgreement}
+                  type="button"
+                  className={styles.privacyButton}
+                  // onClick={openPrivacy}
+                  target="_blank"
+                >
+                  Соглашение <br/> на информационную <br/> рассылку
+                </Link>
+                <Link
+                  href={pagesLinks.cookieUsageStatus}
+                  type="button"
+                  className={styles.privacyButton}
+                  // onClick={openPrivacy}
+                  target="_blank"
+                >
+                  Положение использования <br/> файлов Cookie
+                </Link>
+                <Link
+                  href={pagesLinks.websiteUsageRegulations}
+                  type="button"
+                  className={styles.privacyButton}
+                  // onClick={openPrivacy}
+                  target="_blank"
+                >
+                  Положение <br/> о пользовании сайтом
+                </Link>
+                <Link
+                  href={pagesLinks.technicalRequirementsRoom}
+                  type="button"
+                  className={styles.privacyButton}
+                  // onClick={openPrivacy}
+                  target="_blank"
+                >
+                  Технические требования <br/> к помещению
+                </Link>
+                <Link
+                  href={pagesLinks.rulesStorageCare}
+                  type="button"
+                  className={styles.privacyButton}
+                  // onClick={openPrivacy}
+                  target="_blank"
+                >
+                  Правила <br/>хранения и ухода
+                </Link>
+              </div>
             </div>
             <div className={styles.footerIcons}>
               <Link aria-label="Телеграм" href={links.tgGroup} target="_blank">

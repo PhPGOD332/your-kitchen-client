@@ -134,7 +134,23 @@ export const pagesData: IPages = {
       "Положение о пользовании сайтом",
     url: `${CLIENT_URL}/website_usage_regulations`,
     type: "website"
-  }
+  },
+  technicalRequirementsRoom: {
+    name: `technical_requirements_room`,
+    title: "Технические требования к помещению | Твоя кухня",
+    description:
+      "Технические требования к помещению",
+    url: `${CLIENT_URL}/technical_requirements_room`,
+    type: "website"
+  },
+  rulesStorageCare: {
+    name: `rules_storage_care`,
+    title: "Правила хранения и ухода | Твоя кухня",
+    description:
+      "Правила хранения и ухода",
+    url: `${CLIENT_URL}/rules_storage_care`,
+    type: "website"
+  },
 };
 
 export const links: ILink = {
@@ -164,6 +180,8 @@ export const pagesLinks = {
   newsletterAgreement: "/newsletter_agreement",
   cookieUsageStatus: "/cookie_usage_status",
   websiteUsageRegulations: "/website_usage_regulations",
+  technicalRequirementsRoom: "/technical_requirements_room",
+  rulesStorageCare: "/rules_storage_care",
   admin: "/admin",
   adminClaims: "/admin/claims",
   adminDiscounts: "/admin/discounts",

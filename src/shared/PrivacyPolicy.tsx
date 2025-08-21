@@ -883,77 +883,77 @@ export const PrivacyPolicy = (
     {/*</p>*/}
     {/*<p>Собираемые cookie на нашем сайте:</p>*/}
     {/*<p></p>*/}
-    {/*<table*/}
-    {/*  id="cookies-table"*/}
-    {/*  style={{*/}
-    {/*    borderCollapse: "collapse",*/}
-    {/*    tableLayout: "fixed",*/}
-    {/*    width: "100%",*/}
-    {/*    margin: "0",*/}
-    {/*    overflow: "hidden",*/}
-    {/*  }}*/}
-    {/*>*/}
-    {/*  <tbody>*/}
-    {/*    <tr>*/}
-    {/*      <th*/}
-    {/*        style={{*/}
-    {/*          minWidth: "1em",*/}
-    {/*          border: "2px solid #ced4da",*/}
-    {/*          padding: "3px 5px",*/}
-    {/*          verticalAlign: "top",*/}
-    {/*          boxSizing: "border-box",*/}
-    {/*          position: "relative",*/}
-    {/*          fontWeight: "bold",*/}
-    {/*          textAlign: "left",*/}
-    {/*        }}*/}
-    {/*      >*/}
-    {/*        Название*/}
-    {/*      </th>*/}
-    {/*      <th*/}
-    {/*        style={{*/}
-    {/*          minWidth: "1em",*/}
-    {/*          border: "2px solid #ced4da",*/}
-    {/*          padding: "3px 5px",*/}
-    {/*          verticalAlign: "top",*/}
-    {/*          boxSizing: "border-box",*/}
-    {/*          position: "relative",*/}
-    {/*          fontWeight: "bold",*/}
-    {/*          textAlign: "left",*/}
-    {/*        }}*/}
-    {/*      >*/}
-    {/*        Название*/}
-    {/*      </th>*/}
-    {/*      <th*/}
-    {/*        style={{*/}
-    {/*          minWidth: "1em",*/}
-    {/*          border: "2px solid #ced4da",*/}
-    {/*          padding: "3px 5px",*/}
-    {/*          verticalAlign: "top",*/}
-    {/*          boxSizing: "border-box",*/}
-    {/*          position: "relative",*/}
-    {/*          fontWeight: "bold",*/}
-    {/*          textAlign: "left",*/}
-    {/*        }}*/}
-    {/*      >*/}
-    {/*        Поставщик*/}
-    {/*      </th>*/}
-    {/*      <th*/}
-    {/*        style={{*/}
-    {/*          minWidth: "1em",*/}
-    {/*          border: "2px solid #ced4da",*/}
-    {/*          padding: "3px 5px",*/}
-    {/*          verticalAlign: "top",*/}
-    {/*          boxSizing: "border-box",*/}
-    {/*          position: "relative",*/}
-    {/*          fontWeight: "bold",*/}
-    {/*          textAlign: "left",*/}
-    {/*        }}*/}
-    {/*      >*/}
-    {/*        Время жизни*/}
-    {/*      </th>*/}
-    {/*    </tr>*/}
-    {/*  </tbody>*/}
-    {/*</table>*/}
+    <table
+      id="cookies-table"
+      style={{
+        borderCollapse: "collapse",
+        tableLayout: "fixed",
+        width: "100%",
+        margin: "0",
+        overflow: "hidden",
+      }}
+    >
+      <tbody>
+        <tr>
+          <th
+            style={{
+              minWidth: "1em",
+              border: "2px solid #ced4da",
+              padding: "3px 5px",
+              verticalAlign: "top",
+              boxSizing: "border-box",
+              position: "relative",
+              fontWeight: "bold",
+              textAlign: "left",
+            }}
+          >
+            Название
+          </th>
+          <th
+            style={{
+              minWidth: "1em",
+              border: "2px solid #ced4da",
+              padding: "3px 5px",
+              verticalAlign: "top",
+              boxSizing: "border-box",
+              position: "relative",
+              fontWeight: "bold",
+              textAlign: "left",
+            }}
+          >
+            Название
+          </th>
+          <th
+            style={{
+              minWidth: "1em",
+              border: "2px solid #ced4da",
+              padding: "3px 5px",
+              verticalAlign: "top",
+              boxSizing: "border-box",
+              position: "relative",
+              fontWeight: "bold",
+              textAlign: "left",
+            }}
+          >
+            Поставщик
+          </th>
+          <th
+            style={{
+              minWidth: "1em",
+              border: "2px solid #ced4da",
+              padding: "3px 5px",
+              verticalAlign: "top",
+              boxSizing: "border-box",
+              position: "relative",
+              fontWeight: "bold",
+              textAlign: "left",
+            }}
+          >
+            Время жизни
+          </th>
+        </tr>
+      </tbody>
+    </table>
     {/*<p></p>*/}
     {/*<p>*/}
     {/*  <strong>6. Безопасность данных</strong>*/}
