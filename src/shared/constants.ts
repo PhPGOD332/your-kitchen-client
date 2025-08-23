@@ -151,6 +151,14 @@ export const pagesData: IPages = {
     url: `${CLIENT_URL}/rules_storage_care`,
     type: "website"
   },
+  priceAdditionalAssemblyServices: {
+    name: `price_additional_assembly_services`,
+    title: "Прайс на дополнительные услуги по сборке | Твоя кухня",
+    description:
+      "Прайс на дополнительные услуги по сборке",
+    url: `${CLIENT_URL}/price_additional_assembly_services`,
+    type: "website"
+  }
 };
 
 export const links: ILink = {
@@ -182,6 +190,7 @@ export const pagesLinks = {
   websiteUsageRegulations: "/website_usage_regulations",
   technicalRequirementsRoom: "/technical_requirements_room",
   rulesStorageCare: "/rules_storage_care",
+  priceAdditionalAssemblyServices: "/price_additional_assembly_services",
   admin: "/admin",
   adminClaims: "/admin/claims",
   adminDiscounts: "/admin/discounts",

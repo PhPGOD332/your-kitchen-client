@@ -175,6 +175,15 @@ const Footer = () => {
                 >
                   Правила <br/>хранения и ухода
                 </Link>
+                <Link
+                  href={pagesLinks.priceAdditionalAssemblyServices}
+                  type="button"
+                  className={styles.privacyButton}
+                  // onClick={openPrivacy}
+                  target="_blank"
+                >
+                  Прайс <br/>на дополнительные услуги <br/>по сборке
+                </Link>
               </div>
             </div>
             <div className={styles.footerIcons}>
