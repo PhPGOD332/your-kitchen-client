@@ -161,7 +161,7 @@
   justify-content: space-between;
   align-items: center;
   gap: rem(24);
-  flex-direction: row;
+  flex-direction: column;
 
   @media (max-width: $max-1000) {
     flex-direction: column;
@@ -173,9 +173,15 @@
   line-height: 1;
   cursor: text;
   display: inline-block;
+  text-align: center;
+  width: 100%;
 
   @media (max-width: $max-700) {
     text-align: center;
+  }
+
+  p {
+    margin: 0 auto;
   }
 
   & time,
@@ -213,16 +219,23 @@
 }
 
 .columnRow {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  //grid-template-columns: 1fr 1fr 1fr;
   //flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  //flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: rem(10);
   margin-top: rem(10);
+  width: 100%;
+  padding: 0 rem(20);
 
   @media screen and (max-width: $max-1000) {
-    align-items: center;
+    flex-direction: column;
+  }
+
+  .privacyButton {
+    text-align: center;
   }
 }
 
