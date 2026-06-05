@@ -106,7 +106,7 @@ export const KitchensHelloScreen = ({
             >
               {button && button.text ? button.text : "Подробнее"}
             </OrangeButton>
-            <WidgetsList zoonHide={true}/>
+            {/*<WidgetsList zoonHide={true}/>*/}
           </div>  
         </div>
       </div>
