@@ -36,7 +36,7 @@ const ReviewsInColumn = (
     <div className={styles.reviewsContainer}>
       <h1 className={styles.title}><span>Отзывы</span> клиентов фабрики &quot;Твоя кухня&quot;</h1>
       <p className={styles.subtitle}>Реальные отзывы клиентов о компании, сотрудниках, процессе взаимодействия. качестве материалов</p>
-      <WidgetsList />
+      {/*<WidgetsList />*/}
       <div className={styles.reviewsList}>
         <p className={styles.bgText}>Отзывы</p>
         {

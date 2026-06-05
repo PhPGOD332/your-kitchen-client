@@ -77,7 +77,7 @@ export const FurnitureHelloScreen = ({ isBold }: Props) => {
             >
               Рассчитать стоимость
             </OrangeButton>
-            <WidgetsList zoonHide={true} />
+            {/*<WidgetsList zoonHide={true} />*/}
           </div>
         </div>
       </div>

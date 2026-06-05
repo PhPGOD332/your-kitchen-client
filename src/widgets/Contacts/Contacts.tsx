@@ -64,7 +64,7 @@ export const Contacts = ({ title }: Props) => {
               allowFullScreen
               className={styles.mapFrame}
             ></iframe>
-            <WidgetsList />
+            {/*<WidgetsList />*/}
           </div>
           <div className={styles.content}>
             <div className={styles.card}>

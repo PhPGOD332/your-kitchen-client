@@ -111,7 +111,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <WidgetsList twoGisHide={true}/>
+        {/*<WidgetsList twoGisHide={true}/>*/}
         <div className={styles.footerDown}>
           <div className={styles.downContainer}>
             <div className={`${styles.column} ${styles.docsColumn}`}>
