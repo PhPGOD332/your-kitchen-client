@@ -43,10 +43,7 @@ export default function ContactsPage() {
         miniHeight
       />
       <Contacts />
-      <PhotoSlider
-        title='Производство мебельной фабрики "Твоя кухня"'
-        subtitle="Адрес: г.&nbsp;Ульяновск, 42 Инженерный проезд, д.&nbsp;6"
-      />
+      <PhotoSlider />
       <LeaveRequestMini
         tag="Заказать обратный звонок"
         location="Страница контактов"
